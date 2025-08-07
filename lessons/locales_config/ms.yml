@@ -1,0 +1,34 @@
+ms:
+  menu:
+    languages:
+      lang: "Bahasa"
+      flag: "flags/Malaysia.png"
+  home:
+    tagline:
+      title: "Belajar cara Linux-fu, secara percuma."
+    subscribe:
+      title: "Langgan"
+      body: "Dapatkan maklumat terkini tentang kursus dan pelajaran baharu!"
+    about:
+      title: "Tentang Kami"
+      body: "Pengetahuan yang diperoleh di sini hari ini dikuasakan oleh komuniti sumber terbuka."
+      url_name: "Sumbang dan Bekerjasama"
+      url: "https://github.com/cindyq/linuxjourney"
+    contact:
+      title: "Hubungi Kami"
+      body: "Nampak pepijat? Ada sebarang aduan? Hanya ingin menghantar nota?"
+      url_name: "Beritahu kami"
+      url: "contact@linuxjourney.com"
+  courses:
+    titles:
+      exercises: "Latihan"
+      quiz: "Kuiz"
+  forms:
+    buttons:
+      check_answer: "Periksa Jawapan"
+      continue: "Teruskan"
+      return: "Kembali ke Menu Utama"
+      home: "Laman Utama"
+    messages:
+      answer_correct: "Jawapan betul!"
+      answer_incorrect: "Tidak berapa tepat, cuba lagi"
