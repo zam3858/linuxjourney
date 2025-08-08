@@ -1,8 +1,8 @@
-# Memory Monitoring
+# Pemantauan Memori
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In addition to CPU monitoring and I/O monitoring you can monitor your memory usage with <b>vmstat</b>
+Selain pemantauan CPU dan pemantauan I/O, anda boleh memantau penggunaan memori anda dengan <b>vmstat</b>
 
 <pre>
 pete@icebox:~$ vmstat
@@ -11,56 +11,56 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  1  0      0 396528  38816 384036    0    0     4     2   38   79  0  0 99  0  0
 </pre>
 
-The fields are as follows:
+Medan adalah seperti berikut:
 
 <b>procs</b>
 <ul>
-<li>r - Number of processes for run time</li>
-<li>b - Number of processes in uninterruptible sleep</li>
+<li>r - Bilangan proses untuk masa jalan</li>
+<li>b - Bilangan proses dalam tidur tidak boleh diganggu</li>
 </ul>
 
-<b>memory</b>
+<b>memori</b>
 <ul>
-<li>swpd - Amount of virtual memory used</li>
-<li>free - Amount of free memory</li>
-<li>buff - Amount of memory used as buffers</li>
-<li>cache - Amount of memory used as cache</li>
+<li>swpd - Jumlah memori maya yang digunakan</li>
+<li>free - Jumlah memori bebas</li>
+<li>buff - Jumlah memori yang digunakan sebagai penimbal</li>
+<li>cache - Jumlah memori yang digunakan sebagai cache</li>
 </ul>
 
 <b>swap</b>
 <ul>
-<li>si - Amount of memory swapped in from disk</li>
-<li>so - Amount of memory swapped out to disk</li>
+<li>si - Jumlah memori yang ditukar masuk dari cakera</li>
+<li>so - Jumlah memori yang ditukar keluar ke cakera</li>
 </ul>
 
 <b>io</b>
 <ul>
-<li>bi - Amount of blocks received in from a block device</li>
-<li>bo - Amount of blocks sent out to a block device</li>
+<li>bi - Jumlah blok yang diterima masuk dari peranti blok</li>
+<li>bo - Jumlah blok yang dihantar keluar ke peranti blok</li>
 </ul>
 
-<b>system</b>
+<b>sistem</b>
 <ul>
-<li>in - Number of interrupts per second</li>
-<li>cs - Number of context switches per second</li>
+<li>in - Bilangan sampukan sesaat</li>
+<li>cs - Bilangan suis konteks sesaat</li>
 </ul>
 
 <b>cpu</b>
 <ul>
-<li>us - Time spent in user time</li>
-<li>sy - Time spent in kernel time</li>
-<li>id - Time spent idle</li>
-<li>wa - Time spent waiting for IO</li>
+<li>us - Masa yang dihabiskan dalam masa pengguna</li>
+<li>sy - Masa yang dihabiskan dalam masa kernel</li>
+<li>id - Masa yang dihabiskan terbiar</li>
+<li>wa - Masa yang dihabiskan menunggu IO</li>
 </ul>
 
-## Exercise
+## Latihan
 
-Look at your memory usage with vmstat.
+Lihat penggunaan memori anda dengan vmstat.
 
-## Quiz Question
+## Soalan Kuiz
 
-What tool is used to view memory utilization?
+Apakah alat yang digunakan untuk melihat penggunaan memori?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 vmstat

@@ -1,8 +1,8 @@
-# I/O Monitoring
+# Pemantauan I/O
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We can also monitor CPU usage as well as monitor disk usage with a handy tool known as <b>iostat</b>
+Kita juga boleh memantau penggunaan CPU serta memantau penggunaan cakera dengan alat yang berguna yang dikenali sebagai <b>iostat</b>
 
 <pre>
 pete@icebox:~$ iostat
@@ -15,35 +15,35 @@ Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
 sda               0.17         3.49         1.92     385106     212417
 </pre>
 
-The first part is the CPU information:
+Bahagian pertama ialah maklumat CPU:
 
 <ul>
-<li>%user - Show the percentage of CPU utilization that occurred while executing at the user level (application)</li>
-<li>%nice - Show the percentage of CPU utilization that occurred while executing at the user level with nice priority.user CPU utilization with nice priorities</li>
-<li>%system - Show the percentage of CPU utilization that occurred while executing at the system level (kernel).</li>
-<li>%iowait - Show the percentage of time that the CPU or CPUs were idle during which the system had an outstanding disk I/O request.</li>
-<li>%steal - Show the percentage of time spent in involuntary wait by the virtual CPU or CPUs while the hypervisor was servicing another virtual processor.</li>
-<li>%idle - Show the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request.</li>
+<li>%user - Tunjukkan peratusan penggunaan CPU yang berlaku semasa melaksanakan pada peringkat pengguna (aplikasi)</li>
+<li>%nice - Tunjukkan peratusan penggunaan CPU yang berlaku semasa melaksanakan pada peringkat pengguna dengan keutamaan nice. penggunaan CPU pengguna dengan keutamaan nice</li>
+<li>%system - Tunjukkan peratusan penggunaan CPU yang berlaku semasa melaksanakan pada peringkat sistem (kernel).</li>
+<li>%iowait - Tunjukkan peratusan masa CPU atau CPU terbiar semasa sistem mempunyai permintaan I/O cakera yang belum selesai.</li>
+<li>%steal - Tunjukkan peratusan masa yang dihabiskan dalam menunggu secara sukarela oleh CPU maya atau CPU semasa hipervisor sedang melayan pemproses maya yang lain.</li>
+<li>%idle - Tunjukkan peratusan masa CPU atau CPU terbiar dan sistem tidak mempunyai permintaan I/O cakera yang belum selesai.</li>
 </ul>
 
-The second part is the disk utilization:
+Bahagian kedua ialah penggunaan cakera:
 
 <ul>
-<li>tps - Indicate the number of transfers per second that were issued to the device. A transfer is an I/O request to the device. Multiple logical requests can be combined into a single I/O request to the device. A transfer is of indeterminate size.</li>
-<li>kB_read/s - Indicate the amount of data read from the device expressed in kilobytes per second.</li>
-<li>kB_wrtn/s - Indicate the amount of data written to the device expressed in kilobytes per second.</li>
-<li>kB_read - The total number of kilobytes read.</li>
-<li>kB_wrtn - The total number of kilobytes written.</li>
+<li>tps - Menunjukkan bilangan pemindahan sesaat yang dikeluarkan kepada peranti. Pemindahan ialah permintaan I/O kepada peranti. Beberapa permintaan logik boleh digabungkan menjadi satu permintaan I/O kepada peranti. Pemindahan adalah saiz yang tidak ditentukan.</li>
+<li>kB_read/s - Menunjukkan jumlah data yang dibaca daripada peranti yang dinyatakan dalam kilobait sesaat.</li>
+<li>kB_wrtn/s - Menunjukkan jumlah data yang ditulis kepada peranti yang dinyatakan dalam kilobait sesaat.</li>
+<li>kB_read - Jumlah kilobait yang dibaca.</li>
+<li>kB_wrtn - Jumlah kilobait yang ditulis.</li>
 </ul>
 
-## Exercise
+## Latihan
 
-Use iostat to view your disk usage.
+Gunakan iostat untuk melihat penggunaan cakera anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command can be used to view I/O and CPU usage?
+Apakah arahan yang boleh digunakan untuk melihat penggunaan I/O dan CPU?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 iostat

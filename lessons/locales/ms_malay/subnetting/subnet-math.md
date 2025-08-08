@@ -1,26 +1,26 @@
-# Subnet Math
+# Matematik Subnet
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Ok, we know that subnet masks are important to figure out how many hosts we can have on our subnet. So how many hosts would that be?
+Ok, kita tahu bahawa topeng subnet penting untuk mengetahui berapa banyak hos yang boleh kita ada pada subnet kita. Jadi berapa banyak hos yang akan ada?
 
-Let's say I have an IP address of <b>192.168.1.0</b> and a subnet mask of <b>255.255.255.0</b>, now let's line up these numbers in binary form. For now use an online calculator to convert these values from decimal to binary.
+Katakan saya mempunyai alamat IP <b>192.168.1.0</b> dan topeng subnet <b>255.255.255.0</b>, sekarang mari kita susun nombor ini dalam bentuk binari. Buat masa ini gunakan kalkulator dalam talian untuk menukar nilai ini dari perpuluhan ke binari.
 
 <pre>
 192.168.1.165  = 11000000.10101000.00000001.10100101
 255.255.255.0  = 11111111.11111111.11111111.00000000
 </pre>
 
-The IP address is masked by our subnet mask, when you see a 1, it is masked and we pretend like we don't see it. So the only possible hosts we can have are from the 00000000 region. Remember 11111111 in binary form equals 255, we also account 0 as a host number, so there are 256 possible options. However, it may look like we have 256 possible options, but we actually subtract 2 hosts because we have to account for the broadcast address and the subnet address, leaving us with 254 possible hosts on our subnet. So we know that we can have hosts with IP addresses ranging from 192.168.1.1 - 192.168.1.254.
+Alamat IP ditopeng oleh topeng subnet kami, apabila anda melihat 1, ia ditopeng dan kami berpura-pura seperti kami tidak melihatnya. Jadi satu-satunya hos yang mungkin kita ada adalah dari rantau 00000000. Ingat 11111111 dalam bentuk binari bersamaan dengan 255, kita juga mengira 0 sebagai nombor hos, jadi terdapat 256 pilihan yang mungkin. Walau bagaimanapun, ia mungkin kelihatan seperti kita mempunyai 256 pilihan yang mungkin, tetapi kita sebenarnya menolak 2 hos kerana kita perlu mengambil kira alamat siaran dan alamat subnet, meninggalkan kita dengan 254 hos yang mungkin pada subnet kita. Jadi kita tahu bahawa kita boleh mempunyai hos dengan alamat IP antara 192.168.1.1 - 192.168.1.254.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the binary equivalent of 255?
+Apakah persamaan binari bagi 255?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 11111111

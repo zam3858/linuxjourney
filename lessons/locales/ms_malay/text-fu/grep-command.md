@@ -1,37 +1,37 @@
 # grep
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The grep command is quite possibly the most common text processing command you will use. It allows you to search files for characters that match a certain pattern. What if you wanted to know if a file existed in a certain directory or if you wanted to see if a string was found in a file? You certainly wouldn't dig through every line of text, you would use grep!
+Perintah grep mungkin merupakan perintah pemprosesan teks yang paling biasa anda akan gunakan. Ia membolehkan anda mencari fail untuk aksara yang sepadan dengan corak tertentu. Bagaimana jika anda ingin tahu sama ada fail wujud dalam direktori tertentu atau jika anda ingin melihat sama ada rentetan ditemui dalam fail? Anda pastinya tidak akan menggali setiap baris teks, anda akan menggunakan grep!
 
-Let's use our sample.txt file as an example:
+Mari kita gunakan fail sample.txt kami sebagai contoh:
 
 <pre>$ grep fox sample.txt</pre>
 
-You should see that grep found fox in the sample.txt file.
+Anda akan melihat bahawa grep menemui musang dalam fail sample.txt.
 
-You can also grep patterns that are case insensitive with the -i flag:
+Anda juga boleh grep corak yang tidak peka huruf besar-kecil dengan bendera -i:
 
 <pre>$ grep -i somepattern somefile</pre>
 
-To get even more flexible with grep you can combine it with other commands with |.
+Untuk menjadi lebih fleksibel dengan grep anda boleh menggabungkannya dengan arahan lain dengan |.
 
 <pre>$ env | grep -i User</pre>
 
-As you can see grep is pretty versatile. You can even use regular expressions in your pattern:
+Seperti yang anda lihat grep agak serba boleh. Anda juga boleh menggunakan ungkapan nalar dalam corak anda:
 
 <pre>$ ls /somedir | grep '.txt$'</pre>
 
-Should return all files ending with .txt in somedir.
+Sepatutnya mengembalikan semua fail yang berakhir dengan .txt dalam somedir.
 
-## Exercise
+## Latihan
 
-You may have heard of egrep or fgrep, these are deprecated grep calls and have since been replaced by grep -E and grep -F. Read the grep manpage to learn more.
+Anda mungkin pernah mendengar tentang egrep atau fgrep, ini adalah panggilan grep yang tidak digunakan lagi dan telah digantikan oleh grep -E dan grep -F. Baca halaman manual grep untuk mengetahui lebih lanjut.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command do you use to find a certain pattern?
+Apakah arahan yang anda gunakan untuk mencari corak tertentu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 grep

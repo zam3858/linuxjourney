@@ -1,47 +1,47 @@
-# yum and apt
+# yum dan apt
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Ah, the Batmans of package management, these systems come with all the fixins to make package installation, removal and changes easier, including installing package dependencies. Two of the most popular management systems is <b>yum</b> and <b>apt</b>. Yum is exclusive to the Red Hat family and apt is exclusively to the Debian family.
+Ah, Batman pengurusan pakej, sistem ini dilengkapi dengan semua pembaikan untuk menjadikan pemasangan, pengalihan dan perubahan pakej lebih mudah, termasuk memasang kebergantungan pakej. Dua sistem pengurusan yang paling popular ialah <b>yum</b> dan <b>apt</b>. Yum adalah eksklusif untuk keluarga Red Hat dan apt adalah eksklusif untuk keluarga Debian.
 
-<b>Install a package from a repository</b>
-
-<pre>
-Debian: $ apt install package_name
-RPM: $ yum install package_name
-</pre>
-
-<b>Remove a package</b>
+<b>Pasang pakej dari repositori</b>
 
 <pre>
-Debian: $ apt remove package_name
-RPM: $ yum erase package_name
+Debian: $ apt install nama_pakej
+RPM: $ yum install nama_pakej
 </pre>
 
-<b>Updating packages for a repository</b>
+<b>Alih keluar pakej</b>
 
-It's always best practice to update your package repositories so they are up to date before you install and update a package.
+<pre>
+Debian: $ apt remove nama_pakej
+RPM: $ yum erase nama_pakej
+</pre>
+
+<b>Mengemas kini pakej untuk repositori</b>
+
+Amalan terbaik sentiasa mengemas kini repositori pakej anda supaya ia terkini sebelum anda memasang dan mengemas kini pakej.
 
 <pre>
 Debian: apt update; apt upgrade
 RPM: yum update
 </pre>
 
-<b>Get information about an installed package</b>
+<b>Dapatkan maklumat tentang pakej yang dipasang</b>
 
 <pre>
-Debian: apt show package_name
-RPM: yum info package_name
+Debian: apt show nama_pakej
+RPM: yum info nama_pakej
 </pre>
 
-## Exercise
+## Latihan
 
-Run through each of these package commands and see the output you receive.
+Jalankan setiap arahan pakej ini dan lihat output yang anda terima.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to show package information on a Debian system?
+Apakah arahan yang digunakan untuk menunjukkan maklumat pakej pada sistem Debian?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 apt show

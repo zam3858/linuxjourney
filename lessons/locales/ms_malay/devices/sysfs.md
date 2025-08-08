@@ -1,12 +1,12 @@
 # sysfs
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Sysfs was created long ago to better manage devices on our system that the /dev directory failed to do. Sysfs is a virtual filesystem, most often mounted to the /sys directory. It gives us more detailed information than what we would be able to see in the /dev directory. Both directories /sys and /dev seem to be very similar and they are in some regards, but they do have major differences. Basically, the /dev directory is simple, it allows other programs to access devices themselves, while the /sys filesystem is used to view information and manage the device.
+Sysfs dicipta lama dahulu untuk mengurus peranti pada sistem kita dengan lebih baik yang gagal dilakukan oleh direktori /dev. Sysfs ialah sistem fail maya, selalunya dilekapkan pada direktori /sys. Ia memberi kita maklumat yang lebih terperinci daripada apa yang kita dapat lihat dalam direktori /dev. Kedua-dua direktori /sys dan /dev kelihatan sangat serupa dan dalam beberapa hal ia memang begitu, tetapi ia mempunyai perbezaan besar. Pada asasnya, direktori /dev adalah mudah, ia membolehkan program lain mengakses peranti itu sendiri, manakala sistem fail /sys digunakan untuk melihat maklumat dan mengurus peranti.
 
-The /sys filesystem basically contains all the information for all devices on your system, such as the manufacturer and model, where the device is plugged in, the state of the device, the hierarchy of devices and more. The files you see here aren't device nodes, so you don't really interact with devices from the /sys directory, rather you are managing devices.
+Sistem fail /sys pada asasnya mengandungi semua maklumat untuk semua peranti pada sistem anda, seperti pengilang dan model, di mana peranti itu dipalamkan, keadaan peranti, hierarki peranti dan banyak lagi. Fail yang anda lihat di sini bukanlah nod peranti, jadi anda tidak benar-benar berinteraksi dengan peranti dari direktori /sys, sebaliknya anda mengurus peranti.
 
-Take a look at the contents of the /sys directory:
+Lihat kandungan direktori /sys:
 
 <pre>
 pete@icebox:~$ ls /sys/block/sda
@@ -18,14 +18,14 @@ device            ext_range          range     sda5       subsystem
 </pre>
 
 
-## Exercise
+## Latihan
 
-Check out the contents of the /sys directory and see what files are located in there.
+Semak kandungan direktori /sys dan lihat fail apa yang terdapat di sana.
 
-## Quiz Question
+## Soalan Kuiz
 
-What directory is used to view detailed information on devices?
+Direktori manakah yang digunakan untuk melihat maklumat terperinci tentang peranti?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /sys

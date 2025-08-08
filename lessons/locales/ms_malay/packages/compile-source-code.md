@@ -1,55 +1,55 @@
-# Compile Source Code
+# Menyusun Kod Sumber
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Often times you will encounter an obscure package that only comes in the form of pure source code. You'll need to use a few commands to get that source code package compiled and installed on your system.
+Selalunya anda akan menemui pakej yang tidak jelas yang hanya datang dalam bentuk kod sumber tulen. Anda perlu menggunakan beberapa arahan untuk menyusun dan memasang pakej kod sumber itu pada sistem anda.
 
-First thing is first, you'll need to have software to install the tools that will allow you to compile source code.
+Pertama sekali, anda perlu mempunyai perisian untuk memasang alat yang akan membolehkan anda menyusun kod sumber.
 
 <pre>$ sudo apt install build-essential</pre>
 
-Once you do that, extract the contents of the package file, most likely a .tar.gz file.
+Sebaik sahaja anda melakukannya, ekstrak kandungan fail pakej, kemungkinan besar fail .tar.gz.
 
 <pre>$ tar -xzvf package.tar.gz</pre>
 
-Before you do anything, take a look at the README or INSTALL file inside the package. Sometimes there will be specific installation instructions.
+Sebelum anda melakukan apa-apa, lihat fail README atau INSTALL di dalam pakej. Kadang-kadang akan ada arahan pemasangan khusus.
 
-Depending on what compile method that the developer used, you'll have to use different commands, such as cmake or something else.
+Bergantung pada kaedah penyusunan yang digunakan oleh pembangun, anda perlu menggunakan arahan yang berbeza, seperti cmake atau sesuatu yang lain.
 
-However, most commonly you'll see basic make compilation, so we'll discuss that:
+Walau bagaimanapun, yang paling biasa anda akan lihat ialah penyusunan make asas, jadi kita akan membincangkannya:
 
-Inside the package contents will be a configure script, this script checks for dependencies on your system and if you are missing anything, you'll see an error and you'll need to fix those dependencies.
+Di dalam kandungan pakej akan ada skrip konfigurasi, skrip ini memeriksa kebergantungan pada sistem anda dan jika anda kehilangan apa-apa, anda akan melihat ralat dan anda perlu membetulkan kebergantungan tersebut.
 
 <pre>$ ./configure</pre>
 
-The <b>./</b> allows you to execute a script in the current directory.
+<b>./</b> membolehkan anda melaksanakan skrip dalam direktori semasa.
 
 <pre>$ make</pre>
 
-Inside of the package contents, there is a file called Makefile that contains rules to building the software. When you run the make command, it looks at this file to build the software.
+Di dalam kandungan pakej, terdapat fail yang dipanggil Makefile yang mengandungi peraturan untuk membina perisian. Apabila anda menjalankan arahan make, ia melihat fail ini untuk membina perisian.
 
 <pre>$ sudo make install</pre>
 
-This command actually installs the package, it will copy the correct files to the correct locations on your computer.
+Perintah ini sebenarnya memasang pakej, ia akan menyalin fail yang betul ke lokasi yang betul pada komputer anda.
 
-If you want to uninstall the package, use:
+Jika anda ingin menyahpasang pakej, gunakan:
 
 <pre>$ sudo make uninstall</pre>
 
-Be wary when using make install, you may not realize how much is actually going on in the background. If you decide to remove this package, you may not actually remove everything because you didn't realize what was added to your system. Instead forget everything about make install that I just explained to you and use the <b>checkinstall</b> command. This command will make a .deb file for you that you can easily install and uninstall.
+Berhati-hati apabila menggunakan make install, anda mungkin tidak menyedari betapa banyak yang sebenarnya berlaku di latar belakang. Jika anda memutuskan untuk mengalih keluar pakej ini, anda mungkin tidak benar-benar mengalih keluar semuanya kerana anda tidak menyedari apa yang telah ditambahkan pada sistem anda. Sebaliknya lupakan semua tentang make install yang baru saya terangkan kepada anda dan gunakan arahan <b>checkinstall</b>. Perintah ini akan membuat fail .deb untuk anda yang boleh anda pasang dan nyahpasang dengan mudah.
 
 <pre>$ sudo checkinstall</pre>
 
-This command will essentially "make install" and build a .deb package and install it. This makes it easier to remove the package later on.
+Perintah ini pada asasnya akan "make install" dan membina pakej .deb dan memasangnya. Ini memudahkan untuk mengalih keluar pakej kemudian.
 
-## Exercise
+## Latihan
 
-Find a source code program (from a trusted site) and install from source.
+Cari program kod sumber (dari tapak yang dipercayai) dan pasang dari sumber.
 
-## Quiz Question
+## Soalan Kuiz
 
-What should you use instead of make install ALWAYS?
+Apakah yang perlu anda gunakan dan bukannya make install SENTIASA?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 checkinstall

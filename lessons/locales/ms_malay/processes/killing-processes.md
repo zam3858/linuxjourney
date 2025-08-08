@@ -1,39 +1,39 @@
-# kill (Terminate)
+# bunuh (Tamatkan)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-You can send signals that terminate processes, such a command is aptly named the kill command.
+Anda boleh menghantar isyarat yang menamatkan proses, arahan sedemikian dinamakan dengan tepat sebagai arahan bunuh.
 
 <pre>$ kill 12445</pre>
 
-The 12445 is the PID of the process you want to kill. By default it sends a TERM signal. The SIGTERM signal is sent to a process to request its termination by allowing it to cleanly release its resources and saving its state.
+12445 ialah PID proses yang ingin anda bunuh. Secara lalai ia menghantar isyarat TERM. Isyarat SIGTERM dihantar ke proses untuk meminta penamatannya dengan membenarkannya melepaskan sumbernya dengan bersih dan menyimpan keadaannya.
 
-You can also specify a signal with the kill command:
+Anda juga boleh menentukan isyarat dengan arahan bunuh:
 
 <pre>$ kill -9 12445</pre>
 
-This will run the SIGKILL signal and kill the process.
+Ini akan menjalankan isyarat SIGKILL dan membunuh proses itu.
 
-<b>Differences between SIGHUP, SIGINT, SIGTERM, SIGKILL, SIGSTOP?</b>
+<b>Perbezaan antara SIGHUP, SIGINT, SIGTERM, SIGKILL, SIGSTOP?</b>
 
-These signals all sound reasonably similar, but they do have their differences.
+Isyarat ini semuanya kedengaran agak serupa, tetapi ia mempunyai perbezaan.
 
 <ul>
-<li>SIGHUP - Hangup, sent to a process when the controlling terminal is closed. For example, if you closed a terminal window that had a process running in it, you would get a SIGHUP signal. So basically you've been hung up on</li>
-<li>SIGINT - Is an interrupt signal, so you can use Ctrl-C and the system will try to gracefully kill the process</li>
-<li>SIGTERM - Kill the process, but allow it to do some cleanup first</li>
-<li>SIGKILL - Kill the process, kill it with fire, doesn't do any cleanup</li>
-<li>SIGSTOP - Stop/suspend a process</li>
+<li>SIGHUP - Gantung, dihantar ke proses apabila terminal kawalan ditutup. Sebagai contoh, jika anda menutup tetingkap terminal yang mempunyai proses yang berjalan di dalamnya, anda akan mendapat isyarat SIGHUP. Jadi pada asasnya anda telah digantung</li>
+<li>SIGINT - Adalah isyarat sampukan, jadi anda boleh menggunakan Ctrl-C dan sistem akan cuba membunuh proses itu dengan anggun</li>
+<li>SIGTERM - Bunuh proses, tetapi benarkan ia melakukan beberapa pembersihan terlebih dahulu</li>
+<li>SIGKILL - Bunuh proses, bunuh dengan api, tidak melakukan sebarang pembersihan</li>
+<li>SIGSTOP - Hentikan/gantung proses</li>
 </ul>
 
-## Exercise
+## Latihan
 
-Kill some processes using different signals.
+Bunuh beberapa proses menggunakan isyarat yang berbeza.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the signal name for the default kill command?
+Apakah nama isyarat untuk arahan bunuh lalai?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 SIGTERM

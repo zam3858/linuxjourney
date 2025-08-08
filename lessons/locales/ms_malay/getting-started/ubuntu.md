@@ -1,28 +1,28 @@
 # Ubuntu
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-One of the most popular Linux distributions for personal machines is Ubuntu. Ubuntu also releases its own desktop environment manager Unity by default.
+<b>Gambaran Keseluruhan</b>
+Salah satu distribusi Linux yang paling popular untuk mesin peribadi ialah Ubuntu. Ubuntu juga mengeluarkan pengurus persekitaran desktopnya sendiri Unity secara lalai.
 
-<b>Package Management</b>
-Ubuntu is a Debian-based operating system developed by Canonical. So it uses a core Debian package management system.
+<b>Pengurusan Pakej</b>
+Ubuntu ialah sistem pengendalian berasaskan Debian yang dibangunkan oleh Canonical. Jadi ia menggunakan sistem pengurusan pakej teras Debian.
 
-<b>Configurability</b>
-Ubuntu is a great choice for a beginner who wants to get into Linux. Ubuntu offers ease of use and a great user interface experience that has led to its wide adoption. It’s widely used and supported and is most like other operating systems like OSX and Windows in terms of usability.
+<b>Kebolehubahsuaian</b>
+Ubuntu ialah pilihan yang bagus untuk pemula yang ingin mendalami Linux. Ubuntu menawarkan kemudahan penggunaan dan pengalaman antara muka pengguna yang hebat yang telah membawa kepada penggunaannya yang meluas. Ia digunakan secara meluas dan disokong dan paling serupa dengan sistem pengendalian lain seperti OSX dan Windows dari segi kebolehgunaan.
 
-<b>Uses</b>
-Great for any platform, desktop, laptop and server.
+<b>Kegunaan</b>
+Hebat untuk sebarang platform, desktop, komputer riba dan pelayan.
 
-## Exercise
+## Latihan
 
-If you're interested in having Ubuntu as your operating system, head over to the installation section and give it a try:
+Jika anda berminat untuk mempunyai Ubuntu sebagai sistem pengendalian anda, pergi ke bahagian pemasangan dan cubalah:
 <a href='http://www.ubuntu.com/'>http://www.ubuntu.com/</a>
 
-## Quiz Questions
+## Soalan Kuiz
 
-What operating system is Ubuntu based off of?
+Apakah sistem pengendalian yang menjadi asas Ubuntu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 Debian

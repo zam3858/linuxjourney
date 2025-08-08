@@ -1,96 +1,95 @@
-# uniq (Unique)
+# uniq (Unik)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The uniq (unique) command is another useful tool for parsing text.
+Perintah uniq (unik) ialah satu lagi alat yang berguna untuk menghuraikan teks.
 
-Let's say you had a file with lots of duplicates:
+Katakan anda mempunyai fail dengan banyak pendua:
 
 <pre>
 reading.txt
-book
-book
-paper
-paper
-article
-article
-magazine
+buku
+buku
+kertas
+kertas
+artikel
+artikel
+majalah
 </pre>
 
-And you wanted to remove the duplicates, well you can use the uniq command:
+Dan anda mahu mengalih keluar pendua, anda boleh menggunakan perintah uniq:
 
 <pre>$ uniq reading.txt
-book
-paper
-article
-magazine</pre>
+buku
+kertas
+artikel
+majalah</pre>
 
-Let's get the count of how many occurrences of a line:
+Mari kita dapatkan kiraan berapa banyak kejadian sesuatu baris:
 
 <pre>$ uniq -c reading.txt
-2 book
-2 paper
-2 article
-1 magazine</pre>
+2 buku
+2 kertas
+2 artikel
+1 majalah</pre>
 
-Let's just get unique values:
+Mari kita dapatkan nilai unik sahaja:
 
 <pre>$ uniq -u reading.txt
-magazine</pre>
+majalah</pre>
 
-Let's just get duplicate values:
+Mari kita dapatkan nilai pendua sahaja:
 
 <pre>$ uniq -d reading.txt
-book
-paper
-article
+buku
+kertas
+artikel
 </pre>
 
-<b>Note</b> : uniq does not detect duplicate lines unless they are adjacent. For eg:
+<b>Nota</b> : uniq tidak mengesan baris pendua melainkan ia bersebelahan. Contohnya:
 
-Let's say you had a file with duplicates which are not adjacent:
+Katakan anda mempunyai fail dengan pendua yang tidak bersebelahan:
 
 <pre>
 reading.txt
-book
-paper
-book
-paper
-article
-magazine
-article
+buku
+kertas
+buku
+kertas
+artikel
+majalah
+artikel
 </pre>
 
 <pre>$ uniq reading.txt
 reading.txt
-book
-paper
-book
-paper
-article
-magazine
-article</pre>
+buku
+kertas
+buku
+kertas
+artikel
+majalah
+artikel</pre>
 
-The result returned by uniq will contain all the entries unlike the very first
-example.
+Hasil yang dikembalikan oleh uniq akan mengandungi semua entri tidak seperti contoh pertama.
 
-To overcome this limitation of uniq we can use sort in combination with uniq:
+Untuk mengatasi batasan uniq ini, kita boleh menggunakan sort dalam kombinasi dengan uniq:
 
 <pre>
 $ sort reading.txt | uniq
-article
-book
-magazine
-paper</pre>
+artikel
+buku
+majalah
+kertas</pre>
 
-## Exercise
+## Latihan
 
-What result would you get if you tried uniq -uc?
+Apakah hasil yang akan anda perolehi jika anda mencuba uniq -uc?
 
-## Quiz Question
+## Soalan Kuiz
 
-What command would you use to remove duplicates in a file?
+Apakah arahan yang akan anda gunakan untuk mengalih keluar pendua dalam fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 uniq

@@ -1,27 +1,27 @@
-# Authentication Logging
+# Pengelogan Pengesahan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Authentication logging can be very useful to look at if you are having issues logging in.
+Pengelogan pengesahan boleh menjadi sangat berguna untuk dilihat jika anda menghadapi masalah log masuk.
 
 <b>/var/log/auth.log</b>
 
-This contains system authorization logs, such as user login and the authentication method used.
+Ini mengandungi log kebenaran sistem, seperti log masuk pengguna dan kaedah pengesahan yang digunakan.
 
-Sample snippet:
+Coretan sampel:
 
 <pre>
 Jan 31 10:37:50 icebox pkexec: pam_unix(polkit-1:session): session opened for user root by (uid=1000)
 </pre>
 
-## Exercise
+## Latihan
 
-Do some failed logins and then a successful one, look at your /var/log/auth.log and see what happened.
+Lakukan beberapa log masuk yang gagal dan kemudian yang berjaya, lihat /var/log/auth.log anda dan lihat apa yang berlaku.
 
-## Quiz Question
+## Soalan Kuiz
 
-What log is used for user authentication?
+Log manakah yang digunakan untuk pengesahan pengguna?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 auth.log

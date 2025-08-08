@@ -1,81 +1,81 @@
-# regex (Regular Expressions)
+# regex (Ungkapan Nalar)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Regular expressions are a powerful tool to do pattern based selection. It uses special notations similar to those we've encountered already such as the * wildcard.
+Ungkapan nalar ialah alat yang berkuasa untuk melakukan pemilihan berasaskan corak. Ia menggunakan notasi khas yang serupa dengan yang telah kita temui seperti kad bebas *.
 
-We'll go through a couple of the most common regular expressions, these are almost universal with any programming language.
+Kami akan meneliti beberapa ungkapan nalar yang paling biasa, ini hampir universal dengan mana-mana bahasa pengaturcaraan.
 
-Well use this phrase as our test string:
+Baiklah gunakan frasa ini sebagai rentetan ujian kami:
 <pre>
 sally sells seashells
 by the seashore
 </pre>
 
-<b>1. Beginning of a line with ^</b>
+<b>1. Permulaan baris dengan ^</b>
 
 <pre>
 <b>^</b>by
-would match the line "by the seashore"
+akan sepadan dengan baris "by the seashore"
 </pre>
 
-<b>2. End of a line with $</b>
+<b>2. Penghujung baris dengan $</b>
 
 <pre>
 seashore<b>$</b>
-would match the line "by the seashore"
+akan sepadan dengan baris "by the seashore"
 </pre>
 
-<b>3. Matching any single character with .</b>
+<b>3. Memadankan sebarang aksara tunggal dengan .</b>
 
 <pre>
 b<b>.</b>
-would match by
+akan sepadan dengan by
 </pre>
 
-<b>4. Bracket notation with [] and ()</b>
+<b>4. Notasi kurungan dengan [] dan ()</b>
 
-This can be a little tricky, brackets allow us to specify characters found within the bracket.
+Ini boleh menjadi sedikit rumit, kurungan membolehkan kita menentukan aksara yang terdapat di dalam kurungan.
 
 <pre>
 d<b>[iou]</b>g
-would match: dig, dog, dug
+akan sepadan dengan: dig, dog, dug
 </pre>
 
-The previous anchor tag ^ when used in a bracket means anything except the characters within the bracket.
+Tag sauh ^ sebelum ini apabila digunakan dalam kurungan bermaksud apa sahaja kecuali aksara di dalam kurungan.
 
 <pre>
 d<b>[^i]</b>g
-would match: dog and dug but not dig
+akan sepadan dengan: dog dan dug tetapi bukan dig
 </pre>
 
-Brackets can also use ranges to increase the amount of characters you want to use.
+Kurungan juga boleh menggunakan julat untuk meningkatkan jumlah aksara yang ingin anda gunakan.
 
 <pre>
 d<b>[a-c]</b>g
-will match patterns like dag, dbg, and dcg
+akan sepadan dengan corak seperti dag, dbg, dan dcg
 </pre>
 
-Be careful though as brackets are case sensitive:
+Berhati-hati kerana kurungan adalah peka huruf besar-kecil:
 
 <pre>
 d<b>[A-C]</b>g
-will match dAg, dBg and dCg but not dag, dbg and dcg
+akan sepadan dengan dAg, dBg dan dCg tetapi bukan dag, dbg dan dcg
 </pre>
 
-And those are some basic regular expressions.
+Dan itu adalah beberapa ungkapan nalar asas.
 
-## Exercise
+## Latihan
 
-Try to combine regular expressions with grep and search through some files.
+Cuba gabungkan ungkapan nalar dengan grep dan cari melalui beberapa fail.
 
 <pre>
 grep [regular expression here] [file]
 
-## Quiz Question
+## Soalan Kuiz
 
-What regular expression would you use to match a single character?
+Apakah ungkapan nalar yang akan anda gunakan untuk memadankan satu aksara?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 .

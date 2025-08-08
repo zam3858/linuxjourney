@@ -1,33 +1,33 @@
-# Power States
+# Keadaan Kuasa
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Hard to believe we haven't actually discussed ways to control your system state through the command line, but when talking about init, we not only talk about the modes that get us starting our system, but also the ones that stop our system.
+Sukar untuk percaya kita sebenarnya belum membincangkan cara untuk mengawal keadaan sistem anda melalui baris perintah, tetapi apabila bercakap tentang init, kita bukan sahaja bercakap tentang mod yang membolehkan kita memulakan sistem kita, tetapi juga yang menghentikan sistem kita.
 
-To shutdown your system:
+Untuk mematikan sistem anda:
 
 <pre>$ sudo shutdown -h now</pre>
 
-This will halt the system (power it off), you must also specify a time when you want this to take place. You can add a time in minutes that will shutdown the system in that amount of time.
+Ini akan menghentikan sistem (mematikannya), anda juga mesti menentukan masa bila anda mahu ini berlaku. Anda boleh menambah masa dalam minit yang akan mematikan sistem dalam jumlah masa itu.
 
 <pre>$ sudo shutdown -h +2</pre>
 
-This will shutdown your system in two minutes. You can also restart with the shutdown command:
+Ini akan mematikan sistem anda dalam dua minit. Anda juga boleh memulakan semula dengan arahan shutdown:
 
 <pre>$ sudo shutdown -r now</pre>
 
-Or just use the reboot command:
+Atau gunakan sahaja arahan but semula:
 
 <pre>$ sudo reboot</pre>
 
-## Exercise
+## Latihan
 
-What do you think is happening with init when you shutdown your machine?
+Apa yang anda fikir berlaku dengan init apabila anda mematikan mesin anda?
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command to poweroff your system in 4 minutes?
+Apakah arahan untuk mematikan sistem anda dalam 4 minit?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 sudo shutdown -h +4

@@ -1,29 +1,29 @@
 # udev
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Back in the old days and actually today if you really wanted to, you would create device nodes using a command such as:
+Pada zaman dahulu dan sebenarnya hari ini jika anda benar-benar mahu, anda akan mencipta nod peranti menggunakan arahan seperti:
 
 <pre>$ mknod /dev/sdb1 b 8 3</pre>
 
-This command will make a device node /dev/sdb1 and it will make it a block device (b) with a major number of 8 and a minor number of 3.
+Perintah ini akan membuat nod peranti /dev/sdb1 dan ia akan menjadikannya peranti blok (b) dengan nombor utama 8 dan nombor kecil 3.
 
-To remove a device, you would simply <b>rm</b> the device file in the /dev directory.
+Untuk mengalih keluar peranti, anda hanya perlu <b>rm</b> fail peranti dalam direktori /dev.
 
-Luckily, we really don't need to do this anymore because of udev. The udev system dynamically creates and removes device files for us depending on whether or not they are connected. There is a udevd daemon that is running on the system and it listens for messages from the kernel about devices connected to the system. Udevd will parse that information and it will match the data with the rules that are specified in /etc/udev/rules.d, depending on those rules it will most likely create device nodes and symbolic links for the devices. You can write your own udev rules, but that is a little out of scope for this lesson. Fortunately, your system already comes with lots of udev rules so you may never need to write your own.
+Nasib baik, kita tidak perlu melakukan ini lagi kerana udev. Sistem udev secara dinamik mencipta dan mengalih keluar fail peranti untuk kita bergantung pada sama ada ia disambungkan atau tidak. Terdapat daemon udevd yang berjalan pada sistem dan ia mendengar mesej daripada kernel tentang peranti yang disambungkan ke sistem. Udevd akan menghuraikan maklumat itu dan ia akan memadankan data dengan peraturan yang dinyatakan dalam /etc/udev/rules.d, bergantung pada peraturan tersebut ia kemungkinan besar akan mencipta nod peranti dan pautan simbolik untuk peranti tersebut. Anda boleh menulis peraturan udev anda sendiri, tetapi itu sedikit di luar skop pelajaran ini. Nasib baik, sistem anda sudah dilengkapi dengan banyak peraturan udev jadi anda mungkin tidak perlu menulis sendiri.
 
-You can also view the udev database and sysfs using the <b>udevadm</b> command. This tool is very useful, but sometimes can get very convoluted, a simple command to view information for a device would be:
+Anda juga boleh melihat pangkalan data udev dan sysfs menggunakan arahan <b>udevadm</b>. Alat ini sangat berguna, tetapi kadang-kadang boleh menjadi sangat berbelit-belit, arahan mudah untuk melihat maklumat untuk peranti ialah:
 
 <pre>$ udevadm info --query=all --name=/dev/sda</pre>
 
-## Exercise
+## Latihan
 
-Run the udevadm command given and check out the input.
+Jalankan arahan udevadm yang diberikan dan semak input.
 
-## Quiz Question
+## Soalan Kuiz
 
-What dynamically adds and removes devices?
+Apakah yang menambah dan mengalih keluar peranti secara dinamik?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 udev

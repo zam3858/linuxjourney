@@ -1,28 +1,28 @@
-# Filesystem Types
+# Jenis Sistem Fail
 
-## Lesson Content
+## Kandungan Pelajaran
 
-There are many different filesystem implementations available. Some are faster than others, some support larger capacity storage and others only work on smaller capacity storage. Different filesystems have different ways of organizing their data and we'll go into detail about what types of filesystems there are. Since there are so many different implementations available, applications need a way to deal with the different operations. So there is something called the Virtual File System (VFS) abstraction layer. It is a layer between applications and the different filesystem types, so no matter what filesystem you have, your applications will be able to work with it.
+Terdapat banyak pelaksanaan sistem fail yang berbeza. Sesetengahnya lebih pantas daripada yang lain, sesetengah menyokong storan kapasiti yang lebih besar dan yang lain hanya berfungsi pada storan kapasiti yang lebih kecil. Sistem fail yang berbeza mempunyai cara yang berbeza untuk menyusun data mereka dan kami akan membincangkan secara terperinci tentang jenis sistem fail yang ada. Oleh kerana terdapat begitu banyak pelaksanaan yang berbeza, aplikasi memerlukan cara untuk menangani operasi yang berbeza. Jadi ada sesuatu yang dipanggil lapisan abstraksi Sistem Fail Maya (VFS). Ia adalah lapisan antara aplikasi dan jenis sistem fail yang berbeza, jadi tidak kira apa sistem fail yang anda ada, aplikasi anda akan dapat berfungsi dengannya.
 
-You can have many filesystem on your disks, depending on how they are partitioned and we will go through that in a coming lesson.
+Anda boleh mempunyai banyak sistem fail pada cakera anda, bergantung pada cara ia dipetakan dan kami akan melaluinya dalam pelajaran yang akan datang.
 
-<b>Journaling</b>
+<b>Penjurnalan</b>
 
-Journaling comes by default on most filesystem types, but just in case it doesn't, you should know what it does. Let's say you're copying a large file and all of a sudden you lose power. Well if you are on a non-journaled filesystem, the file would end up corrupted and your filesystem would be inconsistent and then  when you boot back up, your system would perform a filesystem check to make sure everything is ok. However, the repairs could take awhile depending on how large your filesystem was.
+Penjurnalan datang secara lalai pada kebanyakan jenis sistem fail, tetapi sekiranya tidak, anda harus tahu apa yang dilakukannya. Katakan anda sedang menyalin fail yang besar dan tiba-tiba anda kehilangan kuasa. Jika anda menggunakan sistem fail bukan jurnal, fail itu akan rosak dan sistem fail anda akan tidak konsisten dan kemudian apabila anda but semula, sistem anda akan melakukan pemeriksaan sistem fail untuk memastikan semuanya ok. Walau bagaimanapun, pembaikan boleh mengambil sedikit masa bergantung pada saiz sistem fail anda.
 
-Now if you were on a journaled system, before your machine even begins to copy the file, it will write what you're going to be doing in a log file (journal). Now when you actually copy the file, once it completes, the journal marks that task as complete. The filesystem is always in a consistent state because of this, so it will know exactly where you left off if your machine shutdown suddenly. This also decreases the boot time because instead of checking the entire filesystem it just looks at your journal.
+Sekarang jika anda menggunakan sistem berjurnal, sebelum mesin anda mula menyalin fail, ia akan menulis apa yang akan anda lakukan dalam fail log (jurnal). Sekarang apabila anda benar-benar menyalin fail, sebaik sahaja ia selesai, jurnal menandakan tugas itu sebagai selesai. Sistem fail sentiasa dalam keadaan konsisten kerana ini, jadi ia akan tahu di mana anda berhenti jika mesin anda tiba-tiba ditutup. Ini juga mengurangkan masa but kerana bukannya memeriksa keseluruhan sistem fail, ia hanya melihat jurnal anda.
 
-<b>Common Desktop Filesystem Types</b>
+<b>Jenis Sistem Fail Desktop Biasa</b>
 
 <ul>
-<li>ext4 - This is the most current version of the native Linux filesystems. It is compatible with the older ext2 and ext3 versions. It supports disk volumes up to 1 exabyte and file sizes up to 16 terabytes and much more. It is the standard choice for Linux filesystems.</li>
-<li>Btrfs - "Better or Butter FS" it is a new filesystem for Linux that comes with snapshots, incremental backups, performance increase and much more. It is widely available, but not quite stable and compatible yet.</li>
-<li>XFS - High performance journaling file system, great for a system with large files such as a media server.</li>
-<li>NTFS and FAT - Windows filesystems</li>
-<li>HFS+ - Macintosh filesystem</li>
+<li>ext4 - Ini ialah versi paling terkini bagi sistem fail Linux asli. Ia serasi dengan versi ext2 dan ext3 yang lebih lama. Ia menyokong volum cakera sehingga 1 eksabait dan saiz fail sehingga 16 terabait dan banyak lagi. Ia adalah pilihan standard untuk sistem fail Linux.</li>
+<li>Btrfs - "Better or Butter FS" ia adalah sistem fail baharu untuk Linux yang disertakan dengan gambar petikan, sandaran tambahan, peningkatan prestasi dan banyak lagi. Ia tersedia secara meluas, tetapi belum begitu stabil dan serasi.</li>
+<li>XFS - Sistem fail penjurnalan berprestasi tinggi, bagus untuk sistem dengan fail besar seperti pelayan media.</li>
+<li>NTFS dan FAT - Sistem fail Windows</li>
+<li>HFS+ - Sistem fail Macintosh</li>
 </ul>
 
-Check out what filesystems are on your machine:
+Semak sistem fail apa yang ada pada mesin anda:
 
 <pre>
 pete@icebox:~$ df -T
@@ -33,16 +33,16 @@ tmpfs          tmpfs       102544    1068    101476   2% /run
 /dev/sda6      xfs       13752320  460112  13292208   4% /home
 </pre>
 
-The <b>df</b> command reports file system disk space usage and other details about your disk, we will talk more about this tool later.
+Perintah <b>df</b> melaporkan penggunaan ruang cakera sistem fail dan butiran lain tentang cakera anda, kami akan membincangkan lebih lanjut tentang alat ini kemudian.
 
-## Exercise
+## Latihan
 
-Do a little bit of research online on the other filesystem types: ReiserFS, ZFS, JFS and others you can find.
+Lakukan sedikit penyelidikan dalam talian tentang jenis sistem fail lain: ReiserFS, ZFS, JFS dan lain-lain yang boleh anda temui.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the common Linux filesystem type?
+Apakah jenis sistem fail Linux yang biasa?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 ext4

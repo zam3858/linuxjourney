@@ -1,36 +1,36 @@
-# Inodes
+# Inod
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Remember how our filesystem is comprised of all our actual files and a database that manages these files? The database is known as the inode table.
+Ingat bagaimana sistem fail kita terdiri daripada semua fail sebenar kita dan pangkalan data yang menguruskan fail-fail ini? Pangkalan data ini dikenali sebagai jadual inod.
 
-<b>What is an inode?</b>
+<b>Apakah itu inod?</b>
 
-An inode (index node) is an entry in this table and there is one for every file. It describes everything about the file, such as:
+Inod (nod indeks) ialah entri dalam jadual ini dan terdapat satu untuk setiap fail. Ia menerangkan segala-galanya tentang fail, seperti:
 
 <ul>
-<li>File type - regular file, directory, character device, etc</li>
-<li>Owner</li>
-<li>Group</li>
-<li>Access permissions</li>
-<li>Timestamps - mtime (time of last file modification), ctime (time of last attribute change), atime (time of last access)</li>
-<li>Number of hardlinks to the file</li>
-<li>Size of the file</li>
-<li>Number of blocks allocated to the file</li>
-<li>Pointers to the data blocks of the file - most important!</li>
+<li>Jenis fail - fail biasa, direktori, peranti aksara, dsb</li>
+<li>Pemilik</li>
+<li>Kumpulan</li>
+<li>Kebenaran akses</li>
+<li>Cap masa - mtime (masa pengubahsuaian fail terakhir), ctime (masa perubahan atribut terakhir), atime (masa akses terakhir)</li>
+<li>Bilangan pautan keras ke fail</li>
+<li>Saiz fail</li>
+<li>Bilangan blok yang diperuntukkan kepada fail</li>
+<li>Penunjuk ke blok data fail - paling penting!</li>
 </ul>
 
-Basically inodes store everything about the file, except the filename and the file itself!
+Pada asasnya inod menyimpan segala-galanya tentang fail, kecuali nama fail dan fail itu sendiri!
 
-<b>When are inodes created?</b>
+<b>Bilakah inod dicipta?</b>
 
-When a filesystem is created, space for inodes is allocated as well. There are algorithms that take place to determine how much inode space you need depending on the volume of the disk and more. You've probably at some point in your life seen errors for out of disk space issues. Well the same can occur for inodes as well (although less common), you can run out of inodes and therefore be unable to create more files. Remember data storage depends on both the data and the database (inodes).
+Apabila sistem fail dicipta, ruang untuk inod juga diperuntukkan. Terdapat algoritma yang berlaku untuk menentukan berapa banyak ruang inod yang anda perlukan bergantung pada volum cakera dan banyak lagi. Anda mungkin pernah melihat ralat untuk isu kehabisan ruang cakera pada satu ketika dalam hidup anda. Perkara yang sama boleh berlaku untuk inod juga (walaupun kurang biasa), anda boleh kehabisan inod dan oleh itu tidak dapat mencipta lebih banyak fail. Ingat storan data bergantung pada kedua-dua data dan pangkalan data (inod).
 
-To see how many inodes are left on your system, use the command <b>df -i</b>
+Untuk melihat berapa banyak inod yang tinggal pada sistem anda, gunakan arahan <b>df -i</b>
 
-<b>Inode information</b>
+<b>Maklumat Inod</b>
 
-Inodes are identified by numbers, when a file gets created it is assigned an inode number, the number is assigned in sequential order. However, you may sometimes notice when you create a new file, it gets an inode number that is lower than others, this is because once inodes are deleted, they can be reused by other files. To view inode numbers run <b>ls -li</b>:
+Inod dikenal pasti dengan nombor, apabila fail dicipta ia diberikan nombor inod, nombor itu diberikan dalam urutan berurutan. Walau bagaimanapun, anda kadang-kadang mungkin perasan apabila anda mencipta fail baharu, ia mendapat nombor inod yang lebih rendah daripada yang lain, ini kerana apabila inod dipadam, ia boleh digunakan semula oleh fail lain. Untuk melihat nombor inod jalankan <b>ls -li</b>:
 
 <pre>
 pete@icebox:~$ ls -li
@@ -38,9 +38,9 @@ pete@icebox:~$ ls -li
 141 drwxr-xr-x 2 pete pete 6 Jan 20 20:01 Documents
 </pre>
 
-The first field in this command lists the inode number.
+Medan pertama dalam arahan ini menyenaraikan nombor inod.
 
-You can also see detailed information about a file with stat, it tells you information about the inode as well.
+Anda juga boleh melihat maklumat terperinci tentang fail dengan stat, ia memberitahu anda maklumat tentang inod juga.
 
 <pre>
 pete@icebox:~$ stat ~/Desktop/
@@ -55,18 +55,18 @@ Change: 2016-01-20 20:13:06.191675843 -0800
 </pre>
 
 
-<b>How do inodes locate files?</b>
+<b>Bagaimanakah inod mencari fail?</b>
 
-We know our data is out there on the disk somewhere, unfortunately it probably wasn't stored sequentially, so we have to use inodes. Inodes point to the actual data blocks of your files. In a typical filesystem (not all work the same), each inode contains 15 pointers, the first 12 pointers point directly to the data blocks. The 13th pointer, points to a block containing pointers to more blocks, the 14th pointer points to another nested block of pointers, and the 15th pointer points yet again to another block of pointers! Confusing, I know! The reason this is done this way is to keep the inode structure the same for every inode, but be able to reference files of different sizes. If you had a small file, you could find it quicker with the first 12 direct pointers, larger files can be found with the nests of pointers. Either way the structure of the inode is the same.
+Kita tahu data kita ada di luar sana pada cakera di suatu tempat, malangnya ia mungkin tidak disimpan secara berurutan, jadi kita perlu menggunakan inod. Inod menunjuk ke blok data sebenar fail anda. Dalam sistem fail biasa (tidak semua berfungsi sama), setiap inod mengandungi 15 penunjuk, 12 penunjuk pertama menunjuk terus ke blok data. Penunjuk ke-13, menunjuk ke blok yang mengandungi penunjuk ke lebih banyak blok, penunjuk ke-14 menunjuk ke blok bersarang penunjuk yang lain, dan penunjuk ke-15 menunjuk sekali lagi ke blok penunjuk yang lain! Mengelirukan, saya tahu! Sebab ini dilakukan dengan cara ini adalah untuk mengekalkan struktur inod yang sama untuk setiap inod, tetapi dapat merujuk fail dengan saiz yang berbeza. Jika anda mempunyai fail kecil, anda boleh menemuinya dengan lebih cepat dengan 12 penunjuk langsung pertama, fail yang lebih besar boleh ditemui dengan sarang penunjuk. Sama ada cara struktur inod adalah sama.
 
-## Exercise
+## Latihan
 
-Observe some inode numbers for different files, which ones are usually created first?
+Perhatikan beberapa nombor inod untuk fail yang berbeza, yang manakah biasanya dicipta dahulu?
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you see how many inodes are left on your system?
+Bagaimanakah anda melihat berapa banyak inod yang tinggal pada sistem anda?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 df -i

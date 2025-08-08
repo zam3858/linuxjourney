@@ -1,10 +1,10 @@
-# Systemd Goals
+# Matlamat Systemd
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We won't get into the details of writing systemd unit files. We will however go over a brief overview of a unit file and how to manually control units.
+Kami tidak akan membincangkan butiran penulisan fail unit systemd. Walau bagaimanapun, kami akan memberikan gambaran ringkas tentang fail unit dan cara mengawal unit secara manual.
 
-Here is a basic service unit file: foobar.service
+Berikut ialah fail unit perkhidmatan asas: foobar.service
 
 <pre>
 [Unit]
@@ -18,48 +18,48 @@ ExecStart=/usr/bin/foobar
 WantedBy=multi-user.target
 </pre>
 
-This is a simple service target, at the beginning of the file we see a section for [Unit], this allows us to give our unit file a description as well as control the ordering of when to activate the unit. The next portion is the [Service] section, under here we can start, stop or reload a service. And the [Install] section is used for dependency. This is only the tip of the iceberg for writing systemd files, so I implore you to read up on the subject if you want to know more.
+Ini ialah sasaran perkhidmatan yang mudah, pada permulaan fail kita melihat bahagian untuk [Unit], ini membolehkan kita memberikan perihalan fail unit kita serta mengawal susunan bila hendak mengaktifkan unit. Bahagian seterusnya ialah bahagian [Perkhidmatan], di bawah sini kita boleh memulakan, menghentikan atau memuat semula perkhidmatan. Dan bahagian [Pasang] digunakan untuk kebergantungan. Ini hanyalah puncak gunung ais untuk menulis fail systemd, jadi saya merayu anda untuk membaca tentang subjek ini jika anda ingin mengetahui lebih lanjut.
 
-Now, let's get into some commands you can use with systemd units:
+Sekarang, mari kita lihat beberapa arahan yang boleh anda gunakan dengan unit systemd:
 
-<b>List units</b>
+<b>Senaraikan unit</b>
 
 <pre>$ systemctl list-units</pre>
 
-<b>View status of unit</b>
+<b>Lihat status unit</b>
 
 <pre>$ systemctl status networking.service</pre>
 
-<b>Start a service</b>
+<b>Mulakan perkhidmatan</b>
 
 <pre>$ sudo systemctl start networking.service</pre>
 
-<b>Stop a service</b>
+<b>Hentikan perkhidmatan</b>
 
 <pre>$ sudo systemctl stop networking.service</pre>
 
-<b>Restart a service</b>
+<b>Mulakan semula perkhidmatan</b>
 
 <pre>$ sudo systemctl restart networking.service</pre>
 
-<b>Enable a unit</b>
+<b>Dayakan unit</b>
 
 <pre>$ sudo systemctl enable networking.service</pre>
 
-<b>Disable a unit</b>
+<b>Lumpuhkan unit</b>
 
 <pre>$ sudo systemctl disable networking.service</pre>
 
-Again, you have yet to see how much depth systemd gets into, so read up on it if you want to learn more.
+Sekali lagi, anda masih belum melihat betapa mendalamnya systemd, jadi bacalah tentangnya jika anda ingin mengetahui lebih lanjut.
 
-## Exercise
+## Latihan
 
-View the unit statuses and start and stop a few services. What do you observe?
+Lihat status unit dan mulakan serta hentikan beberapa perkhidmatan. Apa yang anda perhatikan?
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command to start a service named peanut.service?
+Apakah arahan untuk memulakan perkhidmatan bernama peanut.service?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 sudo systemctl start peanut.service

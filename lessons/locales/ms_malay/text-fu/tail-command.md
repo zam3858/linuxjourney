@@ -1,31 +1,31 @@
-# tail
+# ekor
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Similar to the head command, the tail command lets you see the last 10 lines of a file by default.
+Sama seperti arahan kepala, arahan ekor membolehkan anda melihat 10 baris terakhir fail secara lalai.
 
 <pre>$ tail /var/log/syslog</pre>
 
-Along with head you can change the number of lines you want to see.
+Bersama dengan kepala anda boleh menukar bilangan baris yang ingin anda lihat.
 
 <pre>$ tail -n 10 /var/log/syslog</pre>
 
-Another great option you can use is the -f (follow) flag, this will follow the file as it grows. Give it a try and see what happens.
+Satu lagi pilihan hebat yang boleh anda gunakan ialah bendera -f (ikut), ini akan mengikuti fail semasa ia berkembang. Cubalah dan lihat apa yang berlaku.
 
 <pre>$ tail -f /var/log/syslog</pre>
 
-Your syslog file will be continually changing while you interact with your system and using tail -f you can see everything that is getting added to that file.
+Fail syslog anda akan sentiasa berubah semasa anda berinteraksi dengan sistem anda dan menggunakan tail -f anda boleh melihat semua yang ditambahkan pada fail itu.
 
-## Exercise
+## Latihan
 
-Look at the man page of tail and read some of the other commands we didn't discuss.
+Lihat halaman manual ekor dan baca beberapa arahan lain yang tidak kami bincangkan.
 
 <pre>$ man tail</pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the flag used to follow a file in tail?
+Apakah bendera yang digunakan untuk mengikuti fail dalam ekor?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 -f

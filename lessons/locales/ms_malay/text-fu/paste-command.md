@@ -1,8 +1,8 @@
-# paste
+# tampal
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The paste command is similar to the cat command, it merges lines together in a file. Let's create a new file with the following contents:
+Perintah tampal adalah serupa dengan perintah cat, ia menggabungkan baris bersama-sama dalam fail. Mari kita cipta fail baharu dengan kandungan berikut:
 
 <pre>
 sample2.txt
@@ -12,26 +12,26 @@ brown
 fox
 </pre>
 
-Let's combine all these lines into one line:
+Mari kita gabungkan semua baris ini menjadi satu baris:
 
 <pre>$ paste -s sample2.txt</pre>
 
-The default delimiter for paste is TAB, so now there is one line with TABs separating each word.
+Pembatas lalai untuk tampal ialah TAB, jadi sekarang terdapat satu baris dengan TAB memisahkan setiap perkataan.
 
-Let's change this delimiter (-d) to something a little more readable:
+Mari kita tukar pembatas ini (-d) kepada sesuatu yang lebih mudah dibaca:
 
 <pre>$ paste -d ' ' -s sample2.txt</pre>
 
-Now everything should be on one line delimited by spaces.
+Sekarang semuanya sepatutnya berada pada satu baris yang dibatasi oleh ruang.
 
-## Exercise
+## Latihan
 
-Try to paste multiple files together, what happens?
+Cuba tampal beberapa fail bersama-sama, apa yang berlaku?
 
-## Quiz Question
+## Soalan Kuiz
 
-What flag do you use with paste to make everything go on one line?
+Apakah bendera yang anda gunakan dengan tampal untuk membuat semuanya menjadi satu baris?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 -s

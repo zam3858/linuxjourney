@@ -1,39 +1,39 @@
-# Kernel Installation
+# Pemasangan Kernel
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Ok, now that we've got all that boring stuff out of the way, let's talk about actually installing and modifying kernels. You can install multiple kernels on your system, remember in our lesson on the boot process? In our GRUB menu we can choose which kernel to boot to.
+Ok, sekarang kita telah mengetepikan semua perkara yang membosankan itu, mari kita bercakap tentang pemasangan dan pengubahsuaian kernel. Anda boleh memasang beberapa kernel pada sistem anda, ingat dalam pelajaran kita tentang proses but? Dalam menu GRUB kami, kami boleh memilih kernel mana untuk but.
 
-To see what kernel version you have on your system, use the following command:
+Untuk melihat versi kernel yang anda ada pada sistem anda, gunakan arahan berikut:
 
 <pre>$ uname -r
 3.19.0-43-generic</pre>
 
-The uname command prints system information, the -r command will print out all of the kernel release version.
+Perintah uname mencetak maklumat sistem, perintah -r akan mencetak semua versi keluaran kernel.
 
-You can install the Linux kernel in different ways, you can download the source package and compile from source or you can install it using package management tools.
+Anda boleh memasang kernel Linux dengan cara yang berbeza, anda boleh memuat turun pakej sumber dan menyusun dari sumber atau anda boleh memasangnya menggunakan alat pengurusan pakej.
 
 <pre>$ sudo apt install linux-generic-lts-vivid</pre>
 
-and then just reboot into the kernel you installed. Simple right? Kind of, you'll need to also install other linux packages such as the linux-headers, linux-image-generic, etc). You can also specify the version number, so the above command can look like, <b>sudo apt install 3.19.0-43-generic</b>
+dan kemudian but semula ke dalam kernel yang anda pasang. Mudah kan? Agak, anda juga perlu memasang pakej linux lain seperti linux-headers, linux-image-generic, dsb). Anda juga boleh menentukan nombor versi, jadi arahan di atas boleh kelihatan seperti, <b>sudo apt install 3.19.0-43-generic</b>
 
-Alternatively, if you just want the updated kernel version, just use dist-upgrade, it performs upgrades to all package on your system:
+Sebagai alternatif, jika anda hanya mahukan versi kernel yang dikemas kini, gunakan sahaja dist-upgrade, ia melakukan peningkatan pada semua pakej pada sistem anda:
 
 <pre>$ sudo apt dist-upgrade</pre>
 
-There are many different kernel versions, some are used as LTS (long term support), some are the latest and greatest, the compatibility may be very different between kernel versions so you may want to try out different kernels.
+Terdapat banyak versi kernel yang berbeza, sesetengahnya digunakan sebagai LTS (sokongan jangka panjang), sesetengahnya adalah yang terkini dan terhebat, keserasian mungkin sangat berbeza antara versi kernel jadi anda mungkin ingin mencuba kernel yang berbeza.
 
-## Exercise
+## Latihan
 
 <ol>
-<li>Find out what kernel version you have.</li>
-<li>Research the different versions of kernels available</li>
+<li>Ketahui versi kernel yang anda ada.</li>
+<li>Selidik versi kernel yang berbeza yang tersedia</li>
 </ol>
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you see the kernel version of your system?
+Bagaimanakah anda melihat versi kernel sistem anda?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 uname -r

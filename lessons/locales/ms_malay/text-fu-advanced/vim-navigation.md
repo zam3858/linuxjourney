@@ -1,24 +1,24 @@
-# Vim Navigation
+# Navigasi Vim
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Now you may notice, the mouse is nowhere is use here. To navigate a text document in vim, use the following keys:
+Sekarang anda mungkin perasan, tetikus tidak digunakan di sini. Untuk menavigasi dokumen teks dalam vim, gunakan kekunci berikut:
 
 <ul>
-<li>h or the left arrow - will move you left one character</li>
-<li>j or the up arrow - will move you up one line</li>
-<li>k or the down arrow - will move you down one line</li>
-<li>l or the right arrow - will move you right one character</li>
+<li>h atau anak panah kiri - akan menggerakkan anda ke kiri satu aksara</li>
+<li>j atau anak panah atas - akan menggerakkan anda ke atas satu baris</li>
+<li>k atau anak panah bawah - akan menggerakkan anda ke bawah satu baris</li>
+<li>l atau anak panah kanan - akan menggerakkan anda ke kanan satu aksara</li>
 </ul>
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What letter is used to move down?
+Apakah huruf yang digunakan untuk bergerak ke bawah?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 k

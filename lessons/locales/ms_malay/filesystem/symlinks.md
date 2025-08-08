@@ -1,8 +1,8 @@
-# symlinks
+# pautan simbolik
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's use a previous example of inode information:
+Mari kita gunakan contoh maklumat inod sebelum ini:
 
 <pre>
 pete@icebox:~$ ls -li
@@ -10,11 +10,11 @@ pete@icebox:~$ ls -li
 141 drwxr-xr-x 2 pete pete 6 Jan 20 20:01 Documents
 </pre>
 
-You may have noticed that we've been glossing over the third field in the ls command, that field is the link count. The link count is the total number of hard links a file has, well that doesn't mean anything to you right now. So let's discuss links first.
+Anda mungkin perasan bahawa kita telah mengabaikan medan ketiga dalam arahan ls, medan itu ialah kiraan pautan. Kiraan pautan ialah jumlah pautan keras yang dimiliki oleh fail, baik itu tidak bermakna apa-apa kepada anda sekarang. Jadi mari kita bincangkan pautan terlebih dahulu.
 
-<b>Symlinks</b>
+<b>Pautan Simbolik</b>
 
-In the Windows operating system, there are things known as shortcuts, shortcuts are just aliases to other files. If you do something to the original file, you could potentially break the shortcut. In Linux, the equivalent of shortcuts are symbolic links (or soft links or symlinks). Symlinks allow us to link to another file by its filename. Another type of links found in Linux are hardlinks, these are actually another file with a link to an inode. Let's see what I mean in practice starting with symlinks.
+Dalam sistem pengendalian Windows, terdapat perkara yang dikenali sebagai pintasan, pintasan hanyalah alias kepada fail lain. Jika anda melakukan sesuatu pada fail asal, anda berpotensi memecahkan pintasan itu. Dalam Linux, yang setara dengan pintasan ialah pautan simbolik (atau pautan lembut atau pautan simbolik). Pautan simbolik membolehkan kita memaut ke fail lain dengan nama failnya. Jenis pautan lain yang terdapat dalam Linux ialah pautan keras, ini sebenarnya fail lain dengan pautan ke inod. Mari kita lihat apa yang saya maksudkan dalam amalan bermula dengan pautan simbolik.
 
 <pre>
 pete@icebox:~/Desktop$ echo 'myfile' > myfile
@@ -30,11 +30,11 @@ total 12
 93403 lrwxrwxrwx 1 pete pete 6 Jan 21 21:39 myfilelink -> myfile
 </pre>
 
-You can see that I've made a symbolic link named myfilelink that points to myfile. Symbolic links are denoted by ->. Notice how I got a new inode number though, symlinks are just files that point to filenames. When you modify a symlink, the file also gets modified. Inode numbers are unique to filesystems, you can't have two of the same inode number in a single filesystem, meaning you can't reference a file in a different filesystem by its inode number. However, if you use symlinks they do not use inode numbers, they use filenames, so they can be referenced across different filesystems.
+Anda boleh lihat bahawa saya telah membuat pautan simbolik bernama myfilelink yang menunjuk ke myfile. Pautan simbolik ditandakan dengan ->. Perhatikan bagaimana saya mendapat nombor inod baharu, pautan simbolik hanyalah fail yang menunjuk ke nama fail. Apabila anda mengubah suai pautan simbolik, fail itu juga akan diubah suai. Nombor inod adalah unik untuk sistem fail, anda tidak boleh mempunyai dua nombor inod yang sama dalam satu sistem fail, bermakna anda tidak boleh merujuk fail dalam sistem fail yang berbeza dengan nombor inodnya. Walau bagaimanapun, jika anda menggunakan pautan simbolik, ia tidak menggunakan nombor inod, ia menggunakan nama fail, jadi ia boleh dirujuk merentasi sistem fail yang berbeza.
 
-<b>Hardlinks</b>
+<b>Pautan Keras</b>
 
-Let's see an example of a hardlink:
+Mari kita lihat contoh pautan keras:
 
 <pre>
 pete@icebox:~/Desktop$ ln myfile2 myhardlink
@@ -47,30 +47,30 @@ total 16
 93401 -rw-rw-r-- 2 pete pete 8 Jan 21 21:36 myhardlink
 </pre>
 
-A hardlink just creates another file with a link to the same inode. So if I modified the contents of myfile2 or myhardlink, the change would be seen on both, but if I deleted myfile2, the file would still be accessible through myhardlink. Here is where our link count in the ls command comes into play. The link count is the number of hardlinks that an inode has, when you remove a file, it will decrease that link count. The inode only gets deleted when all hardlinks to the inode have been deleted. When you create a file, it's link count is 1 because it is the only file that is pointing to that inode. Unlike symlinks, hardlinks do not span filesystems because inodes are unique to the filesystem.
+Pautan keras hanya mencipta fail lain dengan pautan ke inod yang sama. Jadi jika saya mengubah suai kandungan myfile2 atau myhardlink, perubahan itu akan dilihat pada kedua-duanya, tetapi jika saya memadam myfile2, fail itu masih boleh diakses melalui myhardlink. Di sinilah kiraan pautan kami dalam arahan ls dimainkan. Kiraan pautan ialah bilangan pautan keras yang dimiliki oleh inod, apabila anda mengalih keluar fail, ia akan mengurangkan kiraan pautan itu. Inod hanya dipadam apabila semua pautan keras ke inod telah dipadamkan. Apabila anda mencipta fail, kiraan pautannya ialah 1 kerana ia adalah satu-satunya fail yang menunjuk ke inod itu. Tidak seperti pautan simbolik, pautan keras tidak merentangi sistem fail kerana inod adalah unik untuk sistem fail.
 
-<b>Creating a symlink</b>
+<b>Mencipta pautan simbolik</b>
 
 <pre>
 $ ln -s myfile mylink</pre>
 
-To create a symbolic link, you use the ln command with -s for symbolic and you specific a target file and then a link name.
+Untuk mencipta pautan simbolik, anda menggunakan arahan ln dengan -s untuk simbolik dan anda menentukan fail sasaran dan kemudian nama pautan.
 
-<b>Creating a hardlink</b>
+<b>Mencipta pautan keras</b>
 
 <pre>
 $ ln somefile somelink</pre>
 
-Similar to a symlink creation, except this time you leave out the -s.
+Sama seperti penciptaan pautan simbolik, kecuali kali ini anda meninggalkan -s.
 
-## Exercise
+## Latihan
 
-Play around with making symlinks and hardlinks, delete a couple and see what happens.
+Bermain-main dengan membuat pautan simbolik dan pautan keras, padam beberapa dan lihat apa yang berlaku.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command used to make a symlink?
+Apakah arahan yang digunakan untuk membuat pautan simbolik?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 ln -s

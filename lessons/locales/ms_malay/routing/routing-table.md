@@ -1,8 +1,8 @@
-# Routing Table
+# Jadual Penghalaan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Look at your machine's routing table:
+Lihat jadual penghalaan mesin anda:
 
 <pre>
 pete@icebox:~$ sudo route -n
@@ -12,39 +12,39 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.224.0   0.0.0.0         255.255.255.0   U     1      0        0 eth0
 </pre>
 
-<b>Destination</b>
+<b>Destinasi</b>
 
-In the first field, we have a destination IP address of 192.168.224.0, this says that any packet that tries to go to this network, goes out through my Ethernet cable (eth0). If I was 192.168.224.5 and wanted to get to 192.168.224.7, I would just use the network interface eth0 directly.
+Dalam medan pertama, kami mempunyai alamat IP destinasi 192.168.224.0, ini mengatakan bahawa mana-mana paket yang cuba pergi ke rangkaian ini, keluar melalui kabel Ethernet saya (eth0). Jika saya 192.168.224.5 dan ingin ke 192.168.224.7, saya hanya akan menggunakan antara muka rangkaian eth0 secara terus.
 
-Notice that we have addresses of <b>0.0.0.0</b> this means that no address is specified or it's unknown. So if for example, I wanted to send a packet to IP address 151.123.43.6, our routing table doesn't know where that goes, so it denotes it as 0.0.0.0 and therefore routes our packet to the Gateway.
+Perhatikan bahawa kami mempunyai alamat <b>0.0.0.0</b> ini bermakna tiada alamat yang dinyatakan atau ia tidak diketahui. Jadi jika sebagai contoh, saya ingin menghantar paket ke alamat IP 151.123.43.6, jadual penghalaan kami tidak tahu ke mana ia pergi, jadi ia menandakannya sebagai 0.0.0.0 dan oleh itu menghalakan paket kami ke Get Laluan.
 
-<b>Gateway</b>
+<b>Get Laluan</b>
 
-If we are sending a packet that is not on the same network, it will be sent to this Gateway address. Which is aptly named as being a Gateway to another network.
+Jika kami menghantar paket yang tidak berada pada rangkaian yang sama, ia akan dihantar ke alamat Get Laluan ini. Yang dinamakan dengan tepat sebagai Get Laluan ke rangkaian lain.
 
 <b>Genmask</b>
 
-This is the subnet mask, used to figure out what IP addresses match what destination.
+Ini ialah topeng subnet, digunakan untuk mengetahui alamat IP mana yang sepadan dengan destinasi mana.
 
-<b>Flags</b>
+<b>Bendera</b>
 
 <ul>
-<li>UG - Network is Up and is a Gateway</li>
-<li>U - Network is Up</li>
+<li>UG - Rangkaian sedang Aktif dan merupakan Get Laluan</li>
+<li>U - Rangkaian sedang Aktif</li>
 </ul>
 
 <b>Iface</b>
 
-This is the interface that our packet will be going out of, eth0 usually stands for the first Ethernet device on your system.
+Ini ialah antara muka yang akan dilalui oleh paket kami, eth0 biasanya bermaksud peranti Ethernet pertama pada sistem anda.
 
-## Exercise
+## Latihan
 
-Look at your routing table and see where your packets can go.
+Lihat jadual penghalaan anda dan lihat ke mana paket anda boleh pergi.
 
-## Quiz Question
+## Soalan Kuiz
 
-Where are packets routed to if our routing table doesn't know?
+Ke manakah paket dihalakan jika jadual penghalaan kami tidak tahu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-Gateway
+Get Laluan

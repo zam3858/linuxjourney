@@ -1,32 +1,32 @@
-# System Logging
+# Pengelogan Sistem
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The services, kernel, daemons, etc on your system are constantly doing something, this data is actually sent to be saved on your system in the form of logs. This allows us to have a human readable journal of the events that are happening on our system. This data is usually kept in the /var directory, the /var directory is where we keep our variable data, such as logs!
+Perkhidmatan, kernel, daemon, dsb pada sistem anda sentiasa melakukan sesuatu, data ini sebenarnya dihantar untuk disimpan pada sistem anda dalam bentuk log. Ini membolehkan kita mempunyai jurnal peristiwa yang boleh dibaca manusia yang berlaku pada sistem kita. Data ini biasanya disimpan dalam direktori /var, direktori /var ialah tempat kita menyimpan data pembolehubah kita, seperti log!
 
-How are these messages even getting received on your system? There is a service called syslog that sends this information to the system logger.
+Bagaimanakah mesej ini diterima pada sistem anda? Terdapat perkhidmatan yang dipanggil syslog yang menghantar maklumat ini kepada pencatat sistem.
 
-Syslog actually contains many components, one of the important ones is a daemon running called syslogd (newer Linux distributions use rsyslogd), that waits for event messages to occur and filter the ones it wants to know about, and depending on what it's supposed to do with that message, it will send it to a file, your console or do nothing with it.
+Syslog sebenarnya mengandungi banyak komponen, salah satu yang penting ialah daemon yang berjalan dipanggil syslogd (distribusi Linux yang lebih baharu menggunakan rsyslogd), yang menunggu mesej peristiwa berlaku dan menapis yang ingin diketahuinya, dan bergantung pada apa yang sepatutnya dilakukan dengan mesej itu, ia akan menghantarnya ke fail, konsol anda atau tidak melakukan apa-apa dengannya.
 
-You would think that this system logger is the centralized place to manage logs, but unfortunately it's not. You'll see many applications that write their own logging rules and generate different log files, however in general the format of logs should include a timestamp and the event details.
+Anda mungkin fikir bahawa pencatat sistem ini adalah tempat terpusat untuk mengurus log, tetapi malangnya tidak. Anda akan melihat banyak aplikasi yang menulis peraturan pengelogan mereka sendiri dan menjana fail log yang berbeza, walau bagaimanapun secara amnya format log harus menyertakan cap masa dan butiran peristiwa.
 
-Here is an example of a line from syslog:
+Berikut ialah contoh baris daripada syslog:
 
 <pre>
 pete@icebox:~$ less /var/log/syslog
 Jan 27 07:41:32 icebox anacron[4650]: Job `cron.weekly' started
 </pre>
 
-Here we can see that at Jan 27 07:41:32 our cron service ran the cron.weekly job. You can view all the event messages that syslog collects with in the /var/log/syslog file.
+Di sini kita dapat melihat bahawa pada 27 Jan 07:41:32 perkhidmatan cron kami menjalankan kerja cron.weekly. Anda boleh melihat semua mesej peristiwa yang dikumpulkan oleh syslog dalam fail /var/log/syslog.
 
-## Exercise
+## Latihan
 
-Look at your /var/log/syslog file and see what else is happening on your machine.
+Lihat fail /var/log/syslog anda dan lihat apa lagi yang berlaku pada mesin anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the daemon that manages log on newer Linux systems?
+Apakah daemon yang mengurus log pada sistem Linux yang lebih baharu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 rsyslogd

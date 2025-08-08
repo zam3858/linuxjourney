@@ -1,33 +1,33 @@
-# Disk Partitioning
+# Pemetakan Cakera
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's do some practical stuff with filesytems by working through the process on a USB drive. If you don't have one, no worries, you can still follow along these next couple of lessons.
+Mari kita lakukan beberapa perkara praktikal dengan sistem fail dengan melalui proses pada pemacu USB. Jika anda tidak mempunyainya, jangan risau, anda masih boleh mengikuti beberapa pelajaran seterusnya.
 
-First we'll need to partition our disk. There are many tools available to do this:
+Mula-mula kita perlu memetakan cakera kita. Terdapat banyak alat yang tersedia untuk melakukan ini:
 
 <ul>
-<li>fdisk - basic command-line partitioning tool, it does not support GPT</li>
-<li>parted - this is a command line tool that supports both MBR and GPT partitioning</li>
-<li>gparted - this is the GUI version of parted</li>
-<li>gdisk - fdisk, but it does not support MBR only GPT</li>
+<li>fdisk - alat pemetakan baris perintah asas, ia tidak menyokong GPT</li>
+<li>parted - ini ialah alat baris perintah yang menyokong pemetakan MBR dan GPT</li>
+<li>gparted - ini ialah versi GUI parted</li>
+<li>gdisk - fdisk, tetapi ia tidak menyokong MBR sahaja GPT</li>
 </ul>
 
-Let's use parted to do our partitioning. Let's say I connect the USB device and we see the device name is /dev/sdb2.
+Mari kita gunakan parted untuk melakukan pemetakan kita. Katakan saya menyambungkan peranti USB dan kita melihat nama peranti ialah /dev/sdb2.
 
-<b>Launch parted</b>
+<b>Lancarkan parted</b>
 
 <pre>$ sudo parted</pre>
 
-You'll be entered in the parted tool, here you can run commands to partition your device.
+Anda akan dimasukkan ke dalam alat parted, di sini anda boleh menjalankan arahan untuk memetakan peranti anda.
 
-<b>Select the device</b>
+<b>Pilih peranti</b>
 
-<pre>select /dev/sdb2</pre>
+<pre>pilih /dev/sdb2</pre>
 
-To select the device you'll be working with, select it by its device name.
+Untuk memilih peranti yang akan anda gunakan, pilihnya dengan nama perantinya.
 
-<b>View current partition table</b>
+<b>Lihat jadual partition semasa</b>
 
 <pre>
 (parted) print
@@ -43,32 +43,32 @@ Number  Start   End     Size    Type      File system     Flags
  6      7381MB  21.5GB  14.1GB  logical   xfs
 </pre>
 
-Here you will see the available partitions on the device. The <b>start</b> and <b>end</b> points are where the partitions take up space on the hard drive, you'll want to find a good start and end location for your partitions.
+Di sini anda akan melihat partition yang tersedia pada peranti. Titik <b>mula</b> dan <b>akhir</b> ialah tempat partition mengambil ruang pada cakera keras, anda perlu mencari lokasi mula dan akhir yang baik untuk partition anda.
 
-<b>Partition the device</b>
+<b>Petakan peranti</b>
 
 <pre>mkpart primary 123 4567</pre>
 
-Now just choose a start and end point and make the partition, you'll need to specify the type of partition depending on what table you used.
+Sekarang pilih sahaja titik mula dan akhir dan buat partition, anda perlu menentukan jenis partition bergantung pada jadual yang anda gunakan.
 
-<b>Resize a partition</b>
+<b>Ubah saiz partition</b>
 
-You can also resize a partition if you don't have any space.
+Anda juga boleh mengubah saiz partition jika anda tidak mempunyai ruang.
 
-<pre>resize 2 1245 3456</pre>
+<pre>ubah saiz 2 1245 3456</pre>
 
-Select the partition number and then the start and end points of where you want to resize it to.
+Pilih nombor partition dan kemudian titik mula dan akhir tempat anda mahu mengubah saiznya.
 
-Parted is a very powerful tool and you should be careful when partitioning your disks.
+Parted ialah alat yang sangat berkuasa dan anda harus berhati-hati semasa memetakan cakera anda.
 
-## Exercise
+## Latihan
 
-Partition a USB drive with half of the drive as ext4 and the other half as free space.
+Petakan pemacu USB dengan separuh pemacu sebagai ext4 dan separuh lagi sebagai ruang kosong.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the parted command to make a partition?
+Apakah arahan parted untuk membuat partition?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 mkpart

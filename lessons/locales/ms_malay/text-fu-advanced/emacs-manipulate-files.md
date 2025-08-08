@@ -1,35 +1,35 @@
-# Emacs Manipulate Files
+# Memanipulasi Fail Emacs
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In a lot (if not all) of Emacs documentation, you will see the syntax C-[letter]. This just means hit the Ctrl-letter, but for shorthand purposes, we'll call Ctrl with C. If you see syntax such as M-[letter], that means use the Meta key, most commonly the Alt key.
+Dalam banyak (jika tidak semua) dokumentasi Emacs, anda akan melihat sintaks C-[huruf]. Ini hanya bermaksud tekan Ctrl-huruf, tetapi untuk tujuan singkatan, kita akan panggil Ctrl dengan C. Jika anda melihat sintaks seperti M-[huruf], itu bermakna gunakan kekunci Meta, yang paling biasa ialah kekunci Alt.
 
-<b>Saving files</b>
+<b>Menyimpan fail</b>
 
 <pre>
-C-x C-s - Save a file
-C-x C-w - Save file as
-C-x s - Save all
+C-x C-s - Simpan fail
+C-x C-w - Simpan fail sebagai
+C-x s - Simpan semua
 </pre>
 
-The save file options will prompt you if you want to save each file.
+Pilihan simpan fail akan menggesa anda jika anda ingin menyimpan setiap fail.
 
-<b>Opening a file</b>
+<b>Membuka fail</b>
 
 <pre>
 C-x C-f
 </pre>
 
-This will prompt you to type a filename to open. If you do not have a file that already exists, it will create a new file. You can load up a directory as well.
+Ini akan menggesa anda untuk menaip nama fail untuk dibuka. Jika anda tidak mempunyai fail yang sedia ada, ia akan mencipta fail baharu. Anda juga boleh memuatkan direktori.
 
-## Exercise
+## Latihan
 
-Play around with opening files and saving files.
+Bermain-main dengan membuka fail dan menyimpan fail.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to open a file?
+Apakah arahan yang digunakan untuk membuka fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 C-x C-f

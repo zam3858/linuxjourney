@@ -1,33 +1,33 @@
 # NAT
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We've brought up NAT (network address translation) before but didn't touch upon it, when we are working on our network, does that mean that the Internet can see our IP address? Not quite.
+Kami telah membangkitkan NAT (terjemahan alamat rangkaian) sebelum ini tetapi tidak menyentuhnya, apabila kami bekerja pada rangkaian kami, adakah itu bermakna Internet dapat melihat alamat IP kami? Tidak begitu.
 
-NAT makes a device like our router act as an intermediary between the Internet and private network. So only a single, unique IP address is required to represent an entire group of computers.
+NAT menjadikan peranti seperti penghala kami bertindak sebagai perantara antara Internet dan rangkaian peribadi. Jadi hanya satu alamat IP yang unik diperlukan untuk mewakili keseluruhan kumpulan komputer.
 
-Think of NAT is like a receptionist in a large office, if someone wants to contact you, they only know the number to the whole office, the receptionist would then have to look for your extension number and forward the call to you.
+Fikirkan NAT seperti penyambut tetamu di pejabat besar, jika seseorang ingin menghubungi anda, mereka hanya tahu nombor ke seluruh pejabat, penyambut tetamu kemudiannya perlu mencari nombor sambungan anda dan memajukan panggilan kepada anda.
 
-<b>How does it work?</b>
+<b>Bagaimanakah ia berfungsi?</b>
 
-A simple case would look like this:
+Kes yang mudah akan kelihatan seperti ini:
 
 <ol>
-<li>Patty wants to connect to www.google.com, so her machine sends this request through the router</li>
-<li>The router takes that request and opens its own connection to google.com, then it sends Patty's request once it makes a connection</li>
-<li>The router is the intermediary between Patty and www.google.com. Google doesn't know about Patty instead all it can see is the router.</li>
+<li>Patty ingin menyambung ke www.google.com, jadi mesinnya menghantar permintaan ini melalui penghala</li>
+<li>Penghala mengambil permintaan itu dan membuka sambungannya sendiri ke google.com, kemudian ia menghantar permintaan Patty sebaik sahaja ia membuat sambungan</li>
+<li>Penghala ialah perantara antara Patty dan www.google.com. Google tidak tahu tentang Patty sebaliknya semua yang dapat dilihatnya ialah penghala.</li>
 </ol>
 
-NAT and packet routing in general can get pretty ugly, but we won't dive into the specifics.
+NAT dan penghalaan paket secara amnya boleh menjadi agak hodoh, tetapi kami tidak akan menyelami secara spesifik.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is used to represent a single private address to the Internet?
+Apakah yang digunakan untuk mewakili alamat peribadi tunggal ke Internet?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 NAT

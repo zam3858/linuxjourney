@@ -1,32 +1,32 @@
-# What is a router?
+# Apakah itu penghala?
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We've used this term router before, hopefully you know what one is, since you probably have one in your home. A router enables machines on a network to communicate with each other as well as other networks. On a typical router, you will have LAN ports, that allow your machines to connect to the same local area network and you will also have an Internet uplink port that connects you to the Internet, sometimes you'll see this port being labelled as WAN, because it is essentially connecting you to a wider network. When we do any sort of networking activity, it has to go through the router. The router decides where our network packets go and which ones come in. It routes our packets between multiple networks to get from it's source host to it's destination host.
+Kami telah menggunakan istilah penghala ini sebelum ini, semoga anda tahu apa itu, kerana anda mungkin mempunyainya di rumah anda. Penghala membolehkan mesin pada rangkaian berkomunikasi antara satu sama lain serta rangkaian lain. Pada penghala biasa, anda akan mempunyai port LAN, yang membolehkan mesin anda menyambung ke rangkaian kawasan tempatan yang sama dan anda juga akan mempunyai port pautan naik Internet yang menyambungkan anda ke Internet, kadang-kadang anda akan melihat port ini dilabelkan sebagai WAN, kerana ia pada asasnya menyambungkan anda ke rangkaian yang lebih luas. Apabila kita melakukan sebarang aktiviti rangkaian, ia perlu melalui penghala. Penghala memutuskan ke mana paket rangkaian kami pergi dan yang mana masuk. Ia menghalakan paket kami antara beberapa rangkaian untuk sampai dari hos sumbernya ke hos destinasinya.
 
-<b>How does a router work?</b>
+<b>Bagaimanakah penghala berfungsi?</b>
 
-Think about routing the same way as mail delivery, we have an address we want to send a letter to, when we send it off to the post office, they get the letter and see, oh this is going to California, I'll put it on the truck going to California (I honestly have no idea how the postal system works). The letter then gets sent to San Francisco, inside San Francisco there are different zip codes, and then in those zip codes there are smaller address codes, until finally someone is able to deliver your letter to the address you wanted. On the other hand, if you already lived in San Francisco and in the same zipcode, the mail deliverer will probably know exactly where the letter has to go to without handing it off to anyone else.
+Fikirkan tentang penghalaan dengan cara yang sama seperti penghantaran mel, kami mempunyai alamat yang kami ingin hantar surat, apabila kami menghantarnya ke pejabat pos, mereka mendapat surat itu dan melihat, oh ini akan ke California, saya akan meletakkannya di atas trak yang akan ke California (sejujurnya saya tidak tahu bagaimana sistem pos berfungsi). Surat itu kemudiannya dihantar ke San Francisco, di dalam San Francisco terdapat kod pos yang berbeza, dan kemudian dalam kod pos tersebut terdapat kod alamat yang lebih kecil, sehingga akhirnya seseorang dapat menghantar surat anda ke alamat yang anda mahu. Sebaliknya, jika anda sudah tinggal di San Francisco dan dalam kod pos yang sama, penghantar mel mungkin akan tahu dengan tepat ke mana surat itu perlu pergi tanpa menyerahkannya kepada orang lain.
 
-When we route packets, they use similar address "routes", such as to get to network A, send these packets to network B. When we don't have a route set for that, we have a default route that our packets will use. These routes are set on a routing table that our system uses to navigate us across networks.
+Apabila kita menghalakan paket, ia menggunakan "laluan" alamat yang serupa, seperti untuk sampai ke rangkaian A, hantar paket ini ke rangkaian B. Apabila kita tidak mempunyai laluan yang ditetapkan untuk itu, kita mempunyai laluan lalai yang akan digunakan oleh paket kita. Laluan ini ditetapkan pada jadual penghalaan yang digunakan oleh sistem kita untuk menavigasi kita merentasi rangkaian.
 
-<b>Hops</b>
+<b>Lompatan</b>
 
-As packets move across networks, they travel in hops, a hop is how we roughly measure the distance that the packet must travel to get from the source to the destination. Let's say to I have two routers connecting host A to host B, so therefore we say there are two hops between host A and host B. Each hop is a intermediate device like the routers that we must pass through.
+Apabila paket bergerak merentasi rangkaian, ia bergerak dalam lompatan, lompatan ialah cara kita mengukur secara kasar jarak yang perlu dilalui oleh paket untuk sampai dari sumber ke destinasi. Katakan saya mempunyai dua penghala yang menyambungkan hos A ke hos B, jadi oleh itu kita katakan terdapat dua lompatan antara hos A dan hos B. Setiap lompatan ialah peranti perantaraan seperti penghala yang perlu kita lalui.
 
-<b>Understanding the basic difference between Switching, Routing & Flooding?</b>
-Packet SWITCHING is basically receiving, processing and forwarding data to the destination device.
-ROUTING is a process of creating the routing table, so that we can do SWITCHING better.
-Before routing, FLOODING was used. If a router don't know which way to send a packet than every incoming packet is sent through every outgoing link except the one it arrived on.
+<b>Memahami perbezaan asas antara Penukaran, Penghalaan & Banjir?</b>
+PENUKARAN paket pada asasnya menerima, memproses dan memajukan data ke peranti destinasi.
+PENGHALAAN ialah proses mencipta jadual penghalaan, supaya kita boleh melakukan PENUKARAN dengan lebih baik.
+Sebelum penghalaan, BANJIR digunakan. Jika penghala tidak tahu ke mana hendak menghantar paket, maka setiap paket yang masuk dihantar melalui setiap pautan keluar kecuali yang ia tiba.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-How do packets measure distance?
+Bagaimanakah paket mengukur jarak?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-hops
+lompatan

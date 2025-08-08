@@ -1,25 +1,25 @@
-# System Calls
+# Panggilan Sistem
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Remember Britney in the previous lesson? Let's say we want to see her and get some drinks together, how do we get from standing outside in the crowds of people to inside her innermost circle? We would use system calls. System calls are like the VIP passes that get you to a secret side door that leads directly to Britney.
+Ingat Britney dalam pelajaran sebelumnya? Katakan kita ingin menemuinya dan minum bersama, bagaimana kita boleh sampai dari berdiri di luar dalam kerumunan orang ramai ke dalam lingkaran terdalamnya? Kita akan menggunakan panggilan sistem. Panggilan sistem adalah seperti pas VIP yang membawa anda ke pintu sisi rahsia yang menuju terus ke Britney.
 
-System calls (syscall) provide user space processes a way to request the kernel to do something for us. The kernel makes certain services available through the system call API. These services allow us to read or write to a file, modify memory usage, modify our network, etc. The amount of services are fixed, so you can't be adding system calls nilly willy, your system already has a table of what system calls exist and each system call has a unique ID.
+Panggilan sistem (syscall) menyediakan proses ruang pengguna cara untuk meminta kernel melakukan sesuatu untuk kami. Kernel menyediakan perkhidmatan tertentu melalui API panggilan sistem. Perkhidmatan ini membolehkan kami membaca atau menulis ke fail, mengubah suai penggunaan memori, mengubah suai rangkaian kami, dsb. Jumlah perkhidmatan adalah tetap, jadi anda tidak boleh menambah panggilan sistem sewenang-wenangnya, sistem anda sudah mempunyai jadual panggilan sistem yang wujud dan setiap panggilan sistem mempunyai ID yang unik.
 
-I won't get into specifics of system calls, as that will require you to know a bit of C, but the basics is that when you call a program like ls, the code inside this program contains a system call wrapper (so not the actual system call yet). Inside this wrapper it invokes the system call which will execute a trap, this trap then gets caught by the system call handler and then references the system call in the system call table. Let's say we are trying to call the stat() system call, it's identified by a syscall ID and the purpose of the stat() system call is to query the status of a file. Now remember, you were running the ls program in non-privilege mode. So now it sees you're trying to make a syscall, it then switches you over to kernel mode, there it does lots of things but most importantly it looks up your syscall number, finds it in a table based on the syscall ID and then executes the function you wanted to run. Once it's done, it will return back to user mode and your process will receive a return status if it was successful or if it had an error. The inner workings of syscalls get really detailed, I would recommend looking at information online if you want to learn more.
+Saya tidak akan membincangkan secara spesifik panggilan sistem, kerana itu memerlukan anda mengetahui sedikit tentang C, tetapi asasnya ialah apabila anda memanggil program seperti ls, kod di dalam program ini mengandungi pembungkus panggilan sistem (jadi bukan panggilan sistem sebenar lagi). Di dalam pembungkus ini ia memanggil panggilan sistem yang akan melaksanakan perangkap, perangkap ini kemudiannya ditangkap oleh pengendali panggilan sistem dan kemudian merujuk panggilan sistem dalam jadual panggilan sistem. Katakan kita cuba memanggil panggilan sistem stat(), ia dikenal pasti dengan ID syscall dan tujuan panggilan sistem stat() adalah untuk menanyakan status fail. Sekarang ingat, anda menjalankan program ls dalam mod bukan keistimewaan. Jadi sekarang ia melihat anda cuba membuat syscall, ia kemudian menukar anda ke mod kernel, di sana ia melakukan banyak perkara tetapi yang paling penting ia mencari nombor syscall anda, menemuinya dalam jadual berdasarkan ID syscall dan kemudian melaksanakan fungsi yang anda mahu jalankan. Sebaik sahaja ia selesai, ia akan kembali ke mod pengguna dan proses anda akan menerima status pulangan jika ia berjaya atau jika ia mempunyai ralat. Cara kerja dalaman syscall menjadi sangat terperinci, saya akan mengesyorkan mencari maklumat dalam talian jika anda ingin mengetahui lebih lanjut.
 
-You can actually view the system calls that a process makes with the strace command. The strace command is useful for debugging how a program executed.
+Anda sebenarnya boleh melihat panggilan sistem yang dibuat oleh proses dengan arahan strace. Arahan strace berguna untuk menyahpepijat bagaimana program dilaksanakan.
 
 <pre>$ strace ls</pre>
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is used to switch from user mode to kernel mode?
+Apakah yang digunakan untuk beralih dari mod pengguna ke mod kernel?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-system call
+panggilan sistem

@@ -1,10 +1,10 @@
-# Upstart Jobs
+# Kerja Upstart
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Upstart can trigger a lot of events and jobs to run, unfortunately there is no easy way to see where an event or job originated, so you'll have to poke around the job configurations in /etc/init. Most of the time, you won't ever need to look at the Upstart job configuration files, but you will want to control some specific jobs more easily. There are a lot of useful commands you can use in an Upstart system.
+Upstart boleh mencetuskan banyak peristiwa dan kerja untuk dijalankan, malangnya tiada cara mudah untuk melihat dari mana peristiwa atau kerja berasal, jadi anda perlu meneliti konfigurasi kerja dalam /etc/init. Kebanyakan masa, anda tidak akan perlu melihat fail konfigurasi kerja Upstart, tetapi anda akan mahu mengawal beberapa kerja tertentu dengan lebih mudah. Terdapat banyak arahan berguna yang boleh anda gunakan dalam sistem Upstart.
 
-<b>View jobs</b>
+<b>Lihat kerja</b>
 
 <pre>initctl list
 
@@ -13,40 +13,40 @@ console stop/waiting
 ...
 </pre>
 
-You'll see a list of Upstart jobs with different statuses applied to them. In each line, the job name is the first value and the second field (before the /) is actually the goal of the job, the third value (after the /) is the current status. So we see that our shutdown job eventually wants to stop, but it is currently in a state of waiting. The job status and goals will change as you start or stop jobs.
+Anda akan melihat senarai kerja Upstart dengan status yang berbeza dikenakan padanya. Dalam setiap baris, nama kerja ialah nilai pertama dan medan kedua (sebelum /) sebenarnya ialah matlamat kerja, nilai ketiga (selepas /) ialah status semasa. Jadi kita lihat bahawa kerja penutupan kita akhirnya mahu berhenti, tetapi ia sedang dalam keadaan menunggu. Status dan matlamat kerja akan berubah apabila anda memulakan atau menghentikan kerja.
 
-<b>View specific job</b>
+<b>Lihat kerja tertentu</b>
 
 <pre>initctl status networking
 networking start/running
 </pre>
 
-We won't get into the details of how to write an Upstart job configuration, however we already know that jobs are stopped, started and restarted in these configurations. These jobs also emit events, so they can start other jobs. We'll go through the manual commands of the Upstart operation, but if you are curious, you should dig into the .conf files in more depth.
+Kita tidak akan membincangkan butiran cara menulis konfigurasi kerja Upstart, walau bagaimanapun kita sudah tahu bahawa kerja dihentikan, dimulakan dan dimulakan semula dalam konfigurasi ini. Kerja-kerja ini juga mengeluarkan peristiwa, jadi ia boleh memulakan kerja lain. Kami akan melalui arahan manual operasi Upstart, tetapi jika anda ingin tahu, anda harus mendalami fail .conf dengan lebih mendalam.
 
-<b>Manually start a job</b>
+<b>Mulakan kerja secara manual</b>
 
 <pre>$ sudo initctl start networking</pre>
 
-<b>Manually stop a job</b>
+<b>Hentikan kerja secara manual</b>
 
 <pre>$ sudo initctl stop networking</pre>
 
-<b>Manually restart a job</b>
+<b>Mulakan semula kerja secara manual</b>
 
 <pre>$ sudo initctl restart networking</pre>
 
-<b>Manually emit an event</b>
+<b>Keluarkan peristiwa secara manual</b>
 
 <pre>$ sudo initctl emit some_event</pre>
 
-## Exercise
+## Latihan
 
-Observe your list of Upstart jobs, now change the job state with one of the commands we learned today. What do you notice afterwards?
+Perhatikan senarai kerja Upstart anda, sekarang ubah keadaan kerja dengan salah satu arahan yang kita pelajari hari ini. Apa yang anda perhatikan selepas itu?
 
-## Quiz Question
+## Soalan Kuiz
 
-How would I manually restart an Upstart job called peanuts?
+Bagaimanakah saya akan memulakan semula kerja Upstart yang dipanggil kacang secara manual?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 sudo initctl restart peanuts

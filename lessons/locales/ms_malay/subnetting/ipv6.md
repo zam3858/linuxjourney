@@ -1,21 +1,21 @@
 # IPv6
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We've heard the term IPv6 here and there, but what is it? Every device that connects to the Internet gets it's own IP address, well that happens to be a finite number that we are soon approaching in this digital age. IPv6 was created to allow us to connect more hosts to the Internet, it comes with more IP improvements however, it's adoption is quite slow. It isn't meant to replace IPv4, they are meant to complement each other. The two IP protocols are very similar and if you know IPv4 you'll understand IPv6, the major difference is the way the address is written. Here is what a typical IPv6 address looks like:
+Kami telah mendengar istilah IPv6 di sana sini, tetapi apakah itu? Setiap peranti yang menyambung ke Internet mendapat alamat IP sendiri, nah itu kebetulan nombor terhingga yang akan kita dekati dalam zaman digital ini. IPv6 dicipta untuk membolehkan kita menyambungkan lebih banyak hos ke Internet, ia datang dengan lebih banyak penambahbaikan IP walau bagaimanapun, penggunaannya agak perlahan. Ia tidak bertujuan untuk menggantikan IPv4, ia bertujuan untuk saling melengkapi. Kedua-dua protokol IP sangat serupa dan jika anda tahu IPv4 anda akan faham IPv6, perbezaan utama ialah cara alamat ditulis. Berikut ialah rupa alamat IPv6 biasa:
 
 <pre>
 2dde:1235:1256:3:200:f8ed:fe23:59cf
 </pre>
 
-## Exercise
+## Latihan
 
-Check ifconfig to see if you have an IPv6 address listed.
+Semak ifconfig untuk melihat sama ada anda mempunyai alamat IPv6 yang disenaraikan.
 
-## Quiz Question
+## Soalan Kuiz
 
-What IP address is used to help increase the number of hosts that can connect to the Internet?
+Apakah alamat IP yang digunakan untuk membantu meningkatkan bilangan hos yang boleh menyambung ke Internet?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 IPv6

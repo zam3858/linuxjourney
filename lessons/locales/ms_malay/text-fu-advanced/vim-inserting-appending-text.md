@@ -1,12 +1,12 @@
-# Title
+# Memasukkan dan Menambah Teks Vim
 
-## Lesson Content
-
-
-## Exercise
+## Kandungan Pelajaran
 
 
-## Quiz Question
+## Latihan
 
 
-## Quiz Answer
+## Soalan Kuiz
+
+
+## Jawapan Kuiz

@@ -1,21 +1,21 @@
-# Creating Filesystems
+# Mencipta Sistem Fail
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Now that you've actually partitioned a disk, let's create a filesystem!
+Sekarang anda telah benar-benar memetakan cakera, mari kita cipta sistem fail!
 
 <pre>$ sudo mkfs -t ext4 /dev/sdb2</pre>
 
-Simple as that! The <b>mkfs</b> (make filesystem) tool allows us to specify the type of filesystem we want and where we want it. You'll only want to create a filesystem on a newly partitioned disk or if you are repartitioning an old one. You'll most likely leave your filesystem in a corrupted state if you try to create one on top of an existing one.
+Semudah itu! Alat <b>mkfs</b> (make filesystem) membolehkan kita menentukan jenis sistem fail yang kita mahu dan di mana kita mahukannya. Anda hanya perlu mencipta sistem fail pada cakera yang baru dipetakan atau jika anda memetakan semula yang lama. Anda kemungkinan besar akan meninggalkan sistem fail anda dalam keadaan rosak jika anda cuba mencipta satu di atas yang sedia ada.
 
-## Exercise
+## Latihan
 
-Make an ext4 filesystem on the USB drive.
+Buat sistem fail ext4 pada pemacu USB.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to create a filesystem?
+Apakah arahan yang digunakan untuk mencipta sistem fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 mkfs

@@ -1,27 +1,27 @@
-# expand and unexpand
+# kembangkan dan nyahkembangkan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In our lesson on the cut command, we had our sample.txt file that contained a tab. Normally TABs would usually show a noticeable difference but some text files don't show that well enough. Having TABs in a text file may not be the desired spacing you want. To change your TABs to spaces, use the expand command.
+Dalam pelajaran kita mengenai arahan potong, kita mempunyai fail sample.txt kita yang mengandungi tab. Biasanya TAB akan menunjukkan perbezaan yang ketara tetapi sesetengah fail teks tidak menunjukkannya dengan cukup baik. Mempunyai TAB dalam fail teks mungkin bukan jarak yang anda inginkan. Untuk menukar TAB anda kepada ruang, gunakan arahan kembangkan.
 
 <pre>$ expand sample.txt</pre>
 
-The command above will print output with each TAB converted into a group of spaces. To save this output in a file, use output redirection like below.
+Perintah di atas akan mencetak output dengan setiap TAB ditukar kepada sekumpulan ruang. Untuk menyimpan output ini dalam fail, gunakan pengalihan semula output seperti di bawah.
 
 <pre>$ expand sample.txt > result.txt</pre>
 
-Opposite to expand, we can convert back each group of spaces to a TAB with the unexpand command:
+Bertentangan dengan kembangkan, kita boleh menukar kembali setiap kumpulan ruang kepada TAB dengan arahan nyahkembangkan:
 
 <pre>$ unexpand -a result.txt</pre>
 
-## Exercise
+## Latihan
 
-What happens if you just type expand with no file input?
+Apa yang berlaku jika anda hanya menaip kembangkan tanpa input fail?
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to convert TABs to spaces?
+Apakah arahan yang digunakan untuk menukar TAB kepada ruang?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-expand
+kembangkan

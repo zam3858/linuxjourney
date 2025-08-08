@@ -1,21 +1,21 @@
-# Managing Log Files
+# Mengurus Fail Log
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Log files generate lots of data and they store this data on your hard disks, however there are lots of issues with this, for the most part we just want to be able to see newer logs, we also want to manage our disk space efficiently, so how do we do all of this? The answer is with logrotate.
+Fail log menjana banyak data dan ia menyimpan data ini pada cakera keras anda, walau bagaimanapun terdapat banyak isu dengan ini, kebanyakannya kita hanya mahu dapat melihat log yang lebih baharu, kita juga mahu mengurus ruang cakera kita dengan cekap, jadi bagaimana kita melakukan semua ini? Jawapannya adalah dengan logrotate.
 
-The logrotate utility does log management for us. It has a configuration file that allows us to specify how many and what logs to keep, how to compress our logs to save space and more. The logrotate tool is usually run out of cron once a day and the configuration files can be found in /etc/logrotate.d.
+Utiliti logrotate melakukan pengurusan log untuk kami. Ia mempunyai fail konfigurasi yang membolehkan kami menentukan berapa banyak dan log apa yang perlu disimpan, cara memampatkan log kami untuk menjimatkan ruang dan banyak lagi. Alat logrotate biasanya dijalankan dari cron sekali sehari dan fail konfigurasi boleh didapati di /etc/logrotate.d.
 
-There are other logrotating tools you can use to manage your logs, but logrotate is the most common one.
+Terdapat alat putaran log lain yang boleh anda gunakan untuk mengurus log anda, tetapi logrotate adalah yang paling biasa.
 
-## Exercise
+## Latihan
 
-Look at your logrotate configuration file and see how it manages some of your logs.
+Lihat fail konfigurasi logrotate anda dan lihat bagaimana ia mengurus beberapa log anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-What utility is used to manage logs?
+Apakah utiliti yang digunakan untuk mengurus log?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 logrotate

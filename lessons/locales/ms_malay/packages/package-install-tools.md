@@ -1,52 +1,52 @@
-# rpm and dpkg
+# rpm dan dpkg
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Although most of this course is about package management systems (the Batmans of package management), we mustn't forget about the Robins. Although very useful and reliable, they don't come with that sweet batmobile and utility belt.
+Walaupun kebanyakan kursus ini adalah mengenai sistem pengurusan pakej (Batman pengurusan pakej), kita tidak boleh melupakan Robin. Walaupun sangat berguna dan boleh dipercayai, mereka tidak datang dengan batmobile dan tali pinggang utiliti yang manis itu.
 
-Just like .exe is a single executable file, so is .deb and .rpm. You normally wouldn't see these if you use package repositories, but if you directly download packages, you will most likely get them in these popular format. Obviously, they are exclusive to their distributions, .deb for Debian based and .rpm for Red Hat based.
+Sama seperti .exe ialah fail boleh laksana tunggal, begitu juga .deb dan .rpm. Anda biasanya tidak akan melihat ini jika anda menggunakan repositori pakej, tetapi jika anda memuat turun pakej secara terus, kemungkinan besar anda akan mendapatkannya dalam format popular ini. Jelas sekali, ia adalah eksklusif untuk distribusi mereka, .deb untuk berasaskan Debian dan .rpm untuk berasaskan Red Hat.
 
-To install these direct packages, you can use the package management commands: rpm and dpkg. These tools are used to install package files, however they will not install the package dependencies, so if your package had 10 dependencies, you would have to install those packages separately and then their dependencies and so on and so forth. As you can see, that was one of the reasons that brought forth the full blown management systems that we will discuss this later.
+Untuk memasang pakej terus ini, anda boleh menggunakan arahan pengurusan pakej: rpm dan dpkg. Alat ini digunakan untuk memasang fail pakej, walau bagaimanapun ia tidak akan memasang kebergantungan pakej, jadi jika pakej anda mempunyai 10 kebergantungan, anda perlu memasang pakej tersebut secara berasingan dan kemudian kebergantungannya dan seterusnya. Seperti yang anda lihat, itu adalah salah satu sebab yang melahirkan sistem pengurusan penuh yang akan kita bincangkan kemudian.
 
-Keep in mind that there will be countless times when you need to install, query or verify a package with one of these tools, so remember these commands.
+Perlu diingat bahawa akan ada banyak kali apabila anda perlu memasang, menanyakan atau mengesahkan pakej dengan salah satu alat ini, jadi ingatlah arahan ini.
 
-<b>Install a package</b>
+<b>Pasang pakej</b>
 
 <pre>
 Debian: $ dpkg -i some_deb_package.deb
 RPM: $ rpm -i some_rpm_package.rpm
 </pre>
 
-The <b>i</b> stands for install. You can also use the longer format of --install.
+<b>i</b> bermaksud pasang. Anda juga boleh menggunakan format yang lebih panjang --install.
 
-<b>Remove a package</b>
+<b>Alih keluar pakej</b>
 
 <pre>
 Debian: $ dpkg -r some_deb_package.deb
 RPM: $ rpm -e some_rpm_package.rpm
 </pre>
 
-Debian: <b>r</b> for remove
-RPM: <b>e</b> for erase
+Debian: <b>r</b> untuk alih keluar
+RPM: <b>e</b> untuk padam
 
-<b>List installed packages</b>
+<b>Senaraikan pakej yang dipasang</b>
 
 <pre>
 Debian: $ dpkg -l
 RPM: $ rpm -qa
 </pre>
 
-Debian: <b>l</b> for list
-RPM: <b>q</b> for query and <b>a</b> for all
+Debian: <b>l</b> untuk senarai
+RPM: <b>q</b> untuk pertanyaan dan <b>a</b> untuk semua
 
-## Exercise
+## Latihan
 
-Find a program that you want to install on your system like Google Chrome and install it using one of these commands.
+Cari program yang ingin anda pasang pada sistem anda seperti Google Chrome dan pasangkannya menggunakan salah satu arahan ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the package management tool for .deb files?
+Apakah alat pengurusan pakej untuk fail .deb?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 dpkg

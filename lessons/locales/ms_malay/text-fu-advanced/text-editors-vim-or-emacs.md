@@ -1,20 +1,20 @@
-# Text Editors
+# Editor Teks
 
-## Lesson Content
+## Kandungan Pelajaran
 
-If you get a couple of diehard Linux users in a room and ask them what is the best text editor to use, you'll hear a never ending banter about the godliness of either vim or emacs. Don't even try to bring up using a GUI editor if you value your life.
+Jika anda mendapatkan beberapa pengguna Linux tegar dalam satu bilik dan bertanya kepada mereka apakah editor teks terbaik untuk digunakan, anda akan mendengar gurauan yang tidak berkesudahan tentang kehebatan sama ada vim atau emacs. Jangan cuba membawa editor GUI jika anda menghargai hidup anda.
 
-Vim and emacs are popular text editors that are installed by default on most Linux distributions and they both have their pros and cons. If you want to get around your system like a ninja, you'll need to pick up one of these text editors to use. They are essentially coding, word document processing and basically all in one editors.
+Vim dan emacs ialah editor teks popular yang dipasang secara lalai pada kebanyakan distribusi Linux dan kedua-duanya mempunyai kebaikan dan keburukan. Jika anda ingin mengelilingi sistem anda seperti ninja, anda perlu memilih salah satu daripada editor teks ini untuk digunakan. Mereka pada asasnya pengekodan, pemprosesan dokumen perkataan dan pada asasnya semua dalam satu editor.
 
-## Exercise
+## Latihan
 
-Take a little tour of vim and emacs:
+Lakukan lawatan kecil vim dan emacs:
 
 <a href="http://www.vim.org/">Vim</a>
 <a href="https://www.gnu.org/software/emacs/">emacs</a>
 
-## Quiz Question
+## Soalan Kuiz
 
-No questions move along!
+Tiada soalan, teruskan!
 
-## Quiz Answer
+## Jawapan Kuiz

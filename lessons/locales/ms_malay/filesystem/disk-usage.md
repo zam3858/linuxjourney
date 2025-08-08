@@ -1,8 +1,8 @@
-# Disk Usage
+# Penggunaan Cakera
 
-## Lesson Content
+## Kandungan Pelajaran
 
-There are a few tools you can used to see the utilization of your disks:
+Terdapat beberapa alat yang boleh anda gunakan untuk melihat penggunaan cakera anda:
 
 <pre>
 pete@icebox:~$ df -h
@@ -10,24 +10,24 @@ Filesystem     1K-blocks    Used Available Use% Mounted on
 /dev/sda1       6.2G  2.3G  3.6G  40% /
 </pre>
 
-The df command shows you the utilization of your currently mounted filesystems. The -h flag gives you a human readable format. You can see what the device is, and how much capacity is used and available.
+Perintah df menunjukkan kepada anda penggunaan sistem fail yang sedang anda lekapkan. Bendera -h memberikan anda format yang boleh dibaca manusia. Anda boleh melihat peranti itu, dan berapa banyak kapasiti yang digunakan dan tersedia.
 
-Let's say your disk is getting full and you want to know what files or directories are taking up that space, for that you can use the <b>du</b> command.
+Katakan cakera anda semakin penuh dan anda ingin tahu fail atau direktori mana yang menggunakan ruang itu, untuk itu anda boleh menggunakan perintah <b>du</b>.
 
 <pre>$ du -h</pre>
 
-This shows you the disk usage of the current directory you are in, you can take a peek at the root directory with <b>du -h /</b> but that can get a little cluttered.
+Ini menunjukkan kepada anda penggunaan cakera bagi direktori semasa anda berada, anda boleh melihat direktori akar dengan <b>du -h /</b> tetapi itu boleh menjadi sedikit bersepah.
 
-Both of these commands are so similar in syntax it can be hard to remember which one to use, to check how much of your <b>disk</b> is <b>free</b> use df. To check <b>disk usage</b>, use du.
+Kedua-dua arahan ini sangat serupa dalam sintaks sehingga sukar untuk mengingati yang mana satu untuk digunakan, untuk memeriksa berapa banyak <b>cakera</b> anda yang <b>bebas</b> gunakan df. Untuk memeriksa <b>penggunaan cakera</b>, gunakan du.
 
-## Exercise
+## Latihan
 
-Look at your disk usage and free space with both du and df.
+Lihat penggunaan cakera dan ruang kosong anda dengan kedua-dua du dan df.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is use to show how much space is free on your disk?
+Apakah arahan yang digunakan untuk menunjukkan berapa banyak ruang yang bebas pada cakera anda?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 df

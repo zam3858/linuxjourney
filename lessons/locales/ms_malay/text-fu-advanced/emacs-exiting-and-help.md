@@ -1,31 +1,31 @@
-# Emacs Exiting and Help
+# Keluar dan Bantuan Emacs
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>To close out of emacs</b>
+<b>Untuk menutup emacs</b>
 
 <pre>C-x C-c</pre>
 
-If you have any open buffers, it will ask you to save it before closing out of emacs.
+Jika anda mempunyai sebarang penimbal terbuka, ia akan meminta anda untuk menyimpannya sebelum menutup emacs.
 
-<b>Confused?</b>
+<b>Keliru?</b>
 
-<pre>C-h C-h : help menu</pre>
+<pre>C-h C-h : menu bantuan</pre>
 
-<b>Undo</b>
+<b>Buat asal</b>
 
 <pre>C-x u</pre>
 
-As you can see Emacs has more moving parts, so the learning curve is a little steeper. In exchange though, you get a very powerful text editor.
+Seperti yang anda lihat, Emacs mempunyai lebih banyak bahagian yang bergerak, jadi keluk pembelajarannya sedikit lebih curam. Walau bagaimanapun, sebagai balasan anda mendapat editor teks yang sangat berkuasa.
 
-## Exercise
+## Latihan
 
-Visit the Emacs site to learn about more commands. <a href="https://www.gnu.org/software/emacs/">Emacs</a>
+Lawati tapak Emacs untuk mengetahui lebih lanjut mengenai arahan. <a href="https://www.gnu.org/software/emacs/">Emacs</a>
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you access the help menu?
+Bagaimanakah anda mengakses menu bantuan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 C-h C-h

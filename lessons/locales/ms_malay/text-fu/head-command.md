@@ -1,27 +1,27 @@
-# head
+# kepala
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's say we have a very long file, in fact we have many to choose from, go ahead and cat /var/log/syslog. You should see pages upon pages of text. What if I just wanted to see the first couple of lines in this text file? Well we can do that with the head command, by default the head command will show you the first 10 lines in a file.
+Katakan kita mempunyai fail yang sangat panjang, sebenarnya kita mempunyai banyak pilihan, teruskan dan cat /var/log/syslog. Anda akan melihat halaman demi halaman teks. Bagaimana jika saya hanya ingin melihat beberapa baris pertama dalam fail teks ini? Kita boleh melakukannya dengan arahan kepala, secara lalai arahan kepala akan menunjukkan kepada anda 10 baris pertama dalam fail.
 
 <pre>$ head /var/log/syslog</pre>
 
-You can also modify the line count to whatever you choose, let's say I wanted to see the first 15 lines instead.
+Anda juga boleh mengubah suai kiraan baris kepada apa sahaja yang anda pilih, katakan saya ingin melihat 15 baris pertama sebaliknya.
 
 <pre>$ head -n 15 /var/log/syslog</pre>
 
-The -n flag stands for number of lines.
+Bendera -n bermaksud bilangan baris.
 
-## Exercise
+## Latihan
 
-What does the following command do and why?
+Apakah yang dilakukan oleh arahan berikut dan mengapa?
 
 <pre>$ head -c 15 /var/log/syslog</pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What flag would you use to change the number of lines you want to view for the head command?
+Apakah bendera yang akan anda gunakan untuk menukar bilangan baris yang ingin anda lihat untuk arahan kepala?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 -n

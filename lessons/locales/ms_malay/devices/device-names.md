@@ -1,48 +1,48 @@
-# Device Names
+# Nama Peranti
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Here are the most common device names that you will encounter:
+Berikut ialah nama peranti paling biasa yang akan anda temui:
 
-<b>SCSI Devices</b>
+<b>Peranti SCSI</b>
 
-If you have any sort of mass storage on your machine, chances are it is using the SCSI (pronounced "scuzzy") protocol. SCSI stands for Small Computer System Interface, it is a protocol used for allow communication between disks, printers, scanners and other peripherals to your system. You may have heard of SCSI devices which aren't actually in use in modern systems, however our Linux systems correspond SCSI disks with hard disk drives in /dev. They are represented by a prefix of sd (SCSI disk):
+Jika anda mempunyai sebarang jenis storan massa pada mesin anda, kemungkinan besar ia menggunakan protokol SCSI (disebut "scuzzy"). SCSI adalah singkatan untuk Antara Muka Sistem Komputer Kecil, ia adalah protokol yang digunakan untuk membenarkan komunikasi antara cakera, pencetak, pengimbas dan peranti lain ke sistem anda. Anda mungkin pernah mendengar tentang peranti SCSI yang sebenarnya tidak digunakan dalam sistem moden, walau bagaimanapun sistem Linux kami memadankan cakera SCSI dengan pemacu cakera keras dalam /dev. Ia diwakili oleh awalan sd (cakera SCSI):
 
-Common SCSI device files:
-
-<ul>
-<li>/dev/sda - First hard disk</li>
-<li>/dev/sdb - Second hard disk</li>
-<li>/dev/sda3 - Third partition on the first hard disk</li>
-</ul>
-
-<b>Pseudo Devices</b>
-
-As we discussed earlier, pseudo devices aren't really physically connected to your system, most common pseudo devices are character devices:
+Fail peranti SCSI biasa:
 
 <ul>
-<li>/dev/zero - accepts and discards all input, produces a continuous stream of NULL (zero value) bytes</li>
-<li>/dev/null - accepts and discards all input, produces no output</li>
-<li>/dev/random - produces random numbers</li>
+<li>/dev/sda - Cakera keras pertama</li>
+<li>/dev/sdb - Cakera keras kedua</li>
+<li>/dev/sda3 - Partition ketiga pada cakera keras pertama</li>
 </ul>
 
-<b>PATA Devices</b>
+<b>Peranti Pseudo</b>
 
-Sometimes in older systems you may see hard drives being referred to with an hd prefix:
+Seperti yang kita bincangkan sebelum ini, peranti pseudo tidak benar-benar disambungkan secara fizikal ke sistem anda, peranti pseudo yang paling biasa ialah peranti aksara:
 
 <ul>
-<li>/dev/hda - First hard disk</li>
-<li>/dev/hdd2 - Second partition on 4th hard disk</li>
+<li>/dev/zero - menerima dan membuang semua input, menghasilkan strim berterusan bait NULL (nilai sifar)</li>
+<li>/dev/null - menerima dan membuang semua input, tidak menghasilkan output</li>
+<li>/dev/random - menghasilkan nombor rawak</li>
 </ul>
 
-## Exercise
+<b>Peranti PATA</b>
 
-Write to the pseudo devices and see what happens, be careful not to write your disks to those devices!
+Kadang-kadang dalam sistem yang lebih lama anda mungkin melihat pemacu keras dirujuk dengan awalan hd:
 
-## Quiz Question
+<ul>
+<li>/dev/hda - Cakera keras pertama</li>
+<li>/dev/hdd2 - Partition kedua pada cakera keras ke-4</li>
+</ul>
 
-What would commonly be the device name for the first partition on the second SCSI disk?
+## Latihan
 
-## Quiz Answer
+Tulis kepada peranti pseudo dan lihat apa yang berlaku, berhati-hati untuk tidak menulis cakera anda kepada peranti tersebut!
+
+## Soalan Kuiz
+
+Apakah nama peranti yang biasa untuk partition pertama pada cakera SCSI kedua?
+
+## Jawapan Kuiz
 
 sdb1

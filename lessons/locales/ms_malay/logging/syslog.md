@@ -1,10 +1,10 @@
 # syslog
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The syslog service manages and sends logs to the system logger. Rsyslog is an advanced version of syslog, most Linux distributions should be using this new version. The output of all the logs the syslog service collects can be found at /var/log/syslog (every message except auth messages).
+Perkhidmatan syslog mengurus dan menghantar log ke pencatat sistem. Rsyslog ialah versi syslog yang lebih maju, kebanyakan distribusi Linux harus menggunakan versi baharu ini. Output semua log yang dikumpulkan oleh perkhidmatan syslog boleh didapati di /var/log/syslog (setiap mesej kecuali mesej pengesahan).
 
-To find out what files are maintained by our system logger, look at the configuration files in /etc/rsyslog.d:
+Untuk mengetahui fail apa yang diselenggara oleh pencatat sistem kami, lihat fail konfigurasi dalam /etc/rsyslog.d:
 
 <pre>
 pete@icebox:~$ less /etc/rsyslog.d/50-default.conf
@@ -20,24 +20,24 @@ mail.*                          -/var/log/mail.log
 #user.*                         -/var/log/user.log
 </pre>
 
-These rules to log files are denoted by the selector on the left column and the action on the right column. The action tells us where to send the log information, in a file, console, etc. Remember not every application and service uses rsyslog to manage their logs, so if you want to know specifically what is logged you'll have to look inside this directory.
+Peraturan untuk log fail ini ditandakan oleh pemilih pada lajur kiri dan tindakan pada lajur kanan. Tindakan itu memberitahu kami ke mana hendak menghantar maklumat log, dalam fail, konsol, dsb. Ingat tidak setiap aplikasi dan perkhidmatan menggunakan rsyslog untuk mengurus log mereka, jadi jika anda ingin mengetahui secara khusus apa yang dilog, anda perlu melihat di dalam direktori ini.
 
-Let's actually see logging in action, you can manually send a log with the logger command:
+Mari kita lihat pengelogan dalam tindakan, anda boleh menghantar log secara manual dengan arahan logger:
 
 <pre>
 logger -s Hello
 </pre>
 
-Now look inside your /var/log/syslog and you should see this entry in your logs!
+Sekarang lihat di dalam /var/log/syslog anda dan anda akan melihat entri ini dalam log anda!
 
-## Exercise
+## Latihan
 
-Look at your /etc/rsyslog.d configuration file and see what else is being logged via the system logger.
+Lihat fail konfigurasi /etc/rsyslog.d anda dan lihat apa lagi yang dilog melalui pencatat sistem.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command can you use to manually log a message?
+Apakah arahan yang boleh anda gunakan untuk mencatat mesej secara manual?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 logger

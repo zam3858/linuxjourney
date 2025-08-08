@@ -1,48 +1,48 @@
-# System V Overview
+# Gambaran Keseluruhan Sistem V
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The main purpose of init is to start and stop essential processes on the system. There are three major implementations of init in Linux, System V, Upstart and systemd. In this lesson, we're going to go over the most traditional version of init, System V init or Sys V (pronounced as 'System Five').
+Tujuan utama init adalah untuk memulakan dan menghentikan proses penting pada sistem. Terdapat tiga pelaksanaan utama init dalam Linux, Sistem V, Upstart dan systemd. Dalam pelajaran ini, kita akan membincangkan versi init yang paling tradisional, init Sistem V atau Sys V (disebut sebagai 'Sistem Lima').
 
-To find out if you are using the Sys V init implementation, if you have an /etc/inittab file you are most likely running Sys V.
+Untuk mengetahui sama ada anda menggunakan pelaksanaan init Sys V, jika anda mempunyai fail /etc/inittab, kemungkinan besar anda menjalankan Sys V.
 
-Sys V starts and stops processes sequentially, so let's say if you wanted to start up a service named foo-a, well before foo-b can work, you have to make sure foo-a is already running. Sys V does that with scripts, these scripts start and stop services for us, we can write our own scripts or most of the time use the ones that are already built in the operating system and are used to load essential services.
+Sys V memulakan dan menghentikan proses secara berurutan, jadi katakan jika anda ingin memulakan perkhidmatan bernama foo-a, sebelum foo-b boleh berfungsi, anda perlu memastikan foo-a sudah berjalan. Sys V melakukannya dengan skrip, skrip ini memulakan dan menghentikan perkhidmatan untuk kami, kami boleh menulis skrip kami sendiri atau kebanyakannya menggunakan yang sudah dibina dalam sistem pengendalian dan digunakan untuk memuatkan perkhidmatan penting.
 
-The pros of using this implementation of init, is that it's relatively easy to solve dependencies, since you know foo-a comes before foo-b, however performance isn't great because usually one thing is starting or stopping at a time.
+Kelebihan menggunakan pelaksanaan init ini, ialah ia agak mudah untuk menyelesaikan kebergantungan, kerana anda tahu foo-a datang sebelum foo-b, walau bagaimanapun prestasi tidak hebat kerana biasanya satu perkara bermula atau berhenti pada satu masa.
 
-When using Sys V, the state of the machine is defined by runlevels which are set from 0 to 6. These different modes will vary depending on the distribution, but most of the time will look like the following:
+Apabila menggunakan Sys V, keadaan mesin ditakrifkan oleh runlevel yang ditetapkan dari 0 hingga 6. Mod yang berbeza ini akan berbeza-beza bergantung pada pengedaran, tetapi kebanyakannya akan kelihatan seperti berikut:
 
 <ul>
-<li>0: Shutdown</li>
-<li>1: Single User Mode</li>
-<li>2: Multiuser mode without networking</li>
-<li>3: Multiuser mode with networking</li>
-<li>4: Unused</li>
-<li>5: Multiuser mode with networking and GUI</li>
-<li>6: Reboot</li>
+<li>0: Tutup</li>
+<li>1: Mod Pengguna Tunggal</li>
+<li>2: Mod berbilang pengguna tanpa rangkaian</li>
+<li>3: Mod berbilang pengguna dengan rangkaian</li>
+<li>4: Tidak digunakan</li>
+<li>5: Mod berbilang pengguna dengan rangkaian dan GUI</li>
+<li>6: But semula</li>
 </ul>
 
-When your system starts up, it looks to see what runlevel you are in and executes scripts located inside that runlevel configuration. The scripts are located in <b>/etc/rc.d/rc[runlevel number].d/</b> or <b>/etc/init.d</b>. Scripts that start with S(start) or K(kill) will run on startup and shutdown, respectively. The numbers next to these characters are the sequence they run in.
+Apabila sistem anda dimulakan, ia melihat runlevel mana anda berada dan melaksanakan skrip yang terletak di dalam konfigurasi runlevel itu. Skrip terletak di <b>/etc/rc.d/rc[nombor runlevel].d/</b> atau <b>/etc/init.d</b>. Skrip yang bermula dengan S(mula) atau K(bunuh) akan berjalan semasa permulaan dan penutupan, masing-masing. Nombor di sebelah aksara ini ialah urutan ia berjalan.
 
-For example:
+Sebagai contoh:
 
 <pre>
 pete@icebox:/etc/rc.d/rc0.d$ ls
 K10updates  K80openvpn
 </pre>
 
-We see when we switch to runlevel 0 or shutdown mode, our machine will try to run a script to kill the updates services and then openvpn. To find out what runlevel your machine is booting into, you can see the default runlevel in the /etc/inittab file. You can also change your default runlevel in this file as well.
+Kita lihat apabila kita beralih ke runlevel 0 atau mod tutup, mesin kita akan cuba menjalankan skrip untuk membunuh perkhidmatan kemas kini dan kemudian openvpn. Untuk mengetahui runlevel mana mesin anda but, anda boleh melihat runlevel lalai dalam fail /etc/inittab. Anda juga boleh menukar runlevel lalai anda dalam fail ini juga.
 
-One thing to note, System V is slowly getting replaced, maybe not today, or even years from now. However, you may see runlevels come up in other init implementations, this is primarily to support those services that are only started or stopped using System V init scripts.
+Satu perkara yang perlu diberi perhatian, Sistem V perlahan-lahan digantikan, mungkin bukan hari ini, atau bahkan bertahun-tahun dari sekarang. Walau bagaimanapun, anda mungkin melihat runlevel muncul dalam pelaksanaan init lain, ini terutamanya untuk menyokong perkhidmatan yang hanya dimulakan atau dihentikan menggunakan skrip init Sistem V.
 
-## Exercise
+## Latihan
 
-If you are running System V, change the default runlevel of your machine to something else and see what happens.
+Jika anda menjalankan Sistem V, tukar runlevel lalai mesin anda kepada sesuatu yang lain dan lihat apa yang berlaku.
 
-## Quiz Question
+## Soalan Kuiz
 
-What runlevel is usually used for shutdown?
+Runlevel manakah yang biasanya digunakan untuk penutupan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 0

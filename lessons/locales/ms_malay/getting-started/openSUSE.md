@@ -1,27 +1,27 @@
 # openSUSE
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-openSUSE Linux is created by the openSUSE Project. A community that promotes the use of Linux everywhere, working together in an open, transparent and friendly manner as part of the worldwide Free and Open Source Software community. openSUSE is the second oldest still running Linux Distributions and shares the base system with SUSE's award-winning SUSE Linux Enterprise products.
+<b>Gambaran Keseluruhan</b>
+openSUSE Linux dicipta oleh Projek openSUSE. Komuniti yang mempromosikan penggunaan Linux di mana-mana sahaja, bekerjasama secara terbuka, telus dan mesra sebagai sebahagian daripada komuniti Perisian Sumber Terbuka dan Percuma di seluruh dunia. openSUSE ialah Distribusi Linux kedua tertua yang masih berjalan dan berkongsi sistem asas dengan produk SUSE Linux Enterprise yang memenangi anugerah SUSE.
 
-<b>Package Management</b>
-Uses RPM package manager.
+<b>Pengurusan Pakej</b>
+Menggunakan pengurus pakej RPM.
 
-<b>Configurability</b>
-openSUSE is a great choice for a new Linux user. It offers an easy to use graphical installer/administration application (<a href="http://yast.github.io/">YaST</a>) and a tiday base system, easy to tinker with. openSUSE includes everything you need to enjoy the Internet worry free of viruses/spy-ware and to live out your creativity, be it with your photos, videos, music or code.
+<b>Kebolehubahsuaian</b>
+openSUSE ialah pilihan yang bagus untuk pengguna Linux baharu. Ia menawarkan aplikasi pemasang/pentadbiran grafik yang mudah digunakan (<a href="http://yast.github.io/">YaST</a>) dan sistem asas yang kemas, mudah untuk diubah suai. openSUSE merangkumi semua yang anda perlukan untuk menikmati Internet tanpa bimbang tentang virus/perisian intip dan untuk menyerlahkan kreativiti anda, sama ada dengan foto, video, muzik atau kod anda.
 
-<b>Uses</b>
-openSUSE Leap is fully capable of being used on a desktop PC and laptop.
+<b>Kegunaan</b>
+openSUSE Leap mampu digunakan sepenuhnya pada PC desktop dan komputer riba.
 
-## Exercise
+## Latihan
 
-If you're interested in having openSUSE as your operating system, head over to the download page and give it a try: <a href='https://software.opensuse.org/'>software.opensuse.org</a>
+Jika anda berminat untuk mempunyai openSUSE sebagai sistem pengendalian anda, pergi ke halaman muat turun dan cubalah: <a href='https://software.opensuse.org/'>software.opensuse.org</a>
 
-## Quiz Questions
+## Soalan Kuiz
 
-What is the name of openSUSE's Administration/Installation Tool?
+Apakah nama Alat Pentadbiran/Pemasangan openSUSE?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 yast

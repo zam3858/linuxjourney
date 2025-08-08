@@ -1,27 +1,27 @@
 # Arch Linux
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-Arch is a lightweight and flexible Linux distribution driven 100% by the community. Similar to Debian, Arch uses a rolling release model so incremental updates eventually become the Stable release. You really need to get your hands dirty to understand the system and its functions, but in turn you get complete and total control of your system.
+<b>Gambaran Keseluruhan</b>
+Arch ialah distribusi Linux yang ringan dan fleksibel yang dipacu 100% oleh komuniti. Sama seperti Debian, Arch menggunakan model keluaran bergulir jadi kemas kini tambahan akhirnya menjadi keluaran Stabil. Anda benar-benar perlu mengotorkan tangan anda untuk memahami sistem dan fungsinya, tetapi sebagai balasan anda mendapat kawalan penuh dan menyeluruh ke atas sistem anda.
 
-<b>Package Management</b>
-It uses its own package manager, Pacman, to install, update and manage packages.
+<b>Pengurusan Pakej</b>
+Ia menggunakan pengurus pakejnya sendiri, Pacman, untuk memasang, mengemas kini dan mengurus pakej.
 
-<b>Configurability</b>
-If you want a lightweight operating system and really want to understand Linux use Arch! There’s a bit of a learning curve, but for the hardcore Linux users, this is a great choice.
+<b>Kebolehubahsuaian</b>
+Jika anda mahukan sistem pengendalian yang ringan dan benar-benar ingin memahami Linux, gunakan Arch! Terdapat sedikit keluk pembelajaran, tetapi untuk pengguna Linux tegar, ini adalah pilihan yang bagus.
 
-<b>Uses</b>
-Great for desktop and laptop. If you also have a small device such as a Raspberry Pi and need to stick a lightweight OS on it, you can’t go wrong with Arch.
+<b>Kegunaan</b>
+Hebat untuk desktop dan komputer riba. Jika anda juga mempunyai peranti kecil seperti Raspberry Pi dan perlu meletakkan OS yang ringan padanya, anda tidak boleh salah dengan Arch.
 
-## Exercise
+## Latihan
 
-If you're interested in having Arch as your operating system, head over to the installation section and give it a try: <a href='https://www.archlinux.org/'>https://www.archlinux.org/</a>
+Jika anda berminat untuk mempunyai Arch sebagai sistem pengendalian anda, pergi ke bahagian pemasangan dan cubalah: <a href='https://www.archlinux.org/'>https://www.archlinux.org/</a>
 
-## Quiz Questions
+## Soalan Kuiz
 
-What package manager does Arch Linux use?
+Apakah pengurus pakej yang digunakan oleh Arch Linux?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 Pacman

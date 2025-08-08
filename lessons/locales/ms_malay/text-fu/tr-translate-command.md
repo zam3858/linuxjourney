@@ -1,26 +1,26 @@
-# tr (Translate)
+# tr (Terjemah)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The tr (translate) command allows you to translate a set of characters into another set of characters. Let's try an example of translating all lower case characters to uppercase characters.
+Perintah tr (terjemah) membolehkan anda menterjemah satu set aksara kepada set aksara lain. Mari kita cuba contoh menterjemah semua aksara huruf kecil kepada aksara huruf besar.
 
 <pre>$ tr a-z A-Z
 hello
 HELLO</pre>
 
-As you can see we made the ranges of a-z into A-Z and all text we type that is lowercase gets uppercased.
+Seperti yang anda lihat, kami membuat julat a-z menjadi A-Z dan semua teks yang kami taip yang berhuruf kecil akan menjadi huruf besar.
 
-## Exercise
+## Latihan
 
-Try the following command what happens?
+Cuba arahan berikut apa yang berlaku?
 
 <pre>$ tr -d ello
 hello</pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to translate characters?
+Apakah arahan yang digunakan untuk menterjemah aksara?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 tr

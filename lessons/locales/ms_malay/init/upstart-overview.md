@@ -1,12 +1,12 @@
-# Upstart Overview
+# Gambaran Keseluruhan Upstart
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Upstart was developed by Canonical, so it was the init implementation on Ubuntu for a while, however on modern Ubuntu installations systemd is now used. Upstart was created to improve upon the issues with Sys V, such as the strict startup processes, blocking of tasks, etc. Upstart's event and job driven model allow it to respond to events as they happen.
+Upstart dibangunkan oleh Canonical, jadi ia adalah pelaksanaan init pada Ubuntu untuk seketika, walau bagaimanapun pada pemasangan Ubuntu moden systemd kini digunakan. Upstart dicipta untuk memperbaiki isu dengan Sys V, seperti proses permulaan yang ketat, penyekatan tugas, dsb. Model pacuan peristiwa dan kerja Upstart membolehkannya bertindak balas terhadap peristiwa semasa ia berlaku.
 
-To find out if you are using Upstart, if you have a /usr/share/upstart directory that's a pretty good indicator.
+Untuk mengetahui sama ada anda menggunakan Upstart, jika anda mempunyai direktori /usr/share/upstart itu adalah penunjuk yang cukup baik.
 
-Jobs are the actions that Upstart performs and events are messages that are received from other processes to trigger jobs. To see a list of jobs and their configuration:
+Kerja ialah tindakan yang dilakukan oleh Upstart dan peristiwa ialah mesej yang diterima daripada proses lain untuk mencetuskan kerja. Untuk melihat senarai kerja dan konfigurasinya:
 
 <pre>
 pete@icebox:~$ ls /etc/init
@@ -17,33 +17,33 @@ alsa-store.conf              network-interface.conf
 anacron.conf                 network-interface-container.conf
 </pre>
 
-Inside these job configurations, it'll include information on how to start jobs and when to start jobs.
+Di dalam konfigurasi kerja ini, ia akan menyertakan maklumat tentang cara memulakan kerja dan bila untuk memulakan kerja.
 
-For example, in the networking.conf file, it could say something as simple as:
+Sebagai contoh, dalam fail networking.conf, ia boleh mengatakan sesuatu yang semudah:
 <pre>
 start on runlevel [235]
 stop on runlevel [0]
 </pre>
 
-This means that it will start setting up networking on runlevel 2, 3 or 5 and will stop networking on runlevel 0. There are many ways to write the configuration file and you'll discover that when you look at the different job configurations available.
+Ini bermakna ia akan mula menyediakan rangkaian pada runlevel 2, 3 atau 5 dan akan menghentikan rangkaian pada runlevel 0. Terdapat banyak cara untuk menulis fail konfigurasi dan anda akan menemuinya apabila anda melihat konfigurasi kerja yang berbeza yang tersedia.
 
-The way that Upstart works is that:
+Cara Upstart berfungsi ialah:
 
 <ol>
-<li>First, it loads up the job configurations from /etc/init</li>
-<li>Once a startup event occurs, it will run jobs triggered by that event.</li>
-<li>These jobs will make new events and then those events will trigger more jobs</li>
-<li>Upstart continues to do this until it completes all the necessary jobs</li>
+<li>Mula-mula, ia memuatkan konfigurasi kerja dari /etc/init</li>
+<li>Sebaik sahaja peristiwa permulaan berlaku, ia akan menjalankan kerja yang dicetuskan oleh peristiwa itu.</li>
+<li>Kerja-kerja ini akan membuat peristiwa baharu dan kemudian peristiwa itu akan mencetuskan lebih banyak kerja</li>
+<li>Upstart terus melakukan ini sehingga ia melengkapkan semua kerja yang diperlukan</li>
 </ol>
 
-## Exercise
+## Latihan
 
-If you are running Upstart, see if you can make sense of the job configurations in /etc/init.
+Jika anda menjalankan Upstart, lihat jika anda boleh memahami konfigurasi kerja dalam /etc/init.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the init implementation that is used by Ubuntu?
+Apakah pelaksanaan init yang digunakan oleh Ubuntu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 upstart

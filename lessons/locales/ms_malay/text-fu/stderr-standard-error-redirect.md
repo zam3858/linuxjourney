@@ -1,49 +1,49 @@
-# stderr (Standard Error)
+# stderr (Ralat Standard)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's try something a little different now, let's try to list the contents of a directory that doesn't exist on your system and redirect the output to the peanuts.txt file again.
+Mari kita cuba sesuatu yang sedikit berbeza sekarang, mari kita cuba senaraikan kandungan direktori yang tidak wujud pada sistem anda dan halakan semula output ke fail peanuts.txt sekali lagi.
 
 <pre>$ ls /fake/directory > peanuts.txt </pre>
 
-What you should see is:
+Apa yang anda akan lihat ialah:
 
 <pre>ls: cannot access /fake/directory: No such file or directory</pre>
 
-Now you're probably thinking, shouldn't that message have been sent to the file? There is actually another I/O stream in play here called standard error (stderr). By default, stderr sends its output to the screen as well, it's a completely different stream than stdout. So you'll need to redirect its output a different way.
+Sekarang anda mungkin berfikir, bukankah mesej itu sepatutnya dihantar ke fail? Sebenarnya terdapat satu lagi strim I/O yang dimainkan di sini yang dipanggil ralat standard (stderr). Secara lalai, stderr juga menghantar outputnya ke skrin, ia adalah strim yang sama sekali berbeza daripada stdout. Jadi anda perlu menghalakan semula outputnya dengan cara yang berbeza.
 
-Unfortunately the redirector is not as nice as using <b>&lt;</b> or <b>&gt;</b> but it's pretty close. We will have to use file descriptors. A file descriptor is a non-negative number that is used to access a file or stream. We will go in depth about this later, but for now know that the file descriptor for stdin, stdout and stderr is 0, 1, and 2 respectively.
+Malangnya pengalih hala tidak sebagus menggunakan <b>&lt;</b> atau <b>&gt;</b> tetapi ia agak hampir. Kita perlu menggunakan deskriptor fail. Deskriptor fail ialah nombor bukan negatif yang digunakan untuk mengakses fail atau strim. Kita akan membincangkan secara mendalam tentang ini kemudian, tetapi buat masa ini ketahuilah bahawa deskriptor fail untuk stdin, stdout dan stderr masing-masing ialah 0, 1, dan 2.
 
-So now if we want to redirect our stderr to the file we can do this:
+Jadi sekarang jika kita mahu menghalakan semula stderr kita ke fail, kita boleh melakukan ini:
 
 <pre>$ ls /fake/directory 2> peanuts.txt</pre>
 
-You should see just the stderr messages in peanuts.txt.
+Anda akan melihat hanya mesej stderr dalam peanuts.txt.
 
-Now what if I wanted to see both stderr and stdout in the peanuts.txt file? It's possible to do this with file descriptors as well:
+Sekarang bagaimana jika saya ingin melihat kedua-dua stderr dan stdout dalam fail peanuts.txt? Ia boleh dilakukan dengan menggunakan deskriptor fail juga:
 
 <pre>$ ls /fake/directory > peanuts.txt 2>&1</pre>
 
-This sends the results of ls /fake/directory to the peanuts.txt file and then it redirects stderr to the stdout via 2>&1. The order of operations here matters, 2>&1 sends stderr to whatever stdout is pointing to. In this case stdout is pointing to a file, so 2>&1 also sends stderr to a file. So if you open up that peanuts.txt file you should see both stderr and stdout. In our case, the above command only outputs stderr.
+Ini menghantar hasil ls /fake/directory ke fail peanuts.txt dan kemudian ia menghalakan semula stderr ke stdout melalui 2>&1. Urutan operasi di sini penting, 2>&1 menghantar stderr ke mana sahaja stdout menunjuk. Dalam kes ini stdout menunjuk ke fail, jadi 2>&1 juga menghantar stderr ke fail. Jadi jika anda membuka fail peanuts.txt itu anda akan melihat kedua-dua stderr dan stdout. Dalam kes kami, arahan di atas hanya mengeluarkan stderr.
 
-There is a shorter way to redirect both stdout and stderr to a file:
+Terdapat cara yang lebih pendek untuk menghalakan semula kedua-dua stdout dan stderr ke fail:
 
 <pre>$ ls /fake/directory &> peanuts.txt</pre>
 
-Now what if I don't want any of that cruft and want to get rid of stderr messages completely? Well you can also redirect output to a special file call /dev/null and it will discard any input.
+Sekarang bagaimana jika saya tidak mahu sebarang sampah itu dan ingin menyingkirkan mesej stderr sepenuhnya? Anda juga boleh menghalakan semula output ke fail khas yang dipanggil /dev/null dan ia akan membuang sebarang input.
 
 <pre>$ ls /fake/directory 2> /dev/null</pre>
 
-## Exercise
+## Latihan
 
-What is the following command doing?
+Apakah yang dilakukan oleh arahan berikut?
 
 <pre>$ ls /fake/directory >> /dev/null 2>&1</pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the redirector for stderr?
+Apakah pengalih hala untuk stderr?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 2>

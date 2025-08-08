@@ -1,25 +1,25 @@
-# Privilege Levels
+# Tahap Keistimewaan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The next few lessons get pretty theoretical, so if you're looking for some practical stuff you can skip ahead and come back later.
+Beberapa pelajaran seterusnya menjadi agak teori, jadi jika anda mencari beberapa perkara praktikal, anda boleh melangkau ke hadapan dan kembali kemudian.
 
-Why do we have different abstraction layers for user space and kernel? Why can't you combine both powers into one layer? Well there is a very good reason why these two layers exist separately. They both operate in different modes, the kernel operates in kernel mode and the user space operates in user mode.
+Mengapakah kita mempunyai lapisan abstraksi yang berbeza untuk ruang pengguna dan kernel? Mengapakah anda tidak boleh menggabungkan kedua-dua kuasa menjadi satu lapisan? Terdapat sebab yang sangat baik mengapa kedua-dua lapisan ini wujud secara berasingan. Kedua-duanya beroperasi dalam mod yang berbeza, kernel beroperasi dalam mod kernel dan ruang pengguna beroperasi dalam mod pengguna.
 
-In kernel mode, the kernel has complete access to the hardware, it controls everything. In user space mode, there is a very small amount of safe memory and CPU that you are allowed to access. Basically, when we want to do anything that involves hardware, reading data from our disks, writing data to our disks, controlling our network, etc, it is all done in kernel mode. Why is this necessary? Imagine if your machine was infected with spyware, you wouldn't want it to be able to have direct access to your system's hardware. It can access all your data, your webcam, etc. and that's no good.
+Dalam mod kernel, kernel mempunyai akses lengkap kepada perkakasan, ia mengawal segala-galanya. Dalam mod ruang pengguna, terdapat sejumlah kecil memori dan CPU yang selamat yang anda dibenarkan untuk akses. Pada asasnya, apabila kita ingin melakukan apa sahaja yang melibatkan perkakasan, membaca data dari cakera kita, menulis data ke cakera kita, mengawal rangkaian kita, dsb, semuanya dilakukan dalam mod kernel. Mengapakah ini perlu? Bayangkan jika mesin anda dijangkiti perisian intip, anda tidak mahu ia dapat mempunyai akses terus ke perkakasan sistem anda. Ia boleh mengakses semua data anda, kamera web anda, dsb. dan itu tidak baik.
 
-These different modes are called privilege levels (aptly named for the levels of privilege you get) and are often described as protection rings. To make this picture easier to paint, let's say you find out that Britney Spears is in town at your local klerb, she's protected by her groupies, then her personal bodyguards, then the bouncer outside the klerb. You want to get her autograph (because why not?), but you can't get to her because she is heavily protected. The rings work the same way, the innermost ring corresponds to the highest privilege level. There are two main levels or modes in an x86 computer architecture. Ring #3 is the privilege that user mode applications run in, Ring #0 is the privilege that the kernel runs in. Ring #0 can execute any system instruction and is given full trust. So now that we know how those privilege levels work, how are we able to write anything to our hardware? Won't we always be in a different mode than the kernel?
+Mod yang berbeza ini dipanggil tahap keistimewaan (dinamakan dengan tepat untuk tahap keistimewaan yang anda dapat) dan sering digambarkan sebagai cincin perlindungan. Untuk menjadikan gambaran ini lebih mudah untuk dilukis, katakan anda mengetahui bahawa Britney Spears berada di bandar di kelab tempatan anda, dia dilindungi oleh peminatnya, kemudian pengawal peribadinya, kemudian penjaga pintu di luar kelab. Anda ingin mendapatkan autografnya (kerana mengapa tidak?), tetapi anda tidak dapat menemuinya kerana dia sangat dilindungi. Cincin berfungsi dengan cara yang sama, cincin paling dalam sepadan dengan tahap keistimewaan tertinggi. Terdapat dua tahap atau mod utama dalam seni bina komputer x86. Cincin #3 ialah keistimewaan yang dijalankan oleh aplikasi mod pengguna, Cincin #0 ialah keistimewaan yang dijalankan oleh kernel. Cincin #0 boleh melaksanakan sebarang arahan sistem dan diberi kepercayaan penuh. Jadi sekarang kita tahu bagaimana tahap keistimewaan itu berfungsi, bagaimana kita boleh menulis apa sahaja pada perkakasan kita? Bukankah kita akan sentiasa berada dalam mod yang berbeza daripada kernel?
 
-The answer is with system calls, system calls allow us to perform a privileged instruction in kernel mode and then switch back to user mode.
+Jawabannya adalah dengan panggilan sistem, panggilan sistem membolehkan kita melaksanakan arahan istimewa dalam mod kernel dan kemudian beralih kembali ke mod pengguna.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What ring number has the highest privileges?
+Apakah nombor cincin yang mempunyai keistimewaan tertinggi?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 0

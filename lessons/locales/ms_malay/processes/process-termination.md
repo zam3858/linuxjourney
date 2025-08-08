@@ -1,29 +1,29 @@
-# Process Termination
+# Penamatan Proses
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Now that we know what goes on when a process gets created, what is happening when we don't need it anymore? Be forewarned, sometimes Linux can get a little dark...
+Sekarang kita tahu apa yang berlaku apabila proses dicipta, apa yang berlaku apabila kita tidak memerlukannya lagi? Berhati-hatilah, kadang-kadang Linux boleh menjadi sedikit gelap...
 
-A process can exit using the _exit system call, this will free up the resources that process was using for reallocation. So when a process is ready to terminate, it lets the kernel know why it's terminating with something called a termination status. Most commonly a status of 0 means that the process succeeded. However, that's not enough to completely terminate a process. The parent process has to acknowledge the termination of the child process by using the wait system call and what this does is it checks the termination status of the child process. I know it's gruesome to think about, but the wait call is a necessity, after all what parent wouldn't want to know how their child died?
+Proses boleh keluar menggunakan panggilan sistem _exit, ini akan membebaskan sumber yang digunakan oleh proses itu untuk peruntukan semula. Jadi apabila proses sedia untuk ditamatkan, ia memberitahu kernel mengapa ia ditamatkan dengan sesuatu yang dipanggil status penamatan. Paling biasa status 0 bermakna proses itu berjaya. Walau bagaimanapun, itu tidak cukup untuk menamatkan proses sepenuhnya. Proses induk perlu mengakui penamatan proses anak dengan menggunakan panggilan sistem tunggu dan apa yang dilakukannya ialah ia memeriksa status penamatan proses anak. Saya tahu ia mengerikan untuk difikirkan, tetapi panggilan tunggu adalah satu keperluan, lagipun ibu bapa mana yang tidak mahu tahu bagaimana anak mereka meninggal dunia?
 
-There is another way to terminate a process and that involves using signals, which we will discuss soon.
+Terdapat cara lain untuk menamatkan proses dan itu melibatkan penggunaan isyarat, yang akan kita bincangkan tidak lama lagi.
 
-<b>Orphan Processes</b>
+<b>Proses Yatim Piatu</b>
 
-When a parent process dies before a child process, the kernel knows that it's not going to get a wait call, so instead it makes these processes "orphans" and puts them under the care of init (remember mother of all processes). Init will eventually perform the wait system call for these orphans so they can die.
+Apabila proses induk mati sebelum proses anak, kernel tahu bahawa ia tidak akan mendapat panggilan tunggu, jadi sebaliknya ia menjadikan proses ini "yatim piatu" dan meletakkannya di bawah jagaan init (ingat ibu kepada semua proses). Init akhirnya akan melakukan panggilan sistem tunggu untuk anak yatim ini supaya mereka boleh mati.
 
-<b>Zombie Processes</b>
+<b>Proses Zombi</b>
 
-What happens when a child terminates and the parent process hasn't called wait yet? We still want to be able to see how a child process terminated, so even though the child process finished, the kernel turns the child process into a zombie process. The resources the child process used are still freed up for other processes, however there is still an entry in the process table for this zombie. Zombie processes also cannot be killed, since they are technically "dead", so you can't use signals to kill them. Eventually if the parent process calls the wait system call, the zombie will disappear, this is known as "reaping". If the parent doesn't perform a wait call, init will adopt the zombie and automatically perform wait and remove the zombie. It can be a bad thing to have too many zombie processes, since they take up space on the process table, if it fills up it will prevent other processes from running.
+Apa yang berlaku apabila anak ditamatkan dan proses induk belum memanggil tunggu lagi? Kita masih mahu dapat melihat bagaimana proses anak ditamatkan, jadi walaupun proses anak selesai, kernel menukar proses anak menjadi proses zombi. Sumber yang digunakan oleh proses anak masih dibebaskan untuk proses lain, walau bagaimanapun masih terdapat entri dalam jadual proses untuk zombi ini. Proses zombi juga tidak boleh dibunuh, kerana ia secara teknikalnya "mati", jadi anda tidak boleh menggunakan isyarat untuk membunuhnya. Akhirnya jika proses induk memanggil panggilan sistem tunggu, zombi akan hilang, ini dikenali sebagai "menuai". Jika induk tidak melakukan panggilan tunggu, init akan mengambil alih zombi dan secara automatik melakukan tunggu dan mengalih keluar zombi. Ia boleh menjadi perkara yang buruk untuk mempunyai terlalu banyak proses zombi, kerana ia mengambil ruang pada jadual proses, jika ia penuh ia akan menghalang proses lain daripada berjalan.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the most common termination status for a process succeeding?
+Apakah status penamatan yang paling biasa untuk proses yang berjaya?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 0

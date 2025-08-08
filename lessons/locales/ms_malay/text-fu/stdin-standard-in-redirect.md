@@ -1,30 +1,30 @@
-# stdin (Standard In)
+# stdin (Input Standard)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In our previous lesson we learned that we have different stdout streams we can use, such as a file or the screen. Well there are also different standard input (stdin) streams we can use as well. We know that we have stdin from devices like the keyboard, but we can use files, output from other processes and the terminal as well, let's see an example.
+Dalam pelajaran kita sebelum ini kita belajar bahawa kita mempunyai strim stdout yang berbeza yang boleh kita gunakan, seperti fail atau skrin. Terdapat juga strim input standard (stdin) yang berbeza yang boleh kita gunakan juga. Kita tahu bahawa kita mempunyai stdin dari peranti seperti papan kekunci, tetapi kita boleh menggunakan fail, output dari proses lain dan terminal juga, mari kita lihat contoh.
 
-Let's use the peanuts.txt file in the previous lesson for this example, remember it had the text Hello World in it.
+Mari kita gunakan fail peanuts.txt dalam pelajaran sebelumnya untuk contoh ini, ingat ia mempunyai teks Hello World di dalamnya.
 
 <pre>$ cat <b>&lt;</b> peanuts.txt <b>&gt;</b> banana.txt </pre>
 
-Just like we had <b>&gt;</b> for stdout redirection, we can use <b>&lt;</b> for stdin redirection.
+Sama seperti kita mempunyai <b>&gt;</b> untuk pengalihan semula stdout, kita boleh menggunakan <b>&lt;</b> untuk pengalihan semula stdin.
 
-Normally in the cat command, you send a file to it and that file becomes the stdin, in this case, we redirected peanuts.txt to be our stdin. Then the output of cat peanuts.txt which would be Hello World gets redirected to another file called banana.txt.
+Biasanya dalam arahan cat, anda menghantar fail kepadanya dan fail itu menjadi stdin, dalam kes ini, kami menghalakan semula peanuts.txt menjadi stdin kami. Kemudian output cat peanuts.txt yang akan menjadi Hello World dialihkan semula ke fail lain yang dipanggil banana.txt.
 
-## Exercise
+## Latihan
 
-Try out a couple of commands:
+Cuba beberapa arahan:
 <pre>
 $ echo <b>&lt;</b> peanuts.txt <b>&gt;</b> banana.txt
 $ ls <b>&lt;</b> peanuts.txt <b>&gt;</b> banana.txt
 $ pwd <b>&lt;</b> peanuts.txt <b>&gt;</b> banana.txt
 </pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What redirector do you use to redirect stdin?
+Apakah pengalih hala yang anda gunakan untuk menghalakan semula stdin?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 <

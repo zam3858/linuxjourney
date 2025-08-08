@@ -1,28 +1,28 @@
 # NFS
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The most standard network file share for Linux is NFS (Network File System), NFS allows a server to share directories and files with one or more clients over the network.
+Perkongsian fail rangkaian yang paling standard untuk Linux ialah NFS (Network File System), NFS membolehkan pelayan berkongsi direktori dan fail dengan satu atau lebih klien melalui rangkaian.
 
-We won't get into the details of how to create an NFS server as it can get complex, however we will discuss setting up NFS clients.
+Kami tidak akan membincangkan butiran cara membuat pelayan NFS kerana ia boleh menjadi rumit, walau bagaimanapun kami akan membincangkan penyediaan klien NFS.
 
-<b>Setting up NFS client</b>
+<b>Menyediakan klien NFS</b>
 
 <pre>$ sudo service nfsclient start
 $ sudo mount server:/directory /mount_directory</pre>
 
-<b>Automounting</b>
+<b>Pemasangan automatik</b>
 
-Let's say you use the NFS server quite often and you want to keep it permanently mounted, normally you think you'd edit the /etc/fstab file, but you may not always get a connection to the server and that can cause issues on bootup. Instead what you want to do is setup automounting so that you can connect to the NFS server when you need to. This is done with the <b>automount</b> tool or in recent versions of Linux <b>amd</b>. When a file is accessed in a specified directory, automount will look up the remote server and automatically mount it.
+Katakan anda sering menggunakan pelayan NFS dan anda ingin mengekalkannya dilekapkan secara kekal, biasanya anda fikir anda akan mengedit fail /etc/fstab, tetapi anda mungkin tidak sentiasa mendapat sambungan ke pelayan dan itu boleh menyebabkan isu semasa but. Sebaliknya apa yang anda mahu lakukan ialah menyediakan pemasangan automatik supaya anda boleh menyambung ke pelayan NFS apabila anda perlu. Ini dilakukan dengan alat <b>automount</b> atau dalam versi Linux terkini <b>amd</b>. Apabila fail diakses dalam direktori yang ditentukan, automount akan mencari pelayan jauh dan melekapkannya secara automatik.
 
-## Exercise
+## Latihan
 
-Read the manpage for NFS to learn more.
+Baca halaman manual untuk NFS untuk mengetahui lebih lanjut.
 
-## Quiz Question
+## Soalan Kuiz
 
-What tool is used to manage mount points automatically?
+Apakah alat yang digunakan untuk mengurus titik lekap secara automatik?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 automount

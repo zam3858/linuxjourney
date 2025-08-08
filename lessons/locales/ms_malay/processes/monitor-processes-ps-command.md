@@ -1,10 +1,10 @@
-# ps (Processes)
+# ps (Proses)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Processes are the programs that are running on your machine. They are managed by the kernel and each process has an ID associated with it called the <b>process ID (PID).</b> This PID is assigned in the order that processes are created.
+Proses ialah program yang sedang berjalan pada mesin anda. Ia diuruskan oleh kernel dan setiap proses mempunyai ID yang dikaitkan dengannya yang dipanggil <b>ID proses (PID).</b> PID ini diberikan mengikut urutan proses dicipta.
 
-Go ahead and run the ps command to see a list of running processes:
+Teruskan dan jalankan arahan ps untuk melihat senarai proses yang sedang berjalan:
 
 <pre>$ ps
 
@@ -13,52 +13,52 @@ PID        TTY     STAT   TIME          CMD
 51224    pts/4    R+        00:00:00     ps
 </pre>
 
-This shows you a quick snapshot of the current processes:
+Ini menunjukkan kepada anda gambaran ringkas tentang proses semasa:
 
 <ul>
-<li>PID: Process ID</li>
-<li>TTY: Controlling terminal associated with the process (we'll go in detail about this later)</li>
-<li>STAT: Process status code</li>
-<li>TIME: Total CPU usage time</li>
-<li>CMD: Name of executable/command</li>
+<li>PID: ID Proses</li>
+<li>TTY: Terminal kawalan yang dikaitkan dengan proses (kita akan membincangkan secara terperinci tentang ini kemudian)</li>
+<li>STAT: Kod status proses</li>
+<li>TIME: Jumlah masa penggunaan CPU</li>
+<li>CMD: Nama boleh laksana/perintah</li>
 </ul>
 
-If you look at the man page for ps you'll see that there are lots of command options you can pass, they will vary depending on what options you want to use - BSD, GNU or Unix. In my opinion the BSD style is more popular to use, so we're gonna go with that. If you are curious the difference between the styles is the amount of dashes you use and the flags.
+Jika anda melihat halaman manual untuk ps anda akan melihat bahawa terdapat banyak pilihan arahan yang boleh anda lalui, ia akan berbeza-beza bergantung pada pilihan yang ingin anda gunakan - BSD, GNU atau Unix. Pada pendapat saya gaya BSD lebih popular untuk digunakan, jadi kita akan menggunakannya. Jika anda ingin tahu perbezaan antara gaya ialah jumlah sengkang yang anda gunakan dan benderanya.
 
 <pre>$ ps aux</pre>
 
-The <b>a</b> displays all processes running, including the ones being ran by other users. The <b>u</b> shows more details about the processes. And finally the <b>x</b> lists all processes that don't have a TTY associated with it, these programs will show a ? in the TTY field, they are most common in daemon processes that launch as part of the system startup.
+<b>a</b> memaparkan semua proses yang sedang berjalan, termasuk yang dijalankan oleh pengguna lain. <b>u</b> menunjukkan lebih banyak butiran tentang proses. Dan akhirnya <b>x</b> menyenaraikan semua proses yang tidak mempunyai TTY yang dikaitkan dengannya, program ini akan menunjukkan ? dalam medan TTY, ia paling biasa dalam proses daemon yang dilancarkan sebagai sebahagian daripada permulaan sistem.
 
-You'll notice you're seeing a lot more fields now, no need to memorize them all, in a later course on advanced processes, we'll go over some of these again:
+Anda akan perasan anda melihat lebih banyak medan sekarang, tidak perlu menghafal kesemuanya, dalam kursus kemudian mengenai proses lanjutan, kami akan membincangkan beberapa daripadanya sekali lagi:
 
 <ul>
-<li>USER: The effective user (the one whose access we are using)</li>
-<li>PID: Process ID</li>
-<li>%CPU: CPU time used divided by the time the process has been running</li>
-<li>%MEM: Ratio of the process's resident set size to the physical memory on the machine</li>
-<li>VSZ: Virtual memory usage of the entire process</li>
-<li>RSS: Resident set size, the non-swapped physical memory that a task has used</li>
-<li>TTY: Controlling terminal associated with the process</li>
-<li>STAT: Process status code</li>
-<li>START: Start time of the process</li>
-<li>TIME: Total CPU usage time</li>
-<li>COMMAND: Name of executable/command</li>
+<li>USER: Pengguna yang berkesan (yang aksesnya kami gunakan)</li>
+<li>PID: ID Proses</li>
+<li>%CPU: Masa CPU yang digunakan dibahagikan dengan masa proses telah berjalan</li>
+<li>%MEM: Nisbah saiz set pemastautin proses kepada memori fizikal pada mesin</li>
+<li>VSZ: Penggunaan memori maya bagi keseluruhan proses</li>
+<li>RSS: Saiz set pemastautin, memori fizikal yang tidak ditukar yang telah digunakan oleh tugas</li>
+<li>TTY: Terminal kawalan yang dikaitkan dengan proses</li>
+<li>STAT: Kod status proses</li>
+<li>START: Masa mula proses</li>
+<li>TIME: Jumlah masa penggunaan CPU</li>
+<li>COMMAND: Nama boleh laksana/perintah</li>
 </ul>
 
-The ps command can get a little messy to look at, for now the fields we will look at the most are PID, STAT and COMMAND.
+Arahan ps boleh menjadi sedikit kemas untuk dilihat, buat masa ini medan yang akan kita lihat paling banyak ialah PID, STAT dan COMMAND.
 
-Another very useful command is the <b>top</b> command, top gives you real time information about the processes running on your system instead of a snapshot. By default you'll get a refresh every 10 seconds. Top is an extremely useful tool to see what processes are taking up a lot of your resources.
+Satu lagi arahan yang sangat berguna ialah arahan <b>top</b>, top memberikan anda maklumat masa nyata tentang proses yang berjalan pada sistem anda dan bukannya gambar ringkas. Secara lalai anda akan mendapat penyegaran setiap 10 saat. Top ialah alat yang sangat berguna untuk melihat proses mana yang menggunakan banyak sumber anda.
 
 <pre>$ top</pre>
 
-## Exercise
+## Latihan
 
-Use the ps command with different flags and see how the output changes.
+Gunakan arahan ps dengan bendera yang berbeza dan lihat bagaimana output berubah.
 
-## Quiz Question
+## Soalan Kuiz
 
-What ps flag is used to view detailed information about processes?
+Apakah bendera ps yang digunakan untuk melihat maklumat terperinci tentang proses?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 u

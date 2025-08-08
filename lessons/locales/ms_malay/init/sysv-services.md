@@ -1,35 +1,35 @@
-# System V Service
+# Perkhidmatan Sistem V
 
-## Lesson Content
+## Kandungan Pelajaran
 
-There are many command line tools you can use to manage Sys V services.
+Terdapat banyak alat baris perintah yang boleh anda gunakan untuk mengurus perkhidmatan Sys V.
 
-<b>List services</b>
+<b>Senaraikan perkhidmatan</b>
 
 <pre>$ service --status-all</pre>
 
-<b>Start a service</b>
+<b>Mulakan perkhidmatan</b>
 
 <pre>$ sudo service networking start</pre>
 
-<b>Stop a service</b>
+<b>Hentikan perkhidmatan</b>
 
 <pre>$ sudo service networking stop</pre>
 
-<b>Restart a service</b>
+<b>Mulakan semula perkhidmatan</b>
 
 <pre>$ sudo service networking restart</pre>
 
-These commands aren't specific to Sys V init systems, you can use these commands to manage Upstart services as well. Since Linux is trying to move away from the more traditional Sys V init scripts, there are still things in place to help that transition.
+Perintah ini tidak khusus untuk sistem init Sys V, anda boleh menggunakan perintah ini untuk mengurus perkhidmatan Upstart juga. Oleh kerana Linux cuba beralih daripada skrip init Sys V yang lebih tradisional, masih ada perkara yang disediakan untuk membantu peralihan itu.
 
-## Exercise
+## Latihan
 
-Manage a couple of services and change their states, what do you observe?
+Urus beberapa perkhidmatan dan ubah keadaannya, apa yang anda perhatikan?
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command to stop a service named peanut with Sys V?
+Apakah arahan untuk menghentikan perkhidmatan bernama kacang dengan Sys V?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 sudo service peanut stop

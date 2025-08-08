@@ -1,16 +1,16 @@
 # IPv4
 
-## Lesson Content
+## Kandungan Pelajaran
 
-So we know that network hosts have a unique address they can be found at. These addresses are known as IP addresses. An IPv4 address looks something like this:
+Jadi kita tahu bahawa hos rangkaian mempunyai alamat unik yang boleh ditemui. Alamat ini dikenali sebagai alamat IP. Alamat IPv4 kelihatan seperti ini:
 
 <pre>204.23.124.23</pre>
 
-This address actually contains two parts, the network portion that tells us know network it's on and the host portion that tells us which host on that network it is. For this course we will mostly be discussing IPv4 addresses, which are what you commonly will see when referring to IP addresses.
+Alamat ini sebenarnya mengandungi dua bahagian, bahagian rangkaian yang memberitahu kita rangkaian mana ia berada dan bahagian hos yang memberitahu kita hos mana pada rangkaian itu. Untuk kursus ini kita kebanyakannya akan membincangkan alamat IPv4, yang biasa anda lihat apabila merujuk kepada alamat IP.
 
-An IP address is separated into octets by the periods. So there are 4 octets in an IPv4 address. If you know a bit of computer science, an octet is 8 bits and 8 bits actually equal 1 byte, so we also refer to an IPv4 address as having 4 bytes. We use bits frequently when dealing with subnets and IP addresses.
+Alamat IP dipisahkan kepada oktet oleh noktah. Jadi terdapat 4 oktet dalam alamat IPv4. Jika anda tahu sedikit tentang sains komputer, oktet ialah 8 bit dan 8 bit sebenarnya bersamaan dengan 1 bait, jadi kami juga merujuk kepada alamat IPv4 sebagai mempunyai 4 bait. Kami kerap menggunakan bit apabila berurusan dengan subnet dan alamat IP.
 
-You can view your IP address with the ifconfig -a command:
+Anda boleh melihat alamat IP anda dengan arahan ifconfig -a:
 
 <pre>
 pete@icebox:~$ ifconfig -a
@@ -19,16 +19,16 @@ eth0      Link encap:Ethernet  HWaddr 1d:3a:32:24:4d:ce
           inet6 addr: fd60::21c:29ff:fe63:5cdc/64 Scope:Link
 </pre>
 
-As you can see my IPv4 address is: 192.168.1.129
+Seperti yang anda lihat alamat IPv4 saya ialah: 192.168.1.129
 
-## Exercise
+## Latihan
 
-Find your IP address with ifconfig.
+Cari alamat IP anda dengan ifconfig.
 
-## Quiz Question
+## Soalan Kuiz
 
-How many bytes are in an IPv4 address?
+Berapa banyak bait dalam alamat IPv4?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 4

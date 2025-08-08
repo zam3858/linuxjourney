@@ -1,8 +1,8 @@
 # /etc/fstab
 
-## Lesson Content
+## Kandungan Pelajaran
 
-When we want to automatically mount filesystems at startup we can add them to a file called /etc/fstab (pronounced "eff es tab" not "eff stab") short for filesystem table. This file contains a permanent list of filesystems that are mounted.
+Apabila kita ingin melekapkan sistem fail secara automatik semasa permulaan, kita boleh menambahkannya ke fail yang dipanggil /etc/fstab (disebut "eff es tab" bukan "eff stab") singkatan untuk jadual sistem fail. Fail ini mengandungi senarai kekal sistem fail yang dilekapkan.
 
 <pre>
 pete@icebox:~$ cat /etc/fstab
@@ -11,27 +11,27 @@ UUID=78d203a0-7c18-49bd-9e07-54f44cdb5726 /home           xfs     relatime      
 UUID=22c3d34b-467e-467c-b44d-f03803c2c526 none            swap    sw              0       0
 </pre>
 
-Each line represents one filesystem, the fields are:
+Setiap baris mewakili satu sistem fail, medannya ialah:
 
 <ul>
-<li>UUID - Device identifier</li>
-<li>Mount point - Directory the filesystem is mounted to</li>
-<li>Filesystem type</li>
-<li>Options - other mount options, see manpage for more details</li>
-<li>Dump - used by the dump utility to decide when to make a backup, you should just default to 0</li>
-<li>Pass - Used by fsck to decide what order filesystems should be checked, if the value is 0, it will not be checked</li>
+<li>UUID - Pengecam peranti</li>
+<li>Titik lekap - Direktori tempat sistem fail dilekapkan</li>
+<li>Jenis sistem fail</li>
+<li>Pilihan - pilihan lekap lain, lihat halaman manual untuk butiran lanjut</li>
+<li>Buang - digunakan oleh utiliti buang untuk memutuskan bila hendak membuat sandaran, anda hanya perlu lalai kepada 0</li>
+<li>Lulus - Digunakan oleh fsck untuk memutuskan susunan sistem fail yang perlu diperiksa, jika nilainya 0, ia tidak akan diperiksa</li>
 </ul>
 
-To add an entry, just directly modify the /etc/fstab file using the entry syntax above. Be careful when modifying this file, you could potentially make your life a little harder if you mess up.
+Untuk menambah entri, hanya ubah suai fail /etc/fstab secara terus menggunakan sintaks entri di atas. Berhati-hati semasa mengubah suai fail ini, anda berpotensi menjadikan hidup anda lebih sukar jika anda mengacaukannya.
 
-## Exercise
+## Latihan
 
-Add the USB drive we've been working on as a entry in /etc/fstab, when you reboot you should still see it mounted.
+Tambah pemacu USB yang telah kita kerjakan sebagai entri dalam /etc/fstab, apabila anda but semula anda masih akan melihatnya dilekapkan.
 
-## Quiz Question
+## Soalan Kuiz
 
-What file is used to define how filesystems should be mounted?
+Apakah fail yang digunakan untuk menentukan cara sistem fail harus dilekapkan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /etc/fstab

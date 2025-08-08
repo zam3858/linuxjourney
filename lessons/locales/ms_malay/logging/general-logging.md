@@ -1,29 +1,29 @@
-# General Logging
+# Pengelogan Umum
 
-## Lesson Content
+## Kandungan Pelajaran
 
-There are many log files you can view on your system, many important ones can be found under /var/log. We won't go through them all, but we'll discuss a couple of the major ones.
+Terdapat banyak fail log yang boleh anda lihat pada sistem anda, banyak yang penting boleh didapati di bawah /var/log. Kami tidak akan meneliti kesemuanya, tetapi kami akan membincangkan beberapa yang utama.
 
-There are two general log files you can view to get a glimpse of what your system is doing:
+Terdapat dua fail log umum yang boleh anda lihat untuk mendapatkan gambaran tentang apa yang sistem anda lakukan:
 
 <b>/var/log/messages</b>
 
-This log contains all non-critical and non-debug messages, includes messages logged during bootup (dmesg), auth, cron, daemon, etc. Very useful to get a glimpse of how your machine is acting.
+Log ini mengandungi semua mesej bukan kritikal dan bukan debug, termasuk mesej yang dicatat semasa but (dmesg), auth, cron, daemon, dsb. Sangat berguna untuk mendapatkan gambaran tentang bagaimana mesin anda bertindak.
 
 <b>/var/log/syslog</b>
 
-This logs everything except auth messages, it's extremely useful for debugging errors on your machine.
+Ini mencatat segala-galanya kecuali mesej pengesahan, ia sangat berguna untuk menyahpepijat ralat pada mesin anda.
 
-These two logs should be more than enough when troubleshooting issues with your system, However, if you just want to view a specific log component, there are also separate logs for those as well.
+Kedua-dua log ini sepatutnya lebih daripada cukup semasa menyelesaikan masalah dengan sistem anda, Walau bagaimanapun, jika anda hanya ingin melihat komponen log tertentu, terdapat juga log berasingan untuknya juga.
 
-## Exercise
+## Latihan
 
-Look at your /var/log/messages and /var/log/syslog files and see what the differences are.
+Lihat fail /var/log/messages dan /var/log/syslog anda dan lihat apakah perbezaannya.
 
-## Quiz Question
+## Soalan Kuiz
 
-What log file logs everything except auth messages?
+Fail log manakah yang mencatat segala-galanya kecuali mesej pengesahan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 syslog

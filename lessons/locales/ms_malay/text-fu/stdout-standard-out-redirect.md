@@ -1,37 +1,37 @@
-# stdout (Standard Out)
+# stdout (Output Standard)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-By now, we've become familiar with many commands and their output and that brings us to our next subject I/O (input/output) streams. Let's run the following command and we'll discuss how this works.
+Sekarang, kita telah biasa dengan banyak arahan dan outputnya dan itu membawa kita ke subjek seterusnya iaitu strim I/O (input/output). Mari kita jalankan arahan berikut dan kita akan bincangkan bagaimana ia berfungsi.
 
 <pre>$ echo Hello World > peanuts.txt</pre>
 
-What just happened? Well check the directory where you ran that command and lo and behold you should see a file called peanuts.txt, look inside that file and you should see the text Hello World. Lots of things just happened in one command so let's break it down.
+Apa yang baru berlaku? Periksa direktori tempat anda menjalankan arahan itu dan lihatlah anda akan melihat fail yang dipanggil peanuts.txt, lihat di dalam fail itu dan anda akan melihat teks Hello World. Banyak perkara baru berlaku dalam satu arahan jadi mari kita pecahkannya.
 
-First let's break down the first part:
+Mula-mula mari kita pecahkan bahagian pertama:
 
 <pre>$ echo Hello World</pre>
 
-We know this prints out Hello World to the screen, but how? Processes use I/O streams to receive input and return output. By default the echo command takes the input (standard input or stdin) from the keyboard and returns the output (standard output or stdout) to the screen. So that's why when you type echo Hello World in your shell, you get Hello World on the screen. However, I/O redirection allows us to change this default behavior giving us greater file flexibility.
+Kita tahu ini mencetak Hello World ke skrin, tetapi bagaimana? Proses menggunakan strim I/O untuk menerima input dan mengembalikan output. Secara lalai, arahan echo mengambil input (input standard atau stdin) dari papan kekunci dan mengembalikan output (output standard atau stdout) ke skrin. Jadi itulah sebabnya apabila anda menaip echo Hello World dalam shell anda, anda mendapat Hello World pada skrin. Walau bagaimanapun, pengalihan semula I/O membolehkan kita mengubah tingkah laku lalai ini yang memberi kita fleksibiliti fail yang lebih besar.
 
-Let's proceed to the next part of the command:
+Mari kita teruskan ke bahagian seterusnya arahan:
 
 <pre> > </pre>
 
-The > is a redirection operator that allows us the change where standard output goes. It allows us to send the output of echo Hello World to a file instead of the screen. If the file does not already exist it will create it for us. However, if it does exist it will overwrite it (you can add a shell flag to prevent this depending on what shell you are using).
+> ialah operator pengalihan semula yang membolehkan kita menukar ke mana output standard pergi. Ia membolehkan kita menghantar output echo Hello World ke fail dan bukannya skrin. Jika fail itu belum wujud, ia akan menciptanya untuk kita. Walau bagaimanapun, jika ia wujud, ia akan menimpanya (anda boleh menambah bendera shell untuk mengelakkan ini bergantung pada shell yang anda gunakan).
 
-And that's basically how stdout redirection works!
+Dan itulah pada asasnya bagaimana pengalihan semula stdout berfungsi!
 
-Well let's say I didn't want to overwrite my peanuts.txt, luckily there is a redirection operator for that as well, >>:
+Baiklah, katakan saya tidak mahu menimpa peanuts.txt saya, nasib baik ada operator pengalihan semula untuk itu juga, >>:
 
 <pre>$ echo Hello World >> peanuts.txt</pre>
 
-This will append Hello World to the end of the peanuts.txt file, if the file doesn't already exist it will create it for us like it did with the > redirector!
+Ini akan menambahkan Hello World pada penghujung fail peanuts.txt, jika fail itu belum wujud, ia akan menciptanya untuk kita seperti yang dilakukannya dengan pengalih hala >!
 
 
-## Exercise
+## Latihan
 
-Try a couple of commands:
+Cuba beberapa arahan:
 
 <pre>
 $ ls -l /var/log > myoutput.txt
@@ -39,10 +39,10 @@ $ echo Hello World > rm
 $ > somefile.txt
 </pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What redirector do you use to append output to a file?
+Apakah pengalih hala yang anda gunakan untuk menambahkan output pada fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 >>

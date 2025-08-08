@@ -1,35 +1,35 @@
-# Vim Search Patterns
+# Corak Carian Vim
 
-## Lesson Content
+## Kandungan Pelajaran
 
-To search for an expression just type the / key and then your search result while you are in a vim session. Once you hit enter, you can press "n" to go forward or "N" to go backward in your search results.
+Untuk mencari ungkapan, taip sahaja kekunci / dan kemudian hasil carian anda semasa anda berada dalam sesi vim. Sebaik sahaja anda menekan enter, anda boleh menekan "n" untuk maju atau "N" untuk mundur dalam hasil carian anda.
 
 <pre>
-My pretty file is very pretty.
+Fail cantik saya sangat cantik.
 
-/pretty
+/cantik
 
-will find the pretty words in the text file.
+akan mencari perkataan cantik dalam fail teks.
 </pre>
 
 
-The ? search command will search the text file backwards, so in the previous example, the last pretty would come up first.
+Perintah carian ? akan mencari fail teks ke belakang, jadi dalam contoh sebelumnya, cantik yang terakhir akan muncul dahulu.
 <pre>
-My pretty file is very pretty.
+Fail cantik saya sangat cantik.
 
-?pretty
+?cantik
 
-will find the pretty words in the text file.
+akan mencari perkataan cantik dalam fail teks.
 </pre>
 
-## Exercise
+## Latihan
 
-Play with the search key, open a text file in vim with: vim [textfile] and start searching!
+Bermain dengan kekunci carian, buka fail teks dalam vim dengan: vim [failteks] dan mulakan carian!
 
-## Quiz Question
+## Soalan Kuiz
 
-What key is used to search in vim?
+Apakah kekunci yang digunakan untuk mencari dalam vim?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /

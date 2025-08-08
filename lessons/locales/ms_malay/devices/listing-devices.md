@@ -1,29 +1,29 @@
 # lsusb, lspci, lssci
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Just like we would use the ls command to list files and directories, we can use similar tools that list information about devices.
+Sama seperti kita akan menggunakan arahan ls untuk menyenaraikan fail dan direktori, kita boleh menggunakan alat yang serupa yang menyenaraikan maklumat tentang peranti.
 
-<b>Listing USB Devices</b>
+<b>Menyenaraikan Peranti USB</b>
 
 <pre>$ lsusb </pre>
 
-<b>Listing PCI Devices</b>
+<b>Menyenaraikan Peranti PCI</b>
 
 <pre>$ lspci </pre>
 
-<b>Listing SCSI Devices</b>
+<b>Menyenaraikan Peranti SCSI</b>
 
 <pre>$ lsscsi </pre>
 
-## Exercise
+## Latihan
 
-Try out each of these commands and see the output you receive.
+Cuba setiap arahan ini dan lihat output yang anda terima.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command can be used to view usb devices?
+Apakah arahan yang boleh digunakan untuk melihat peranti usb?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 lsusb

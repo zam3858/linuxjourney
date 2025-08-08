@@ -1,28 +1,28 @@
-# Kernel Location
+# Lokasi Kernel
 
-## Lesson Content
+## Kandungan Pelajaran
 
-What happens when you install a new kernel? Well it actually adds a couple of files to your system, these files are usually added to the /boot directory.
+Apa yang berlaku apabila anda memasang kernel baharu? Sebenarnya ia menambah beberapa fail pada sistem anda, fail ini biasanya ditambahkan pada direktori /boot.
 
-You will see multiple files for different kernel versions:
+Anda akan melihat beberapa fail untuk versi kernel yang berbeza:
 
 <ul>
-<li>vmlinuz - this is the actual linux kernel</li>
-<li>initrd - as we've discussed before, the initrd is used as a temporary file system, used before loading the kernel</li>
-<li>System.map - symbolic lookup table</li>
-<li>config - kernel configuration settings, if you are compiling your own kernel, you can set which modules can be loaded</li>
+<li>vmlinuz - ini ialah kernel linux sebenar</li>
+<li>initrd - seperti yang telah kita bincangkan sebelum ini, initrd digunakan sebagai sistem fail sementara, digunakan sebelum memuatkan kernel</li>
+<li>System.map - jadual carian simbolik</li>
+<li>config - tetapan konfigurasi kernel, jika anda menyusun kernel anda sendiri, anda boleh menetapkan modul mana yang boleh dimuatkan</li>
 </ul>
 
-If your /boot directory runs out of space, you can always delete old versions of these files or just use a package manager, but be careful when doing maintenance in this directory and don't accidentally delete the kernel you are using.
+Jika direktori /boot anda kehabisan ruang, anda sentiasa boleh memadam versi lama fail ini atau hanya menggunakan pengurus pakej, tetapi berhati-hati semasa melakukan penyelenggaraan dalam direktori ini dan jangan padam kernel yang sedang anda gunakan secara tidak sengaja.
 
-## Exercise
+## Latihan
 
-Go into your boot directory and see what files are in there.
+Pergi ke direktori but anda dan lihat fail apa yang ada di sana.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the kernel image called in /boot?
+Apakah nama imej kernel dalam /boot?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 vmlinuz

@@ -1,14 +1,14 @@
-# Process Threads
+# Benang Proses
 
-## Lesson Content
+## Kandungan Pelajaran
 
-You may have heard of the terms single-threaded and multi-threaded processes. Threads are very similar to processes, in that they are used to execute the same program, they are often referred to as lightweight processes. If a process has one thread it is single-threaded and if a process has more than one thread it is multi-threaded. However, all processes have at least one thread.
+Anda mungkin pernah mendengar istilah proses benang tunggal dan berbilang benang. Benang sangat serupa dengan proses, kerana ia digunakan untuk melaksanakan program yang sama, ia sering dirujuk sebagai proses ringan. Jika proses mempunyai satu benang ia adalah benang tunggal dan jika proses mempunyai lebih daripada satu benang ia adalah berbilang benang. Walau bagaimanapun, semua proses mempunyai sekurang-kurangnya satu benang.
 
-Processes operate with their own isolated system resources, however threads can share these resources among each other easily, making it easier for them to communicate among each other and at times it is more efficient to have a multi-threaded application than a multi-process application.
+Proses beroperasi dengan sumber sistem terpencil mereka sendiri, walau bagaimanapun benang boleh berkongsi sumber ini antara satu sama lain dengan mudah, menjadikannya lebih mudah untuk mereka berkomunikasi antara satu sama lain dan kadangkala lebih cekap untuk mempunyai aplikasi berbilang benang daripada aplikasi berbilang proses.
 
-Basically, let's say you open up LibreOffice Writer and Chrome, each is it's own separate process. Now you go inside Writer and start editing text, when you edit the text it gets automatically saved. These two parallel "lightweight processes" of saving and editing are threads.
+Pada asasnya, katakan anda membuka LibreOffice Writer dan Chrome, setiap satunya ialah proses yang berasingan. Sekarang anda masuk ke dalam Writer dan mula menyunting teks, apabila anda menyunting teks ia akan disimpan secara automatik. Kedua-dua "proses ringan" selari menyimpan dan menyunting ini adalah benang.
 
-To view process threads, you can use:
+Untuk melihat benang proses, anda boleh menggunakan:
 
 <pre>
 pete@icebox:~$ ps m
@@ -19,16 +19,16 @@ pete@icebox:~$ ps m
     - -        R+     0:00 -
 </pre>
 
-The processes are denoted with each PID and underneath the processes are their threads (denoted by a --). So you can see that the processes above are both single-threaded.
+Proses ditandakan dengan setiap PID dan di bawah proses adalah benang mereka (ditandakan dengan --). Jadi anda boleh lihat bahawa proses di atas kedua-duanya adalah benang tunggal.
 
-## Exercise
+## Latihan
 
-Run the <b>ps m</b> command and see what processes you have running are multi-threaded.
+Jalankan arahan <b>ps m</b> dan lihat proses apa yang anda jalankan adalah berbilang benang.
 
-## Quiz Question
+## Soalan Kuiz
 
-True or false, all processes start out single-threaded.
+Benar atau salah, semua proses bermula sebagai benang tunggal.
 
-## Quiz Answer
+## Jawapan Kuiz
 
-True
+Benar

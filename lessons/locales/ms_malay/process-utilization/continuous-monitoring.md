@@ -1,41 +1,41 @@
-# Continuous Monitoring
+# Pemantauan Berterusan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-These monitoring tools are good to look at when your machine is having issues, but what about machines that are having issues when you aren't looking. For those, you'll need to use a continuous monitoring tool, something that will collect, report and save your system activity information. In this lesson we will go over a great tool to use <b>sar</b>.
+Alat pemantauan ini bagus untuk dilihat apabila mesin anda menghadapi masalah, tetapi bagaimana pula dengan mesin yang menghadapi masalah apabila anda tidak melihat. Untuk itu, anda perlu menggunakan alat pemantauan berterusan, sesuatu yang akan mengumpul, melaporkan dan menyimpan maklumat aktiviti sistem anda. Dalam pelajaran ini kita akan membincangkan alat yang hebat untuk digunakan <b>sar</b>.
 
-<b>Installing sar</b>
-Sar is a tool that is used to do historical analysis on your system, first make sure you have it installed by installing the sysstat package <b>sudo apt install sysstat</b>.
+<b>Memasang sar</b>
+Sar ialah alat yang digunakan untuk melakukan analisis sejarah pada sistem anda, mula-mula pastikan anda telah memasangnya dengan memasang pakej sysstat <b>sudo apt install sysstat</b>.
 
-<b>Setting up data collection</b>
-Usually once you install sysstat, your system will automatically start collecting data, if it doesn't you can enable it by modifying the ENABLED field in /etc/default/sysstat.
+<b>Menyediakan pengumpulan data</b>
+Biasanya sebaik sahaja anda memasang sysstat, sistem anda akan mula mengumpul data secara automatik, jika tidak, anda boleh mendayakannya dengan mengubah suai medan ENABLED dalam /etc/default/sysstat.
 
-<b>Using sar</b>
+<b>Menggunakan sar</b>
 
 <pre>$ sudo sar -q</pre>
 
-This command will list the details from the start of the day.
+Perintah ini akan menyenaraikan butiran dari awal hari.
 
 <pre>$ sudo sar -r</pre>
 
-This will list the details of memory usage from the start of the day.
+Ini akan menyenaraikan butiran penggunaan memori dari awal hari.
 
 <pre>$ sudo sar -P</pre>
 
-This will list the details of CPU usage.
+Ini akan menyenaraikan butiran penggunaan CPU.
 
-To see a view of a different day, you can go into /var/log/sysstat/saXX where XX is the day you want to view.
+Untuk melihat paparan hari yang berbeza, anda boleh pergi ke /var/log/sysstat/saXX di mana XX ialah hari yang ingin anda lihat.
 
 <pre>$sar -q /var/log/sysstat/sa02</pre>
 
-## Exercise
+## Latihan
 
-Install sar on your system and start collecting and analyzing your system resource utilization.
+Pasang sar pada sistem anda dan mula mengumpul dan menganalisis penggunaan sumber sistem anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is a good tool to use for monitoring system resources?
+Apakah alat yang baik untuk digunakan untuk memantau sumber sistem?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 sar

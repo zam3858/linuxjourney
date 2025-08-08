@@ -1,19 +1,19 @@
-# Vim (Vi Improved)
+# Vim (Vi Dipertingkatkan)
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Vim stands for vi (Improved) just like its name it stands for an improved version of the vi text editor command.
+Vim adalah singkatan untuk vi (Dipertingkatkan) sama seperti namanya ia adalah singkatan untuk versi yang lebih baik bagi perintah editor teks vi.
 
-It's super lightweight, opening and editing a file with vim is quick and easy. It's also almost always available, if you booted up a random Linux distribution, chances are vim is installed by default.
+Ia sangat ringan, membuka dan menyunting fail dengan vim adalah cepat dan mudah. Ia juga hampir sentiasa tersedia, jika anda but sebarang distribusi Linux secara rawak, kemungkinan besar vim dipasang secara lalai.
 
-To fire up vim just type: <pre>vim</pre>
+Untuk menghidupkan vim hanya taip: <pre>vim</pre>
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-No questions move along!
+Tiada soalan, teruskan!
 
-## Quiz Answer
+## Jawapan Kuiz

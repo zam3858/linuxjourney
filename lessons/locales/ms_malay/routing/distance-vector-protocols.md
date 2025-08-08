@@ -1,21 +1,21 @@
-# Distance Vector Protocols
+# Protokol Vektor Jarak
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Distance vector protocols determine the path of other networks using the hop count a packet takes across the network. If network A was 3 hops away and network B was next to network A, then we assume it must be 4 hops away. In distance vector protocols, the next route would be the one with the least amount of hops.
+Protokol vektor jarak menentukan laluan rangkaian lain menggunakan kiraan lompatan yang diambil oleh paket merentasi rangkaian. Jika rangkaian A berada 3 lompatan jauhnya dan rangkaian B berada di sebelah rangkaian A, maka kita menganggap ia mesti 4 lompatan jauhnya. Dalam protokol vektor jarak, laluan seterusnya ialah yang mempunyai jumlah lompatan paling sedikit.
 
-Distance vector protocols are great for small networks, when networks start to scale it takes longer for the routers to converge because it periodically sends the entire routing table out to every router. Another downside to distance vector protocols is efficiency, it chooses routes that are closer in hops, but it may not always choose the most efficient route.
+Protokol vektor jarak hebat untuk rangkaian kecil, apabila rangkaian mula berskala, ia mengambil masa yang lebih lama untuk penghala menumpu kerana ia secara berkala menghantar keseluruhan jadual penghalaan ke setiap penghala. Satu lagi kelemahan protokol vektor jarak ialah kecekapan, ia memilih laluan yang lebih dekat dalam lompatan, tetapi ia mungkin tidak sentiasa memilih laluan yang paling cekap.
 
-One of the common distance vector protocols is RIP (Routing Information Protocol), it broadcasts the routing table to every router in the network every 30 seconds. For a large network, this can take some serious juice to pull off, because of that RIP limits it's hop count to 15.
+Salah satu protokol vektor jarak yang biasa ialah RIP (Routing Information Protocol), ia menyiarkan jadual penghalaan ke setiap penghala dalam rangkaian setiap 30 saat. Untuk rangkaian yang besar, ini boleh mengambil sedikit masa untuk dilaksanakan, kerana itu RIP mengehadkan kiraan lompatannya kepada 15.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-True or false, distance protocols use the route with the least amount of bandwidth?
+Benar atau salah, protokol jarak menggunakan laluan dengan jumlah lebar jalur yang paling sedikit?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-false
+salah

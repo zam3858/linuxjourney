@@ -1,32 +1,32 @@
-# Vim Saving and Exiting
+# Menyimpan dan Keluar Vim
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Now that you've done your editing it's time to actually save and quit out of vim:
+Sekarang anda telah selesai menyunting, tiba masanya untuk menyimpan dan keluar dari vim:
 
 <ul>
-<li>:w - writes or saves the file</li>
-<li>:q - quit out of vim</li>
-<li>:wq - write and then quit</li>
-<li>:q! - quit out of vim without saving the file</li>
-<li>ZZ - equivalent of :wq, but one character faster</li>
+<li>:w - menulis atau menyimpan fail</li>
+<li>:q - keluar dari vim</li>
+<li>:wq - tulis dan kemudian keluar</li>
+<li>:q! - keluar dari vim tanpa menyimpan fail</li>
+<li>ZZ - setara dengan :wq, tetapi satu aksara lebih pantas</li>
 
-<li>u - undo your last action</li>
-<li>Ctrl-r - redo your last action</li>
+<li>u - buat asal tindakan terakhir anda</li>
+<li>Ctrl-r - buat semula tindakan terakhir anda</li>
 </ul>
 
-You may not think ZZ is necessary, but you'll eventually see that your fingers may tend to lean towards this rather than :wq.
+Anda mungkin tidak fikir ZZ perlu, tetapi akhirnya anda akan melihat bahawa jari anda mungkin cenderung ke arah ini dan bukannya :wq.
 
-Whew that was a lot of information to take about Vim. Now that you know some basic commands and navigation, you can start editing some text files. There are many more options you can use in vim to increase your ability to master this text editor, head on to Vim's online guide to take a look.
+Wah, banyak maklumat yang perlu diambil tentang Vim. Sekarang anda tahu beberapa arahan dan navigasi asas, anda boleh mula menyunting beberapa fail teks. Terdapat banyak lagi pilihan yang boleh anda gunakan dalam vim untuk meningkatkan keupayaan anda menguasai editor teks ini, pergi ke panduan dalam talian Vim untuk melihatnya.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you quit out of vim without saving?
+Bagaimanakah anda keluar dari vim tanpa menyimpan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 :q!

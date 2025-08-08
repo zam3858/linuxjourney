@@ -1,29 +1,29 @@
-# Process States
+# Keadaan Proses
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's take a look at the ps aux command again:
+Mari kita lihat arahan ps aux sekali lagi:
 
 <pre>$ ps aux</pre>
 
-In the STAT column, you'll see lots of values. A linux process can be in a number of different states. The most common state codes you'll see are described below:
+Dalam lajur STAT, anda akan melihat banyak nilai. Proses linux boleh berada dalam beberapa keadaan yang berbeza. Kod keadaan yang paling biasa anda akan lihat diterangkan di bawah:
 
 <ul>
-<li>R: running or runnable, it is just waiting for the CPU to process it</li>
-<li>S: Interruptible sleep, waiting for an event to complete, such as input from the terminal</li>
-<li>D: Uninterruptible sleep, processes that cannot be killed or interrupted with a signal, usually to make them go away you have to reboot or fix the issue</li>
-<li>Z: Zombie, we discussed in a previous lesson that zombies are terminated processes that are waiting to have their statuses collected</li>
-<li>T: Stopped, a process that has been suspended/stopped</li>
+<li>R: berjalan atau boleh dijalankan, ia hanya menunggu CPU memprosesnya</li>
+<li>S: Tidur boleh diganggu, menunggu peristiwa selesai, seperti input dari terminal</li>
+<li>D: Tidur tidak boleh diganggu, proses yang tidak boleh dibunuh atau diganggu dengan isyarat, biasanya untuk menghilangkannya anda perlu but semula atau membetulkan isu tersebut</li>
+<li>Z: Zombi, kita telah membincangkan dalam pelajaran sebelumnya bahawa zombi ialah proses yang ditamatkan yang sedang menunggu untuk statusnya dikumpulkan</li>
+<li>T: Dihentikan, proses yang telah digantung/dihentikan</li>
 </ul>
 
-## Exercise
+## Latihan
 
-Take a look at the running processes on your system and check out their process states.
+Lihat proses yang sedang berjalan pada sistem anda dan semak keadaan prosesnya.
 
-## Quiz Question
+## Soalan Kuiz
 
-What STAT code is used to represent an uninterruptible sleep?
+Apakah kod STAT yang digunakan untuk mewakili tidur yang tidak boleh diganggu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 D

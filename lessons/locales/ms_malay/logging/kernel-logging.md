@@ -1,21 +1,21 @@
-# Kernel Logging
+# Pengelogan Kernel
 
-## Lesson Content
+## Kandungan Pelajaran
 
 <b>/var/log/dmesg</b>
-On boot-time your system logs information about the kernel ring buffer. This shows us information about hardware drivers, kernel information and status during bootup and more. This log file can be found at /var/log/dmesg and gets reset on every boot, you may not actually see any use in it now, but if you were to ever have issues with something during bootup or a hardware issue, dmesg is the best place to look. You can also view this log using the dmesg command.
+Pada masa but, sistem anda mencatat maklumat tentang penimbal gelang kernel. Ini menunjukkan kepada kami maklumat tentang pemacu perkakasan, maklumat kernel dan status semasa but dan banyak lagi. Fail log ini boleh didapati di /var/log/dmesg dan ditetapkan semula pada setiap but, anda mungkin tidak melihat sebarang kegunaan di dalamnya sekarang, tetapi jika anda pernah menghadapi masalah dengan sesuatu semasa but atau isu perkakasan, dmesg ialah tempat terbaik untuk mencari. Anda juga boleh melihat log ini menggunakan arahan dmesg.
 
 <b>/var/log/kern.log</b>
-Another log you can use to view kernel information is the /var/log/kern.log file, this logs the kernel information and events on your system, it also logs dmesg output.
+Log lain yang boleh anda gunakan untuk melihat maklumat kernel ialah fail /var/log/kern.log, ini mencatat maklumat dan peristiwa kernel pada sistem anda, ia juga mencatat output dmesg.
 
-## Exercise
+## Latihan
 
-Look at your dmesg and kern logs, what differences do you notice?
+Lihat log dmesg dan kern anda, apakah perbezaan yang anda perhatikan?
 
-## Quiz Question
+## Soalan Kuiz
 
-What command can be used to view kernel bootup messages?
+Apakah arahan yang boleh digunakan untuk melihat mesej but kernel?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 dmesg

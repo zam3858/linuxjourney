@@ -1,34 +1,34 @@
-# Path of a Packet
+# Laluan Paket
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Let's look at how a packet travels within it's local network</b>
-
-<ol>
-<li>First the local machine will compare the destination IP address to see if it's in the same subnet by looking at its subnet mask.</li>
-<li>When packets are sent they need to have a source MAC address, destination MAC address, source IP address and destination IP address, at this point we do not know the destination MAC address.</li>
-<li>To get to the destination host, we use ARP to broadcast a request on the local network to find the MAC address of the destination host.</li>
-<li>Now the packet can be successfully sent!</li>
-</ol>
-
-<b>Let's see how a packet travels outside it's network</b>
+<b>Mari kita lihat bagaimana paket bergerak dalam rangkaian tempatannya</b>
 
 <ol>
-<li>First the local machine will compare the destination IP address, since it's outside of our network, it does not see the MAC address of the destination host. And we can't use ARP because the ARP request is a broadcast to locally connected hosts.</li>
-<li>So our packet now looks at the routing table, it doesn't know the address of the destination IP, so it sends it out to the default gateway (another router). So now our packet contains our source IP, destination IP and source MAC, however we don't have a destination MAC. Remember MAC addresses are only reached through the same network. So what does it do? It sends an ARP request to get the MAC address of the default gateway.</li>
-<li>The router looks at the packet and confirms the destination MAC address, but it's not the final destination IP address, so it keeps looking at the routing table to forward the packet to another IP address that can help the packet move along to its destination. Everytime the packet moves, it strips the old source and destination MAC address and updates the packet with the new source and destination MAC addresses.</li>
-<li>Once the packet gets forwarded to the same network, we use ARP to find the final destination MAC address</li>
-<li>During this process, our packet doesn't change the source or destination IP address.</li>
+<li>Mula-mula mesin tempatan akan membandingkan alamat IP destinasi untuk melihat sama ada ia berada dalam subnet yang sama dengan melihat topeng subnetnya.</li>
+<li>Apabila paket dihantar, ia perlu mempunyai alamat MAC sumber, alamat MAC destinasi, alamat IP sumber dan alamat IP destinasi, pada ketika ini kita tidak tahu alamat MAC destinasi.</li>
+<li>Untuk sampai ke hos destinasi, kami menggunakan ARP untuk menyiarkan permintaan pada rangkaian tempatan untuk mencari alamat MAC hos destinasi.</li>
+<li>Sekarang paket boleh dihantar dengan jayanya!</li>
 </ol>
 
-## Exercise
+<b>Mari kita lihat bagaimana paket bergerak di luar rangkaiannya</b>
 
-No exercises for this lesson.
+<ol>
+<li>Mula-mula mesin tempatan akan membandingkan alamat IP destinasi, kerana ia berada di luar rangkaian kami, ia tidak melihat alamat MAC hos destinasi. Dan kami tidak boleh menggunakan ARP kerana permintaan ARP ialah siaran kepada hos yang disambungkan secara tempatan.</li>
+<li>Jadi paket kami sekarang melihat jadual penghalaan, ia tidak tahu alamat IP destinasi, jadi ia menghantarnya ke get laluan lalai (penghala lain). Jadi sekarang paket kami mengandungi IP sumber, IP destinasi dan MAC sumber kami, walau bagaimanapun kami tidak mempunyai MAC destinasi. Ingat alamat MAC hanya dicapai melalui rangkaian yang sama. Jadi apa yang dilakukannya? Ia menghantar permintaan ARP untuk mendapatkan alamat MAC get laluan lalai.</li>
+<li>Penghala melihat paket dan mengesahkan alamat MAC destinasi, tetapi ia bukan alamat IP destinasi akhir, jadi ia terus melihat jadual penghalaan untuk memajukan paket ke alamat IP lain yang boleh membantu paket bergerak ke destinasinya. Setiap kali paket bergerak, ia menanggalkan alamat MAC sumber dan destinasi lama dan mengemas kini paket dengan alamat MAC sumber dan destinasi baharu.</li>
+<li>Sebaik sahaja paket dimajukan ke rangkaian yang sama, kami menggunakan ARP untuk mencari alamat MAC destinasi akhir</li>
+<li>Semasa proses ini, paket kami tidak mengubah alamat IP sumber atau destinasi.</li>
+</ol>
 
-## Quiz Question
+## Latihan
 
-How do we find the MAC address of an IP address?
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Answer
+## Soalan Kuiz
+
+Bagaimanakah kita mencari alamat MAC bagi alamat IP?
+
+## Jawapan Kuiz
 
 ARP

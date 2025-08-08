@@ -1,27 +1,27 @@
-# Process Creation
+# Penciptaan Proses
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Again this lesson and the next are purely information to let you see what's under the hood, feel free to circle back to this once you've worked with processes a bit more.
+Sekali lagi pelajaran ini dan yang seterusnya adalah maklumat semata-mata untuk membolehkan anda melihat apa yang ada di bawah hud, jangan ragu untuk kembali ke sini setelah anda bekerja dengan proses lebih sedikit.
 
-When a new process is created, an existing process basically clones itself using something called the fork system call (system calls will be discussed very far into the future). The fork system call creates a mostly identical child process, this child process takes on a new process ID (PID) and the original process becomes its parent process and has something called a parent process ID <b>PPID</b>. Afterwards, the child process can either continue to use the same program its parent was using before or more often use the execve system call to launch up a new program. This system call destroys the memory management that the kernel put into place for that process and sets up new ones for the new program.
+Apabila proses baharu dicipta, proses sedia ada pada asasnya mengklonkan dirinya sendiri menggunakan sesuatu yang dipanggil panggilan sistem fork (panggilan sistem akan dibincangkan jauh pada masa hadapan). Panggilan sistem fork mencipta proses anak yang kebanyakannya serupa, proses anak ini mengambil ID proses baharu (PID) dan proses asal menjadi proses induknya dan mempunyai sesuatu yang dipanggil ID proses induk <b>PPID</b>. Selepas itu, proses anak boleh sama ada terus menggunakan program yang sama yang digunakan oleh induknya sebelum ini atau lebih kerap menggunakan panggilan sistem execve untuk melancarkan program baharu. Panggilan sistem ini memusnahkan pengurusan memori yang diletakkan oleh kernel untuk proses itu dan menyediakan yang baharu untuk program baharu.
 
-We can see this in action:
+Kita boleh melihat ini dalam tindakan:
 
 <pre>$ ps l</pre>
 
-The l option gives us a "long format" or even more detailed view of our running processes. You'll see a column labelled <b>PPID</b>, this is the parent ID. Now look at your terminal, you'll see a process running that is your shell, so on my system I have a process running bash. Now remember when you ran the ps l command, you were running it from the process that was running bash. Now you'll see that the <b>PID</b> of the bash shell is the <b>PPID</b> of the <b>ps l</b> command.
+Pilihan l memberi kita "format panjang" atau paparan yang lebih terperinci tentang proses yang sedang berjalan. Anda akan melihat lajur berlabel <b>PPID</b>, ini ialah ID induk. Sekarang lihat terminal anda, anda akan melihat proses yang sedang berjalan iaitu shell anda, jadi pada sistem saya, saya mempunyai proses yang menjalankan bash. Sekarang ingat apabila anda menjalankan arahan ps l, anda menjalankannya dari proses yang menjalankan bash. Sekarang anda akan melihat bahawa <b>PID</b> shell bash ialah <b>PPID</b> arahan <b>ps l</b>.
 
-So if every process has to have a parent and they are just forks of each other, there must be a mother of all processes right? You are correct, when the system boots up, the kernels creates a process called <b>init</b>, it has a PID of 1. The init process can't be terminated unless the system shuts down. It runs with root privileges and runs many processes that keep the system running. We will take a closer look at init in the system bootup course, for now just know it is the process that spawns all other processes.
+Jadi jika setiap proses mesti mempunyai induk dan ia hanyalah cabang antara satu sama lain, mesti ada ibu kepada semua proses, bukan? Anda betul, apabila sistem but, kernel mencipta proses yang dipanggil <b>init</b>, ia mempunyai PID 1. Proses init tidak boleh ditamatkan melainkan sistem ditutup. Ia berjalan dengan keistimewaan root dan menjalankan banyak proses yang memastikan sistem berjalan. Kita akan melihat lebih dekat pada init dalam kursus but sistem, buat masa ini ketahuilah ia adalah proses yang melahirkan semua proses lain.
 
-## Exercise
+## Latihan
 
-Take a look at your running processes, can you see what other processes have parents?
+Lihat proses yang sedang berjalan, bolehkah anda melihat proses lain yang mempunyai induk?
 
-## Quiz Question
+## Soalan Kuiz
 
-What system call creates a new process?
+Apakah panggilan sistem yang mencipta proses baharu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 fork

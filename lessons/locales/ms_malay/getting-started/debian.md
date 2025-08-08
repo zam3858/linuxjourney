@@ -1,30 +1,30 @@
 # Debian
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-Debian is an operating system composed entirely of free and open-source software. It’s widely known and has been in development for over 20 years. There are three branches that you can use, Stable, Testing and Unstable.
+<b>Gambaran Keseluruhan</b>
+Debian ialah sistem pengendalian yang terdiri sepenuhnya daripada perisian sumber terbuka dan percuma. Ia terkenal secara meluas dan telah dibangunkan selama lebih 20 tahun. Terdapat tiga cawangan yang boleh anda gunakan, Stabil, Ujian dan Tidak Stabil.
 
-Stable is an overall good branch to be on. Testing and Unstable are rolling releases. This means that any incremental changes in those branches will eventually become Stable. For example, if you wanted to get to the next update from Windows 8 to Windows 10, you’ll have to do a complete Windows 10 installation. However being on the Testing release, you’ll automatically get updates until it becomes the next operating system release without having to do a full installation.
+Stabil ialah cawangan yang baik secara keseluruhan. Ujian dan Tidak Stabil ialah keluaran bergulir. Ini bermakna sebarang perubahan tambahan dalam cawangan tersebut akhirnya akan menjadi Stabil. Sebagai contoh, jika anda ingin mendapatkan kemas kini seterusnya dari Windows 8 ke Windows 10, anda perlu melakukan pemasangan Windows 10 yang lengkap. Walau bagaimanapun, dengan berada pada keluaran Ujian, anda akan mendapat kemas kini secara automatik sehingga ia menjadi keluaran sistem pengendalian seterusnya tanpa perlu melakukan pemasangan penuh.
 
-<b>Package Management</b>
-Debian also uses Debian package management tools. Every Linux distribution installs and manages packages differently and they use different package management tools. We’ll get more into this in a later course.
+<b>Pengurusan Pakej</b>
+Debian juga menggunakan alat pengurusan pakej Debian. Setiap distribusi Linux memasang dan mengurus pakej secara berbeza dan mereka menggunakan alat pengurusan pakej yang berbeza. Kami akan membincangkan lebih lanjut mengenai ini dalam kursus kemudian.
 
-<b>Configurability</b>
-Debian may not get the latest updates, but it's extremely stable. If you want a good "core" operating system, this is the one for you.
+<b>Kebolehubahsuaian</b>
+Debian mungkin tidak mendapat kemas kini terkini, tetapi ia sangat stabil. Jika anda mahukan sistem pengendalian "teras" yang baik, ini adalah untuk anda.
 
-<b>Uses</b>
-Debian is an overall great operating system for any platform.
+<b>Kegunaan</b>
+Debian ialah sistem pengendalian yang hebat secara keseluruhan untuk sebarang platform.
 
 
-## Exercise
+## Latihan
 
-If you're interested in having Debian as your operating system, head over to the installation section and give it a try: <a href='https://www.debian.org/'>https://www.debian.org/</a>
+Jika anda berminat untuk mempunyai Debian sebagai sistem pengendalian anda, pergi ke bahagian pemasangan dan cubalah: <a href='https://www.debian.org/'>https://www.debian.org/</a>
 
-## Quiz Question
+## Soalan Kuiz
 
-What kind of release does Testing and Unstable have?
+Apakah jenis keluaran yang dimiliki oleh Ujian dan Tidak Stabil?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-Rolling
+Bergulir

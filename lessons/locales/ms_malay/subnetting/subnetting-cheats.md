@@ -1,10 +1,10 @@
-# Subnetting Cheats
+# Penipuan Subnetting
 
-## Lesson Content
+## Kandungan Pelajaran
 
-I hate to have to add this section, in the real world you would most likely never have to do subnet math by hand, however if you were getting interviewed on this, you'll have to know how to convert to and from binary form for subnetting. Luckily there are some arithmetic cheats you can memorize.
+Saya benci terpaksa menambah bahagian ini, dalam dunia nyata anda kemungkinan besar tidak perlu melakukan matematik subnet dengan tangan, walau bagaimanapun jika anda ditemu duga mengenai perkara ini, anda perlu tahu cara menukar ke dan dari bentuk binari untuk subnetting. Nasib baik terdapat beberapa penipuan aritmetik yang boleh anda hafal.
 
-First memorize your base-2 calculations, just do it:
+Mula-mula hafal pengiraan asas-2 anda, lakukannya sahaja:
 
 <ul>
 <li>2^1 = 2</li>
@@ -21,43 +21,43 @@ First memorize your base-2 calculations, just do it:
 <li>2^12 = 4096</li>
 </ul>
 
-<b>Decimal to Binary Chart</b>
+<b>Carta Perpuluhan ke Perduaan</b>
 
 <pre>
 1   1  1  1  1 1 1 1
 128 64 32 16 8 4 2 1
 </pre>
 
-There are lots of reasons why the following chart looks the way it does, if you're curious how it works there are lots of resources online.
+Terdapat banyak sebab mengapa carta berikut kelihatan seperti itu, jika anda ingin tahu bagaimana ia berfungsi terdapat banyak sumber dalam talian.
 
-Ok, got these memorized? Let's do a quick decimal to binary conversion:
+Ok, sudah hafal ini? Mari kita lakukan penukaran perpuluhan ke perduaan pantas:
 
-<b>Convert 192.168.23.43 to Binary</b>
+<b>Tukar 192.168.23.43 kepada Perduaan</b>
 
-Remember: 128 / 64 / 32 / 16 / 8 / 4 / 2 / 1
+Ingat: 128 / 64 / 32 / 16 / 8 / 4 / 2 / 1
 
-Let's walk through converting the first octet to binary and you'll understand how the rest works.
+Mari kita lalui penukaran oktet pertama kepada perduaan dan anda akan faham bagaimana selebihnya berfungsi.
 
 <ol>
-<li>Can you subtract 192 - 128? Yes, so the first bit is 1</li>
-<li>192 - 128 = 64, the next number in the chart is 64, can you subtract 64 - 64? Yes, so the second bit is 1</li>
-<li>We've run out of numbers to subtract from, so our binary form of 192 is 11000000</li>
+<li>Bolehkah anda menolak 192 - 128? Ya, jadi bit pertama ialah 1</li>
+<li>192 - 128 = 64, nombor seterusnya dalam carta ialah 64, bolehkah anda menolak 64 - 64? Ya, jadi bit kedua ialah 1</li>
+<li>Kami telah kehabisan nombor untuk ditolak, jadi bentuk perduaan 192 kami ialah 11000000</li>
 </ol>
 
-<b>Convert Binary 11000000 to Decimal</b>
+<b>Tukar Perduaan 11000000 kepada Perpuluhan</b>
 
-For binary to decimal conversion you add up the numbers that have a 1, so:
+Untuk penukaran perduaan ke perpuluhan anda menambah nombor yang mempunyai 1, jadi:
 
 128 + 64 + 0 + 0 + 0 + 0 + 0 + 0 = 192!
 
-## Exercise
+## Latihan
 
-Look at your IP address and subnet mask and see how many hosts you can have on your subnet.
+Lihat alamat IP dan topeng subnet anda dan lihat berapa banyak hos yang boleh anda ada pada subnet anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the binary conversion of 123?
+Apakah penukaran perduaan bagi 123?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 1111011

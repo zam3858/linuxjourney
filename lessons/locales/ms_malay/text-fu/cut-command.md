@@ -1,44 +1,44 @@
-# cut
+# potong
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We're gonna learn a couple of useful commands that you can use to process text. Before we get started, let's create a file that we'll be working with. Copy and paste the following command, once you do that add a TAB in between lazy and dog (hold down Ctrl-v + TAB).
+Kita akan belajar beberapa arahan berguna yang boleh anda gunakan untuk memproses teks. Sebelum kita bermula, mari kita cipta fail yang akan kita gunakan. Salin dan tampal arahan berikut, sebaik sahaja anda melakukannya tambah TAB di antara malas dan anjing (tahan Ctrl-v + TAB).
 
 <pre>$ echo 'The quick brown; fox jumps over the lazy  dog' > sample.txt</pre>
 
-First command we'll be learning about is the cut command. It extracts portions of text from a file.
+Perintah pertama yang akan kita pelajari ialah perintah potong. Ia mengekstrak bahagian teks dari fail.
 
-To extract contents by a list of characters:
+Untuk mengekstrak kandungan dengan senarai aksara:
 
 <pre>$ cut -c 5 sample.txt</pre>
 
-This outputs the 5th character in each line of the file. In this case it is "q", note that the space also counts as a character.
+Ini mengeluarkan aksara ke-5 dalam setiap baris fail. Dalam kes ini ia adalah "q", ambil perhatian bahawa ruang juga dikira sebagai aksara.
 
-To extract the contents by a field, we'll need to do a little modification:
+Untuk mengekstrak kandungan mengikut medan, kita perlu melakukan sedikit pengubahsuaian:
 
 <pre>$ cut -f 2 sample.txt</pre>
 
-The -f or field flag cuts text based off of fields, by default it uses TABs as delimiters, so everything separated by a TAB is considered a field. You should see "dog" as your output.
+Bendera -f atau medan memotong teks berdasarkan medan, secara lalai ia menggunakan TAB sebagai pembatas, jadi semua yang dipisahkan oleh TAB dianggap sebagai medan. Anda akan melihat "anjing" sebagai output anda.
 
-You can combine the field flag with the delimiter flag to extract the contents by a custom delimiter:
+Anda boleh menggabungkan bendera medan dengan bendera pembatas untuk mengekstrak kandungan dengan pembatas tersuai:
 
 <pre>$ cut -f 1 -d ";" sample.txt</pre>
 
-This will change the TAB delimiter to a ";" delimiter and since we are cutting the first field, the result should be "The quick brown".
+Ini akan menukar pembatas TAB kepada pembatas ";" dan kerana kita memotong medan pertama, hasilnya sepatutnya "The quick brown".
 
-## Exercise
+## Latihan
 
-What does the following command do? Why?
+Apakah yang dilakukan oleh arahan berikut? Mengapa?
 
 <pre>$ cut -c 5-10 sample.txt
 $ cut -c 5- sample.txt
 $ cut -c -5 sample.txt
 </pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What command would you use to get the first character of every line in a file?
+Apakah arahan yang akan anda gunakan untuk mendapatkan aksara pertama setiap baris dalam fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-cut -c 1
+potong -c 1

@@ -1,12 +1,12 @@
-# Tracking processes: top
+# Menjejaki proses: atas
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In this course, we'll go over how to read and analyze the resource utilization on your system, this lesson shows some great tools to use when you need to track what a process is doing.
+Dalam kursus ini, kita akan membincangkan cara membaca dan menganalisis penggunaan sumber pada sistem anda, pelajaran ini menunjukkan beberapa alat hebat untuk digunakan apabila anda perlu menjejaki apa yang dilakukan oleh sesuatu proses.
 
-<b>top</b>
+<b>atas</b>
 
-We've discussed top before, but we're going to dig into the specifics of what it's actually displaying. Remember top is the tool we used to get a real time view of the system utilization by our processes:
+Kami telah membincangkan tentang atas sebelum ini, tetapi kami akan mendalami secara spesifik tentang apa yang sebenarnya dipaparkannya. Ingat atas ialah alat yang kami gunakan untuk mendapatkan paparan masa nyata penggunaan sistem oleh proses kami:
 
 <pre>
 top - 18:06:26 up 6 days,  4:07,  2 users,  load average: 0.92, 0.62, 0.59
@@ -20,64 +20,64 @@ KiB Swap: 33480700 total,    39892 used, 33440808 free. 19454152 cached Mem
  6926 patty    20   0  935888 163456  25576 S   4.3  0.5   5:28.13 chrome
 </pre>
 
-Let's go over what this output means, you don't have to memorize this, but come back to this when you need a reference.
+Mari kita lihat apa maksud output ini, anda tidak perlu menghafalnya, tetapi kembali ke sini apabila anda memerlukan rujukan.
 
-<b>1st line: This is the same information you would see if you ran the uptime command (more to come)</b>
+<b>Baris pertama: Ini adalah maklumat yang sama yang akan anda lihat jika anda menjalankan arahan uptime (banyak lagi yang akan datang)</b>
 
-The fields are from left to right:
+Medan adalah dari kiri ke kanan:
 <ol>
-<li>Current time</li>
-<li>How long the system has been running</li>
-<li>How many users are currently logged on</li>
-<li>System load average (more to come)</li>
+<li>Masa semasa</li>
+<li>Berapa lama sistem telah berjalan</li>
+<li>Berapa ramai pengguna yang sedang log masuk</li>
+<li>Purata beban sistem (banyak lagi yang akan datang)</li>
 </ol>
 
-<b>2nd line: Tasks that are running, sleeping, stopped and zombied</b>
+<b>Baris ke-2: Tugas yang sedang berjalan, tidur, dihentikan dan zombi</b>
 
-<b>3rd line: Cpu information</b>
-
-<ol>
-<li>us: user CPU time - Percentage of CPU time spent running users’ processes that aren’t niced.</li>
-<li>sy: system CPU time - Percentage of CPU time spent running the kernel and kernel processes</li>
-<li>ni: nice CPU time - Percentage of CPU time spent running niced processes</li>
-<li>id: CPU idle time - Percentage of CPU time that is spent idle</li>
-<li>wa: I/O wait - Percentage of CPU time that is spent waiting for I/O. If this value is low, the problem probably isn’t disk or network I/O</li>
-<li>hi: hardware interrupts - Percentage of CPU time spent serving hardware interrupts</li>
-<li>si: software interrupts - Percentage of CPU time spent serving software interrupts</li>
-<li>st: steal time - If you are running virtual machines, this is the percentage of CPU time that was stolen from you for other tasks</li>
-</ol>
-
-<b>4th and 5th line: Memory Usage and Swap Usage</b>
-
-<b>Processes List that are Currently in Use</b>
+<b>Baris ke-3: Maklumat CPU</b>
 
 <ol>
-<li>PID: Id of the process</li>
-<li>USER: user that is the owner of the process</li>
-<li>PR: Priority of process</li>
-<li>NI: The nice value</li>
-<li>VIRT: Virtual memory used by the process</li>
-<li>RES: Physical memory used from the process</li>
-<li>SHR: Shared memory of the process</li>
-<li>S: Indicates the status of the process: S=sleep, R=running, Z=zombie,D=uninterruptible,T=stopped</li>
-<li>%CPU - this is the percent of CPU used by this process</li>
-<li>%MEM - percentage of RAM used by this process</li>
-<li>TIME+ - total time of activity of this process</li>
-<li>COMMAND - name of the process</li>
+<li>us: masa CPU pengguna - Peratusan masa CPU yang dihabiskan untuk menjalankan proses pengguna yang tidak dinice.</li>
+<li>sy: masa CPU sistem - Peratusan masa CPU yang dihabiskan untuk menjalankan kernel dan proses kernel</li>
+<li>ni: masa CPU nice - Peratusan masa CPU yang dihabiskan untuk menjalankan proses yang dinice</li>
+<li>id: masa terbiar CPU - Peratusan masa CPU yang dihabiskan terbiar</li>
+<li>wa: tunggu I/O - Peratusan masa CPU yang dihabiskan menunggu I/O. Jika nilai ini rendah, masalahnya mungkin bukan I/O cakera atau rangkaian</li>
+<li>hi: sampukan perkakasan - Peratusan masa CPU yang dihabiskan untuk melayan sampukan perkakasan</li>
+<li>si: sampukan perisian - Peratusan masa CPU yang dihabiskan untuk melayan sampukan perisian</li>
+<li>st: masa curi - Jika anda menjalankan mesin maya, ini ialah peratusan masa CPU yang dicuri daripada anda untuk tugas lain</li>
 </ol>
 
-You can also specify a process ID if you just want to track certain processes:
+<b>Baris ke-4 dan ke-5: Penggunaan Memori dan Penggunaan Swap</b>
+
+<b>Senarai Proses yang Sedang Digunakan</b>
+
+<ol>
+<li>PID: Id proses</li>
+<li>USER: pengguna yang merupakan pemilik proses</li>
+<li>PR: Keutamaan proses</li>
+<li>NI: Nilai nice</li>
+<li>VIRT: Memori maya yang digunakan oleh proses</li>
+<li>RES: Memori fizikal yang digunakan daripada proses</li>
+<li>SHR: Memori kongsi proses</li>
+<li>S: Menunjukkan status proses: S=tidur, R=berjalan, Z=zombi,D=tidak boleh diganggu,T=dihentikan</li>
+<li>%CPU - ini ialah peratus CPU yang digunakan oleh proses ini</li>
+<li>%MEM - peratusan RAM yang digunakan oleh proses ini</li>
+<li>TIME+ - jumlah masa aktiviti proses ini</li>
+<li>COMMAND - nama proses</li>
+</ol>
+
+Anda juga boleh menentukan ID proses jika anda hanya ingin menjejaki proses tertentu:
 
 <pre>$ top -p 1</pre>
 
-## Exercise
+## Latihan
 
-Play around with the top command and see what processes are using the most resources.
+Bermain-main dengan arahan atas dan lihat proses mana yang menggunakan sumber paling banyak.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command displays the same output as the first line in top?
+Apakah arahan yang memaparkan output yang sama dengan baris pertama di atas?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 uptime

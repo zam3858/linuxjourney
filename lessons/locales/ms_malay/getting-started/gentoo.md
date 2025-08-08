@@ -1,27 +1,27 @@
 # Gentoo
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-Gentoo offers ridiculous flexibility with the operating system at a price. It’s made for advanced users who don’t mind getting their hands dirty with the system.
+<b>Gambaran Keseluruhan</b>
+Gentoo menawarkan fleksibiliti yang tidak masuk akal dengan sistem pengendalian pada harga tertentu. Ia dibuat untuk pengguna lanjutan yang tidak kisah mengotorkan tangan mereka dengan sistem.
 
-<b>Package Management</b>
-Gentoo uses its own package management, Portage. The Portage package management is very modular and easy to maintain, which plays a big part in the operating system as a whole being very flexible.
+<b>Pengurusan Pakej</b>
+Gentoo menggunakan pengurusan pakejnya sendiri, Portage. Pengurusan pakej Portage sangat modular dan mudah diselenggara, yang memainkan peranan besar dalam sistem pengendalian secara keseluruhannya menjadi sangat fleksibel.
 
-<b>Configurability</b>
-If you’re just getting started with Linux and want to take a more difficult path, I’d choose Gentoo or Arch Linux as your distribution.
+<b>Kebolehubahsuaian</b>
+Jika anda baru bermula dengan Linux dan ingin mengambil jalan yang lebih sukar, saya akan memilih Gentoo atau Arch Linux sebagai distribusi anda.
 
-<b>Uses</b>
-Great for desktop and laptop.
+<b>Kegunaan</b>
+Hebat untuk desktop dan komputer riba.
 
-## Exercise
+## Latihan
 
-If you're interested in having Gentoo as your operating system, head over to the installation section and give it a try: <a href='https://www.gentoo.org/'>https://www.gentoo.org/</a>
+Jika anda berminat untuk mempunyai Gentoo sebagai sistem pengendalian anda, pergi ke bahagian pemasangan dan cubalah: <a href='https://www.gentoo.org/'>https://www.gentoo.org/</a>
 
-## Quiz Questions
+## Soalan Kuiz
 
-What package management system does Gentoo use?
+Apakah sistem pengurusan pakej yang digunakan oleh Gentoo?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 Portage

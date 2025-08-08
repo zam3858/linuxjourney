@@ -1,27 +1,27 @@
-# /proc filesystem
+# sistem fail /proc
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Remember everything in Linux is a file, even processes. Process information is stored in a special filesystem known as the /proc filesystem.
+Ingat semua dalam Linux adalah fail, malah proses. Maklumat proses disimpan dalam sistem fail khas yang dikenali sebagai sistem fail /proc.
 
 <pre>$ ls /proc</pre>
 
-You should see multiple values in here, there are sub-directories for every PID. If you looked at a PID in the ps output, you would be able to find it in the /proc directory.
+Anda akan melihat beberapa nilai di sini, terdapat sub-direktori untuk setiap PID. Jika anda melihat PID dalam output ps, anda akan dapat menemuinya dalam direktori /proc.
 
-Go ahead and enter one of the processes and look at that file:
+Teruskan dan masukkan salah satu proses dan lihat fail itu:
 
 <pre>$ cat /proc/12345/status</pre>
 
-You should see process state information and well as more detailed information. The /proc directory is how the kernel is views the system, so there is a lot more information here than what you would see in ps.
+Anda akan melihat maklumat keadaan proses dan juga maklumat yang lebih terperinci. Direktori /proc ialah cara kernel melihat sistem, jadi terdapat lebih banyak maklumat di sini daripada apa yang anda akan lihat dalam ps.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What filesystem stores process information?
+Apakah sistem fail yang menyimpan maklumat proses?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /proc

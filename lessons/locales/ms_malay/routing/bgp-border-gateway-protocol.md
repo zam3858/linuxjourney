@@ -1,19 +1,19 @@
-# Border Gateway Protocol
+# Protokol Gerbang Sempadan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The last important protocol we'll discuss is BGP, BGP is basically how the Internet runs. It's used to collect and exchange routing information among autonomous systems. Think of an autonomous system as an Internet service provider, a company, university, any organization, etc. Without BGP, these systems would not know how to talk to each other, they would just be siloed off. Instead of routing inside these autonomous systems, BGP routes between them.
+Protokol penting terakhir yang akan kita bincangkan ialah BGP, BGP pada asasnya ialah cara Internet berjalan. Ia digunakan untuk mengumpul dan menukar maklumat penghalaan antara sistem autonomi. Fikirkan sistem autonomi sebagai penyedia perkhidmatan Internet, syarikat, universiti, mana-mana organisasi, dsb. Tanpa BGP, sistem ini tidak akan tahu cara untuk bercakap antara satu sama lain, ia hanya akan terasing. Daripada menghala di dalam sistem autonomi ini, BGP menghala di antara mereka.
 
-Let's say you were on your home network and I'm working from Starbucks, I want to be able to communicate with you, so I send an email and the network packet travels through Starbuck's network, it bounces around there and goes through the routing tables in Starbuck's network until it finally reaches a point at the border of the Starbucks network and passes it to a Border Gateway router. This router contains the information for my packet to leave the Starbucks network and traverse other networks.
+Katakan anda berada di rangkaian rumah anda dan saya bekerja dari Starbucks, saya ingin dapat berkomunikasi dengan anda, jadi saya menghantar e-mel dan paket rangkaian bergerak melalui rangkaian Starbucks, ia melantun di sana dan melalui jadual penghalaan dalam rangkaian Starbucks sehingga akhirnya sampai ke satu titik di sempadan rangkaian Starbucks dan menghantarnya ke penghala Gerbang Sempadan. Penghala ini mengandungi maklumat untuk paket saya meninggalkan rangkaian Starbucks dan merentasi rangkaian lain.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What protocol basically makes the Internet work?
+Protokol manakah yang pada asasnya menjadikan Internet berfungsi?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 BGP

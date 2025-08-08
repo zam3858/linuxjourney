@@ -1,21 +1,21 @@
-# Routing Protocols
+# Protokol Penghalaan
 
-## Lesson Content
+## Kandungan Pelajaran
 
-It would be a pain to have to manually configure routes on a routing table for every device on your network, so instead we use what are known as routing protocols. Routing protocols are used to help our system adapt to network changes, it learns of different routes, builds them in the routing table and then routes our packets through that way. There are two primary routing protocol types, distance vector protocols and link state protocols.
+Adalah menyusahkan untuk perlu mengkonfigurasi laluan secara manual pada jadual penghalaan untuk setiap peranti pada rangkaian anda, jadi sebaliknya kami menggunakan apa yang dikenali sebagai protokol penghalaan. Protokol penghalaan digunakan untuk membantu sistem kami menyesuaikan diri dengan perubahan rangkaian, ia mempelajari laluan yang berbeza, membinanya dalam jadual penghalaan dan kemudian menghalakan paket kami melalui cara itu. Terdapat dua jenis protokol penghalaan utama, protokol vektor jarak dan protokol keadaan pautan.
 
-<b>Convergence</b>
+<b>Penumpuan</b>
 
-Before we talk about the protocols, we should go over a term using in routing known as convergence. When using routing protocols, routers communicate with other routers to collect and exchange information about the network. When they agree on how a network should look, every routing table maps out the complete topology of the network, thus "converging". When something occurs in the network topology, the convergence will temporarily break until all routers are aware of this change.
+Sebelum kita bercakap tentang protokol, kita harus meneliti istilah yang digunakan dalam penghalaan yang dikenali sebagai penumpuan. Apabila menggunakan protokol penghalaan, penghala berkomunikasi dengan penghala lain untuk mengumpul dan bertukar maklumat tentang rangkaian. Apabila mereka bersetuju tentang bagaimana rupa rangkaian, setiap jadual penghalaan memetakan topologi lengkap rangkaian, dengan itu "menumpu". Apabila sesuatu berlaku dalam topologi rangkaian, penumpuan akan terputus buat sementara waktu sehingga semua penghala menyedari perubahan ini.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the term used when all routing tables know the network topology?
+Apakah istilah yang digunakan apabila semua jadual penghalaan mengetahui topologi rangkaian?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-convergence
+penumpuan

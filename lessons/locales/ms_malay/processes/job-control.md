@@ -1,21 +1,21 @@
-# Job Control
+# Kawalan Kerja
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's say you're working on a single terminal window and you're running a command that is taking forever. You can't interact with the shell until it is complete, however we want to keep working on our machines, so we need that shell open. Fortunately we can control how our processes run with jobs:
+Katakan anda sedang bekerja pada satu tetingkap terminal dan anda menjalankan arahan yang mengambil masa yang lama. Anda tidak boleh berinteraksi dengan shell sehingga ia selesai, walau bagaimanapun kami ingin terus bekerja pada mesin kami, jadi kami perlukan shell itu terbuka. Nasib baik kita boleh mengawal bagaimana proses kita berjalan dengan kerja:
 
-<b>Sending a job to the background</b>
+<b>Menghantar kerja ke latar belakang</b>
 
-Appending an ampersand (&) to the command will run it in the background so you can still use your shell. Let's see an example:
+Menambah ampersand (&) pada arahan akan menjalankannya di latar belakang supaya anda masih boleh menggunakan shell anda. Mari kita lihat contoh:
 
 <pre>$ sleep 1000 &
 $ sleep 1001 &
 $ sleep 1002 &
 </pre>
 
-<b>View all background jobs</b>
+<b>Lihat semua kerja latar belakang</b>
 
-Now you can view the jobs you just sent to the background.
+Sekarang anda boleh melihat kerja yang baru anda hantar ke latar belakang.
 
 <pre>$ jobs
 
@@ -25,11 +25,11 @@ Now you can view the jobs you just sent to the background.
 
 </pre>
 
-This will show you the job id in the first column, then the status and the command that was run. The <b>+</b> next to the job ID means that it is the most recent background job that started. The job with the <b>-</b> is the second most recent command.
+Ini akan menunjukkan kepada anda id kerja dalam lajur pertama, kemudian status dan arahan yang dijalankan. Tanda <b>+</b> di sebelah ID kerja bermakna ia adalah kerja latar belakang terbaharu yang dimulakan. Kerja dengan <b>-</b> ialah arahan kedua terbaharu.
 
-<b>Sending a job to the background on existing job</b>
+<b>Menghantar kerja ke latar belakang pada kerja sedia ada</b>
 
-If you already ran a job and want to send it to the background, you don't have to terminate it and start over again. First suspend the job with Ctrl-Z, then run the <b>bg</b> command to send it to the background.
+Jika anda sudah menjalankan kerja dan ingin menghantarnya ke latar belakang, anda tidak perlu menamatkannya dan memulakan semula. Mula-mula gantung kerja dengan Ctrl-Z, kemudian jalankan arahan <b>bg</b> untuk menghantarnya ke latar belakang.
 
 <pre>
 pete@icebox ~ $ sleep 1003
@@ -47,26 +47,26 @@ pete@icebox ~ $ jobs
 [4]+   Running     sleep 1003 &
 </pre>
 
-<b>Moving a job from the background to the foreground</b>
+<b>Memindahkan kerja dari latar belakang ke latar depan</b>
 
-To move a job out of the background just specify the job ID you want. If you run fg without any options, it will bring back the most recent background job (the job with the + sign next to it)
+Untuk memindahkan kerja keluar dari latar belakang, hanya nyatakan ID kerja yang anda mahu. Jika anda menjalankan fg tanpa sebarang pilihan, ia akan mengembalikan kerja latar belakang terbaharu (kerja dengan tanda + di sebelahnya)
 
 <pre>$ fg %1</pre>
 
-<b>Kill background jobs</b>
+<b>Bunuh kerja latar belakang</b>
 
-Similar to moving jobs out of the background, you can use the same form to kill the processes by using their Job ID.
+Sama seperti memindahkan kerja keluar dari latar belakang, anda boleh menggunakan borang yang sama untuk membunuh proses dengan menggunakan ID Kerja mereka.
 
 <pre>kill %1</pre>
 
-## Exercise
+## Latihan
 
-Move some jobs between the background and the foreground
+Pindahkan beberapa kerja antara latar belakang dan latar depan
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to list background jobs?
+Apakah arahan yang digunakan untuk menyenaraikan kerja latar belakang?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 jobs

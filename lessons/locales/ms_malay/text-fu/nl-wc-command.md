@@ -1,43 +1,43 @@
-# wc and nl
+# wc dan nl
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The wc (word count) command shows the total count of words in a file.
+Perintah wc (kiraan perkataan) menunjukkan jumlah kiraan perkataan dalam fail.
 
 <pre>$ wc /etc/passwd
  96     265    5925 /etc/passwd
 </pre>
 
-It display the number of lines, number of words and number of bytes, respectively.
+Ia memaparkan bilangan baris, bilangan perkataan dan bilangan bait, masing-masing.
 
-To just see just the count of a certain field, use the -l, -w, or -c respectively.
+Untuk hanya melihat kiraan medan tertentu, gunakan -l, -w, atau -c masing-masing.
 
 <pre>$ wc -l /etc/passwd
 96</pre>
 
-Another command you can use to check the count of lines on a file is the nl (number lines) command.
+Satu lagi arahan yang boleh anda gunakan untuk menyemak kiraan baris pada fail ialah arahan nl (baris nombor).
 
 <pre>
 file1.txt
-i
-like
-turtles
+saya
+suka
+penyu
 </pre>
 
 <pre>$ nl file1.txt
-1. i
-2. like
-3. turtles
+1. saya
+2. suka
+3. penyu
 </pre>
 
-## Exercise
+## Latihan
 
-How would you get the total count of lines by using the nl file without searching through the entire output? Hint: Use some of the other commands you learned in this course.
+Bagaimanakah anda akan mendapatkan jumlah kiraan baris dengan menggunakan fail nl tanpa mencari melalui keseluruhan output? Petunjuk: Gunakan beberapa arahan lain yang anda pelajari dalam kursus ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command would you use to get the total number of words in a file and just the words?
+Apakah arahan yang akan anda gunakan untuk mendapatkan jumlah perkataan dalam fail dan hanya perkataan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 wc -w

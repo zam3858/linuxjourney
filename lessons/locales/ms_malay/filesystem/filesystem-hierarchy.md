@@ -1,40 +1,40 @@
-# Filesystem Hierarchy
+# Hierarki Sistem Fail
 
-## Lesson Content
+## Kandungan Pelajaran
 
-At this point, you're probably well familiar with the directory structure of your system, if not you will be soon. Filesystems can vary with how they are structured, but for the most part they should conform to the Filesystem Hierarchy Standard.
+Pada ketika ini, anda mungkin sudah biasa dengan struktur direktori sistem anda, jika tidak, anda akan mengetahuinya tidak lama lagi. Sistem fail boleh berbeza-beza dari segi strukturnya, tetapi kebanyakannya harus mematuhi Piawaian Hierarki Sistem Fail.
 
-Go ahead and do an <b>ls -l /</b> to see the directories listed under the root directory, yours may look different than mine, but the directories should for the most part look like the following:
+Teruskan dan lakukan <b>ls -l /</b> untuk melihat direktori yang disenaraikan di bawah direktori akar, direktori anda mungkin kelihatan berbeza daripada saya, tetapi kebanyakannya direktori harus kelihatan seperti berikut:
 
 <ul>
-<li>/ - The root directory of the entire filesystem hierarchy, everything is nestled under this directory.</li>
-<li>/bin - Essential ready-to-run programs (binaries), includes the most basic commands such as ls and cp.</li>
-<li>/boot - Contains kernel boot loader files.</li>
-<li>/dev - Device files.</li>
-<li>/etc - Core system configuration directory, should hold only configuration files and not any binaries.</li>
-<li>/home - Personal directories for users, holds your documents, files, settings, etc. </li>
-<li>/lib - Holds library files that binaries can use.</li>
-<li>/media - Used as an attachment point for removable media like USB drives.</li>
-<li>/mnt - Temporarily mounted filesystems.</li>
-<li>/opt - Optional application software packages.</li>
-<li>/proc - Information about currently running processes.</li>
-<li>/root - The root user's home directory.</li>
-<li>/run - Information about the running system since the last boot.</li>
-<li>/sbin - Contains essential system binaries, usually can only be ran by root.</li>
-<li>/srv - Site-specific data which are served by the system.</li>
-<li>/tmp - Storage for temporary files</li>
-<li>/usr - This is unfortunately named, most often it does not contain user files in the sense of a home folder. This is meant for user installed software and utilities, however that is not to say you can't add personal directories in there. Inside this directory are sub-directories for /usr/bin, /usr/local, etc.</li>
-<li>/var - Variable directory, it's used for system logging, user tracking, caches, etc. Basically anything that is subject to change all the time.</li>
+<li>/ - Direktori akar bagi keseluruhan hierarki sistem fail, semuanya terletak di bawah direktori ini.</li>
+<li>/bin - Program sedia untuk dijalankan yang penting (binari), termasuk arahan paling asas seperti ls dan cp.</li>
+<li>/boot - Mengandungi fail pemuat but kernel.</li>
+<li>/dev - Fail peranti.</li>
+<li>/etc - Direktori konfigurasi sistem teras, hanya perlu menyimpan fail konfigurasi dan bukan sebarang binari.</li>
+<li>/home - Direktori peribadi untuk pengguna, menyimpan dokumen, fail, tetapan anda, dsb.</li>
+<li>/lib - Menyimpan fail perpustakaan yang boleh digunakan oleh binari.</li>
+<li>/media - Digunakan sebagai titik lampiran untuk media boleh tanggal seperti pemacu USB.</li>
+<li>/mnt - Sistem fail yang dilekapkan buat sementara waktu.</li>
+<li>/opt - Pakej perisian aplikasi pilihan.</li>
+<li>/proc - Maklumat tentang proses yang sedang berjalan.</li>
+<li>/root - Direktori rumah pengguna akar.</li>
+<li>/run - Maklumat tentang sistem yang berjalan sejak but terakhir.</li>
+<li>/sbin - Mengandungi binari sistem penting, biasanya hanya boleh dijalankan oleh akar.</li>
+<li>/srv - Data khusus tapak yang dilayan oleh sistem.</li>
+<li>/tmp - Storan untuk fail sementara</li>
+<li>/usr - Ini malangnya dinamakan, selalunya ia tidak mengandungi fail pengguna dalam erti kata folder rumah. Ini bertujuan untuk perisian dan utiliti yang dipasang pengguna, namun itu tidak bermakna anda tidak boleh menambah direktori peribadi di sana. Di dalam direktori ini terdapat sub-direktori untuk /usr/bin, /usr/local, dsb.</li>
+<li>/var - Direktori pembolehubah, ia digunakan untuk pengelogan sistem, penjejakan pengguna, cache, dsb. Pada asasnya apa sahaja yang tertakluk kepada perubahan sepanjang masa.</li>
 </ul>
 
-## Exercise
+## Latihan
 
-Look inside your /usr directory, what kind of information is located there?
+Lihat di dalam direktori /usr anda, apakah jenis maklumat yang terdapat di sana?
 
-## Quiz Question
+## Soalan Kuiz
 
-What directory is used to store logs?
+Direktori manakah yang digunakan untuk menyimpan log?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /var

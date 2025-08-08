@@ -1,36 +1,36 @@
-# Cron Jobs
+# Kerja Cron
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Although we have been talking about resource utilization, I think this would be a good point to mention a neat tool in Linux that is used to schedule tasks using cron. There is a service that runs programs for you at whatever time you schedule. This is a really useful if you have a script you want to run once a day that needs to execute something for you.
+Walaupun kita telah bercakap tentang penggunaan sumber, saya fikir ini adalah masa yang baik untuk menyebut alat yang kemas dalam Linux yang digunakan untuk menjadualkan tugas menggunakan cron. Terdapat perkhidmatan yang menjalankan program untuk anda pada bila-bila masa yang anda jadualkan. Ini sangat berguna jika anda mempunyai skrip yang ingin anda jalankan sekali sehari yang perlu melaksanakan sesuatu untuk anda.
 
-For example, let's say I have a script located in /home/pete/scripts/change_wallpaper. I use this script every morning to change the picture I use for my wallpaper, but each morning I have to manually execute this script. Instead what I can do is create a cron job that executes my script through cron. I can specify the time I want this cron job to run and execute my script.
+Sebagai contoh, katakan saya mempunyai skrip yang terletak di /home/pete/scripts/change_wallpaper. Saya menggunakan skrip ini setiap pagi untuk menukar gambar yang saya gunakan untuk kertas dinding saya, tetapi setiap pagi saya perlu melaksanakan skrip ini secara manual. Sebaliknya apa yang boleh saya lakukan ialah membuat kerja cron yang melaksanakan skrip saya melalui cron. Saya boleh menentukan masa yang saya mahu kerja cron ini dijalankan dan melaksanakan skrip saya.
 
 <pre>30 08 * * * /home/pete/scripts/change_wallpaper</pre>
 
-The fields are as follows from left to right:
+Medan adalah seperti berikut dari kiri ke kanan:
 <ul>
-<li>Minute - (0-59)</li>
-<li>Hour - (0-23)</li>
-<li>Day of the month - (1-31)</li>
-<li>Month - (1-12)</li>
-<li>Day of the week - (0-7). 0 and 7 are denoted as Sunday</li>
+<li>Minit - (0-59)</li>
+<li>Jam - (0-23)</li>
+<li>Hari dalam bulan - (1-31)</li>
+<li>Bulan - (1-12)</li>
+<li>Hari dalam minggu - (0-7). 0 dan 7 ditandakan sebagai Ahad</li>
 </ul>
 
-The asterisk in the field means to match every value. So in my above example, I want this to run every day in every month at 8:30am.
+Tanda bintang dalam medan bermaksud untuk memadankan setiap nilai. Jadi dalam contoh saya di atas, saya mahu ini berjalan setiap hari dalam setiap bulan pada jam 8:30 pagi.
 
-To create a cronjob, just edit the crontab file:
+Untuk membuat kerja cron, hanya edit fail crontab:
 
 <pre>crontab -e</pre>
 
-## Exercise
+## Latihan
 
-Create a cronjob that you want to run at a scheduled time.
+Buat kerja cron yang ingin anda jalankan pada masa yang dijadualkan.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command to edit your cronjobs?
+Apakah arahan untuk mengedit kerja cron anda?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 crontab -e

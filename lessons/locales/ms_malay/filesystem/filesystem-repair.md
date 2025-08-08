@@ -1,21 +1,21 @@
-# Filesystem Repair
+# Pembaikan Sistem Fail
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Sometimes our filesystem isn't always in the best condition, if we have a sudden shutdown, our data can become corrupt. It's up to the system to try to get us back in a working state (although we sure can try ourselves).
+Kadang-kadang sistem fail kita tidak sentiasa dalam keadaan terbaik, jika kita mengalami penutupan secara tiba-tiba, data kita boleh menjadi rosak. Terpulang kepada sistem untuk cuba membawa kita kembali ke keadaan berfungsi (walaupun kita pasti boleh mencubanya sendiri).
 
-The <b>fsck</b> (filesystem check) command is used to check the consistency of a filesystem and can even try to repair it for us. Usually when you boot up a disk, fsck will run before your disk is mounted to make sure everything is ok. Sometimes though, your disk is so bad that you'll need to manually do this. However, be sure to do this while you are in a rescue disk or somewhere where you can access your filesystem without it being mounted.
+Perintah <b>fsck</b> (pemeriksaan sistem fail) digunakan untuk memeriksa ketekalan sistem fail dan malah boleh cuba membaikinya untuk kita. Biasanya apabila anda but cakera, fsck akan berjalan sebelum cakera anda dilekapkan untuk memastikan semuanya ok. Walau bagaimanapun, kadang-kadang cakera anda begitu teruk sehingga anda perlu melakukannya secara manual. Walau bagaimanapun, pastikan anda melakukan ini semasa anda berada dalam cakera penyelamat atau di suatu tempat di mana anda boleh mengakses sistem fail anda tanpa ia dilekapkan.
 
 <pre>$ sudo fsck /dev/sda</pre>
 
-## Exercise
+## Latihan
 
-Look at the manpage for fsck to see what else it can do.
+Lihat halaman manual untuk fsck untuk melihat apa lagi yang boleh dilakukannya.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to check the integrity of a filesystem?
+Apakah arahan yang digunakan untuk memeriksa integriti sistem fail?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 fsck

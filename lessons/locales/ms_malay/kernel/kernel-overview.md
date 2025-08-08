@@ -1,25 +1,25 @@
-# Overview of the Kernel
+# Gambaran Keseluruhan Kernel
 
-## Lesson Content
+## Kandungan Pelajaran
 
-As you've learned up to this point, the kernel is the core of the operating system. We've talked about the other parts of the operating system but have yet to show how they all work together. The Linux operating system can be organized into three different levels of abstraction.
+Seperti yang telah anda pelajari sehingga ke tahap ini, kernel ialah teras sistem pengendalian. Kami telah membincangkan bahagian lain sistem pengendalian tetapi masih belum menunjukkan cara semuanya berfungsi bersama. Sistem pengendalian Linux boleh disusun kepada tiga tahap abstraksi yang berbeza.
 
-The most basic level is hardware, this includes our CPU, memory, hard disks, networking ports, etc. The physical layer that actually computes what our machine is doing.
+Tahap paling asas ialah perkakasan, ini termasuk CPU, memori, cakera keras, port rangkaian, dsb. Lapisan fizikal yang sebenarnya mengira apa yang mesin kita lakukan.
 
-The next level is the kernel, which handles process and memory management, device communication, system calls, sets up our filesystem, etc. The kernel's job is to talk to the hardware to make sure it does what we want our processes to do.
+Tahap seterusnya ialah kernel, yang mengendalikan proses dan pengurusan memori, komunikasi peranti, panggilan sistem, menyediakan sistem fail kita, dsb. Tugas kernel adalah untuk bercakap dengan perkakasan untuk memastikan ia melakukan apa yang kita mahu proses kita lakukan.
 
-And the level that you are familiar with is the user space, the user space includes the shell, the programs that you run, the graphics, etc.
+Dan tahap yang anda biasa ialah ruang pengguna, ruang pengguna termasuk shell, program yang anda jalankan, grafik, dsb.
 
-In this course, we'll be focusing on the kernel and learning its intricacies.
+Dalam kursus ini, kita akan memberi tumpuan kepada kernel dan mempelajari selok-beloknya.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What level of the operating system manages devices?
+Apakah tahap sistem pengendalian yang mengurus peranti?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 kernel

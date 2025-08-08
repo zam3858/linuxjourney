@@ -1,25 +1,25 @@
-# /dev directory
+# direktori /dev
 
-## Lesson Content
+## Kandungan Pelajaran
 
-When you connect a device to your machine, it generally needs a device driver to function properly. You can interact with device drivers through device files or device nodes, these are special files that look like regular files. Since these device files are just like regular files, you can use programs such as ls, cat, etc to interact with them. These device files are generally stored in the /dev directory. Go ahead and ls the /dev directory on your system, you'll see a large amount of devices files that are on your system.
+Apabila anda menyambungkan peranti ke mesin anda, ia biasanya memerlukan pemacu peranti untuk berfungsi dengan betul. Anda boleh berinteraksi dengan pemacu peranti melalui fail peranti atau nod peranti, ini adalah fail khas yang kelihatan seperti fail biasa. Oleh kerana fail peranti ini sama seperti fail biasa, anda boleh menggunakan program seperti ls, cat, dsb untuk berinteraksi dengannya. Fail peranti ini biasanya disimpan dalam direktori /dev. Teruskan dan ls direktori /dev pada sistem anda, anda akan melihat sejumlah besar fail peranti yang ada pada sistem anda.
 
 <pre>$ ls /dev </pre>
 
-Some of these devices you've already used and interacted with such as /dev/null. Remember when we send output to /dev/null, the kernel knows that this device takes all of our input and just discards it, so nothing gets returned.
+Sesetengah peranti ini telah anda gunakan dan berinteraksi dengannya seperti /dev/null. Ingat apabila kita menghantar output ke /dev/null, kernel tahu bahawa peranti ini mengambil semua input kita dan hanya membuangnya, jadi tiada apa yang dikembalikan.
 
-In the old days, if you wanted to add a device to your system, you'd add the device file in /dev and then probably forget about it. Well repeat that a couple of times and you can see where there was a problem. The /dev directory would get cluttered with static device files of devices that you've long since upgraded, stopped using, etc. Devices are also assigned device files in the order that the kernel finds them. So if everytime you rebooted your system, the devices could have different device files depending on when they were discovered.
+Pada zaman dahulu, jika anda ingin menambah peranti pada sistem anda, anda akan menambah fail peranti dalam /dev dan kemudian mungkin melupakannya. Ulangi itu beberapa kali dan anda boleh lihat di mana masalahnya. Direktori /dev akan menjadi sesak dengan fail peranti statik peranti yang telah lama anda tingkatkan, berhenti menggunakan, dsb. Peranti juga diberikan fail peranti mengikut urutan kernel menemuinya. Jadi jika setiap kali anda but semula sistem anda, peranti boleh mempunyai fail peranti yang berbeza bergantung pada bila ia ditemui.
 
-Thankfully we no longer use that method, now we have something that we use to dynamically add and remove devices that are currently being used on the system and we'll be discussing this in the coming lessons.
+Syukurlah kita tidak lagi menggunakan kaedah itu, sekarang kita mempunyai sesuatu yang kita gunakan untuk menambah dan mengalih keluar peranti secara dinamik yang sedang digunakan pada sistem dan kita akan membincangkan ini dalam pelajaran yang akan datang.
 
-## Exercise
+## Latihan
 
-Check out the contents of the /dev directory, do you recognize any familiar devices?
+Semak kandungan direktori /dev, adakah anda mengenali sebarang peranti yang biasa?
 
-## Quiz Question
+## Soalan Kuiz
 
-Where are device files stored on the system?
+Di manakah fail peranti disimpan pada sistem?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 /dev

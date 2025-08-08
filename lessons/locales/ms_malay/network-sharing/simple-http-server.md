@@ -1,23 +1,23 @@
-# Simple HTTP Server
+# Pelayan HTTP Mudah
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Python has a super useful tool for serving files over HTTP. This is great if you just want to create a quick network share that other machines on your network can access. To do that just go to the directory you want to share and run:
+Python mempunyai alat yang sangat berguna untuk menghidangkan fail melalui HTTP. Ini bagus jika anda hanya ingin membuat perkongsian rangkaian pantas yang boleh diakses oleh mesin lain pada rangkaian anda. Untuk melakukannya, pergi sahaja ke direktori yang anda ingin kongsi dan jalankan:
 
 <pre>$ python -m SimpleHTTPServer</pre>
 
-This sets up a basic webserver that you can access via the localhost address. So grab the IP address of the machine you ran this on and then on another machine access it in the browser with: http://IP_ADDRESS:8000. On your own machine, you can view the files available by typing: http://localhost:8000 in your web browser.
+Ini menyediakan pelayan web asas yang boleh anda akses melalui alamat localhost. Jadi dapatkan alamat IP mesin yang anda jalankan ini dan kemudian pada mesin lain aksesnya dalam penyemak imbas dengan: http://IP_ADDRESS:8000. Pada mesin anda sendiri, anda boleh melihat fail yang tersedia dengan menaip: http://localhost:8000 dalam penyemak imbas web anda.
 
-You can also do this with node or if you are running Python 3, the syntax will be a little bit different.
+Anda juga boleh melakukan ini dengan nod atau jika anda menggunakan Python 3, sintaksnya akan sedikit berbeza.
 
-## Exercise
+## Latihan
 
-Try setting up a SimpleHTTPServer!
+Cuba sediakan SimpleHTTPServer!
 
-## Quiz Question
+## Soalan Kuiz
 
-What tool can you use to create a simple http server with python?
+Apakah alat yang boleh anda gunakan untuk mencipta pelayan http mudah dengan python?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 SimpleHTTPServer

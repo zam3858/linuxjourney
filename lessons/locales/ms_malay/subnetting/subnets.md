@@ -1,41 +1,41 @@
-# Subnets
+# Subnet
 
-## Lesson Content
+## Kandungan Pelajaran
 
-How can I tell if I'm on the same network as Patty? Well we can just look at the subnet short for subnetwork. A subnet is a group of hosts with IP addresses that are similar in a certain way. These hosts usually are in a proximate location from each other and you can easily send data to and from hosts on the same subnet. Think about it as sending mail in the same zip code, it's a lot easier than sending mail to a different state.
+Bagaimanakah saya boleh tahu jika saya berada pada rangkaian yang sama dengan Patty? Kita boleh lihat sahaja pada subnet singkatan untuk subnetwork. Subnet ialah sekumpulan hos dengan alamat IP yang serupa dalam cara tertentu. Hos ini biasanya berada di lokasi yang berdekatan antara satu sama lain dan anda boleh menghantar data ke dan dari hos pada subnet yang sama dengan mudah. Fikirkan ia seperti menghantar mel dalam poskod yang sama, ia lebih mudah daripada menghantar mel ke negeri yang berbeza.
 
-For example, all hosts with an IP address that starts with 123.45.67 would be on the same subnet. My host has an IP of 123.45.67.8 and Patty's has an IP of 123.45.67.9. The common numbers are my network prefix and the 8 and 9 are our hosts, therefore my network is the same as Patty's. A subnet is divided into a network prefix, such as 123.45.67.0 and a subnet mask.
+Sebagai contoh, semua hos dengan alamat IP yang bermula dengan 123.45.67 akan berada pada subnet yang sama. Hos saya mempunyai IP 123.45.67.8 dan Patty mempunyai IP 123.45.67.9. Nombor biasa ialah awalan rangkaian saya dan 8 dan 9 ialah hos kami, oleh itu rangkaian saya sama dengan Patty. Subnet dibahagikan kepada awalan rangkaian, seperti 123.45.67.0 dan topeng subnet.
 
-<b>Subnet Masks</b>
+<b>Topeng Subnet</b>
 
-Subnet masks determine what part of your IP address is the network portion and what part is the host portion.
+Topeng subnet menentukan bahagian mana alamat IP anda ialah bahagian rangkaian dan bahagian mana ialah bahagian hos.
 
-A typical subnet mask can look something like this:
+Topeng subnet biasa boleh kelihatan seperti ini:
 
 <pre>255.255.255.0</pre>
 
-The 255 portion is actually our mask. To make this a little easier to understand, remember how we refer to each octet as 8 bits? In computer science a bit is denoted by a 0 or a 1 in binary form. When binary numbers are used, 1 means on and 0 means off. So what does 8 0's or 1's equal?
+Bahagian 255 sebenarnya adalah topeng kami. Untuk menjadikan ini lebih mudah difahami, ingat bagaimana kita merujuk setiap oktet sebagai 8 bit? Dalam sains komputer, bit ditandakan dengan 0 atau 1 dalam bentuk binari. Apabila nombor binari digunakan, 1 bermaksud hidup dan 0 bermaksud mati. Jadi apakah persamaan 8 0 atau 1?
 
-Punch into Google "binary to decimal calculator" and convert 11111111 into a decimal form. What do you get? 255! So an octet ranges from 0 to 255. So if we had a subnet mask of 255.255.255.0, and an IP address of 192.168.1.0, how many hosts are on that subnet? We'll find out the answer to that in our subnet math lesson.
+Masukkan ke dalam Google "kalkulator binari ke perpuluhan" dan tukar 11111111 ke dalam bentuk perpuluhan. Apa yang anda dapat? 255! Jadi oktet berjulat dari 0 hingga 255. Jadi jika kita mempunyai topeng subnet 255.255.255.0, dan alamat IP 192.168.1.0, berapa banyak hos pada subnet itu? Kita akan mengetahui jawapannya dalam pelajaran matematik subnet kita.
 
-Also when we talk about our subnet, we commonly denote it by the network prefix followed by the subnet mask:
+Juga apabila kita bercakap tentang subnet kita, kita biasanya menandakannya dengan awalan rangkaian diikuti dengan topeng subnet:
 
 <pre>123.234.0.0/255.255.0.0</pre>
 
-<b>Why?</b>
+<b>Mengapa?</b>
 
-Why on earth do we make subnets? Subnetting is used to segment networks and control the flow of traffic within that network. So a host on one subnet can’t interact with another host on a different subnet.
+Mengapakah kita membuat subnet? Subnetting digunakan untuk mensegmenkan rangkaian dan mengawal aliran trafik dalam rangkaian itu. Jadi hos pada satu subnet tidak boleh berinteraksi dengan hos lain pada subnet yang berbeza.
 
-But wait a minute, what if I want to connect to other hosts like yahoo.com? Then you need to connect subnets together. To connect subnets you just need to find the hosts that are connected to more than one subnet. For example, if my host at 192.168.1.129 is connected to a local network of 192.168.1.129/24 it can reach any hosts on that network. To reach hosts on the rest of the Internet, it needs to communicate through the router. Traditionally, on most networks with a subnet mask of 255.255.255.0, the router is usually at address 1 of the subnet, so 192.168.1.1. Now that router will have a port that connects it to another subnet (more in the Routing course). Certain IP addresses (private networks) are not visible to the internet, and we have things like NAT in place (more on this later).
+Tetapi tunggu sebentar, bagaimana jika saya ingin menyambung ke hos lain seperti yahoo.com? Kemudian anda perlu menyambungkan subnet bersama-sama. Untuk menyambungkan subnet anda hanya perlu mencari hos yang disambungkan ke lebih daripada satu subnet. Sebagai contoh, jika hos saya di 192.168.1.129 disambungkan ke rangkaian tempatan 192.168.1.129/24 ia boleh mencapai mana-mana hos pada rangkaian itu. Untuk mencapai hos di seluruh Internet, ia perlu berkomunikasi melalui penghala. Secara tradisinya, pada kebanyakan rangkaian dengan topeng subnet 255.255.255.0, penghala biasanya berada di alamat 1 subnet, jadi 192.168.1.1. Sekarang penghala itu akan mempunyai port yang menyambungkannya ke subnet lain (lebih lanjut dalam kursus Penghalaan). Alamat IP tertentu (rangkaian peribadi) tidak dapat dilihat oleh internet, dan kami mempunyai perkara seperti NAT (lebih lanjut mengenai ini kemudian).
 
-## Exercise
+## Latihan
 
-Use ifconfig to view your subnet mask.
+Gunakan ifconfig untuk melihat topeng subnet anda.
 
-## Quiz Question
+## Soalan Kuiz
 
-True or false, a subnet consists of a subnet mask and network prefix.
+Benar atau salah, subnet terdiri daripada topeng subnet dan awalan rangkaian.
 
-## Quiz Answer
+## Jawapan Kuiz
 
-True
+Benar

@@ -1,27 +1,27 @@
 # Fedora
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Overview</b>
-Backed by Red Hat, the Fedora Project is community driven containing open-source and free software. Red Hat Enterprise Linux branches off Fedora, so think of Fedora as an upstream RHEL operating system. Eventually RHEL will get updates from Fedora after thorough testing and quality assurance. Think of Fedora as an Ubuntu equivalent that uses a Red Hat backend instead of Debian.
+<b>Gambaran Keseluruhan</b>
+Disokong oleh Red Hat, Projek Fedora dipacu komuniti yang mengandungi perisian sumber terbuka dan percuma. Red Hat Enterprise Linux bercabang dari Fedora, jadi anggap Fedora sebagai sistem pengendalian RHEL huluan. Akhirnya RHEL akan mendapat kemas kini daripada Fedora selepas ujian menyeluruh dan jaminan kualiti. Anggap Fedora sebagai setara Ubuntu yang menggunakan bahagian belakang Red Hat dan bukannya Debian.
 
-<b>Package Management</b>
-Uses Red Hat package manager.
+<b>Pengurusan Pakej</b>
+Menggunakan pengurus pakej Red Hat.
 
-<b>Configurability</b>
-If you want to use a Red Hat based operating system, this is a user friendly version.
+<b>Kebolehubahsuaian</b>
+Jika anda ingin menggunakan sistem pengendalian berasaskan Red Hat, ini ialah versi yang mesra pengguna.
 
-<b>Uses</b>
-Fedora is great if you want a Red Hat based operating system without the price tag. Recommended for desktop and laptop.
+<b>Kegunaan</b>
+Fedora hebat jika anda mahukan sistem pengendalian berasaskan Red Hat tanpa tanda harga. Disyorkan untuk desktop dan komputer riba.
 
-## Exercise
+## Latihan
 
-If you're interested in having Fedora as your operating system, head over to the installation section and give it a try: <a href='https://getfedora.org/'>https://getfedora.org/</a>
+Jika anda berminat untuk mempunyai Fedora sebagai sistem pengendalian anda, pergi ke bahagian pemasangan dan cubalah: <a href='https://getfedora.org/'>https://getfedora.org/</a>
 
-## Quiz Questions
+## Soalan Kuiz
 
-What is RHEL branched off of?
+Dari manakah RHEL bercabang?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 Fedora

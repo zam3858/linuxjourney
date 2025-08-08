@@ -1,38 +1,38 @@
 # dd
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The dd tool is super useful for converting and copying data. It reads input from a file or data stream and writes it to a file or data stream.
+Alat dd sangat berguna untuk menukar dan menyalin data. Ia membaca input daripada fail atau strim data dan menulisnya ke fail atau strim data.
 
-Consider the following command:
+Pertimbangkan arahan berikut:
 
 <pre>$ dd if=/home/pete/backup.img of=/dev/sdb bs=1024 </pre>
 
-This command is copying the contents of backup.img to /dev/sdb. It will copy the data in blocks of 1024 bytes until there is no more data to be copied.
+Perintah ini menyalin kandungan backup.img ke /dev/sdb. Ia akan menyalin data dalam blok 1024 bait sehingga tiada lagi data untuk disalin.
 
 <ul>
-<li>if=file - Input file, read from a file instead of standard input</li>
-<li>of=file - Output file, write to a file instead of standard output</li>
-<li>bs=bytes - Block size, it reads and writes this many bytes of data at a time. You can use different size metrics by denoting the size with a k for kilobyte, m for megabyte, etc, so 1024 bytes is 1k</li>
-<li>count=number - Number of blocks to copy.</li>
+<li>if=fail - Fail input, baca daripada fail dan bukannya input standard</li>
+<li>of=fail - Fail output, tulis ke fail dan bukannya output standard</li>
+<li>bs=bait - Saiz blok, ia membaca dan menulis bait data ini pada satu masa. Anda boleh menggunakan metrik saiz yang berbeza dengan menandakan saiz dengan k untuk kilobait, m untuk megabait, dsb, jadi 1024 bait ialah 1k</li>
+<li>kiraan=nombor - Bilangan blok untuk disalin.</li>
 </ul>
 
-You will see some dd commands that use the count option, usually with dd if you want to copy a file that is 1 megabyte, you'll usually want to see that file as 1 megabyte when it's done being copied. Let's say you run the following command:
+Anda akan melihat beberapa arahan dd yang menggunakan pilihan kiraan, biasanya dengan dd jika anda ingin menyalin fail yang bersaiz 1 megabait, anda biasanya ingin melihat fail itu sebagai 1 megabait apabila ia selesai disalin. Katakan anda menjalankan arahan berikut:
 
 <pre>$ dd if=/home/pete/backup.img of=/dev/sdb bs=1M count=2</pre>
 
-Our backup.img file is 10M, however, we are saying in this command to copy over 1M 2 times, so only 2M is being copied, leaving our copied data incomplete. Count can come in handy in many situations, but if you are just copying over data, you can pretty much omit count and even bs for that matter. If you really want to optimize your data transfers, then you'll want to start using those options.
+Fail backup.img kami ialah 10M, walau bagaimanapun, kami mengatakan dalam arahan ini untuk menyalin lebih 1M 2 kali, jadi hanya 2M yang disalin, meninggalkan data salinan kami tidak lengkap. Kiraan boleh berguna dalam banyak situasi, tetapi jika anda hanya menyalin data, anda boleh meninggalkan kiraan dan juga bs. Jika anda benar-benar ingin mengoptimumkan pemindahan data anda, maka anda perlu mula menggunakan pilihan tersebut.
 
-dd is extremely powerful, you can use it to make backups of anything, including whole disk drives, restoring disks images, and more. Be careful, that powerful tool can come at a price if you aren't sure what you are doing.
+dd sangat berkuasa, anda boleh menggunakannya untuk membuat sandaran apa sahaja, termasuk keseluruhan pemacu cakera, memulihkan imej cakera dan banyak lagi. Berhati-hati, alat yang berkuasa itu boleh datang dengan harga jika anda tidak pasti apa yang anda lakukan.
 
-## Exercise
+## Latihan
 
-Use the dd command to make a backup of your drive and set the output to a .img file.
+Gunakan arahan dd untuk membuat sandaran pemacu anda dan tetapkan output kepada fail .img.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the dd option for block size?
+Apakah pilihan dd untuk saiz blok?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 bs

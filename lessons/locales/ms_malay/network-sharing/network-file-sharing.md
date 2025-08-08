@@ -1,33 +1,33 @@
-# File Sharing Overview
+# Gambaran Keseluruhan Perkongsian Fail
 
-## Lesson Content
+## Kandungan Pelajaran
 
-You usually are not the only computer on your network, this is especially the case if you're working in a commercial environment. When we want to transfer data from one machine to another, sometimes it maybe easier to connect a USB drive and manually copy them. But for the most part, if you're working with machines on the same network, the way to transfer data is through network file sharing.
+Anda biasanya bukan satu-satunya komputer dalam rangkaian anda, ini terutamanya berlaku jika anda bekerja dalam persekitaran komersial. Apabila kita ingin memindahkan data dari satu mesin ke mesin lain, kadang-kadang lebih mudah untuk menyambungkan pemacu USB dan menyalinnya secara manual. Tetapi kebanyakannya, jika anda bekerja dengan mesin pada rangkaian yang sama, cara untuk memindahkan data adalah melalui perkongsian fail rangkaian.
 
-In this course we'll go over a couple of different methods to copy data to and from different machines on your network. We'll discuss some simple file copies, then we'll talk about mounting entire directories on your machine that act as a separate drive.
+Dalam kursus ini kita akan membincangkan beberapa kaedah yang berbeza untuk menyalin data ke dan dari mesin yang berbeza pada rangkaian anda. Kita akan membincangkan beberapa salinan fail mudah, kemudian kita akan bercakap tentang melekapkan keseluruhan direktori pada mesin anda yang bertindak sebagai pemacu yang berasingan.
 
-One simple file sharing tool is the <b>scp</b> command. The scp command stands for secure copy, it works exactly the way the cp command does, but allows you to copy from one host over to another host on the same network. It works via ssh so all your actions are using the same authentication and security as ssh.
+Satu alat perkongsian fail yang mudah ialah arahan <b>scp</b>. Arahan scp adalah singkatan untuk salinan selamat, ia berfungsi sama seperti arahan cp, tetapi membolehkan anda menyalin dari satu hos ke hos lain pada rangkaian yang sama. Ia berfungsi melalui ssh jadi semua tindakan anda menggunakan pengesahan dan keselamatan yang sama seperti ssh.
 
-<b>To copy a file over from local host to a remote host</b>
+<b>Untuk menyalin fail dari hos tempatan ke hos jauh</b>
 
 <pre>$ scp myfile.txt username@remotehost.com:/remote/directory</pre>
 
-<b>To copy a file from a remote host to your local host</b>
+<b>Untuk menyalin fail dari hos jauh ke hos tempatan anda</b>
 
 <pre>$ scp username@remotehost.com:/remote/directory/myfile.txt /local/directory</pre>
 
-<b>To copy over a directory from your local host to a remote host</b>
+<b>Untuk menyalin direktori dari hos tempatan anda ke hos jauh</b>
 
 <pre>$ scp -r mydir username@remotehost.com:/remote/directory</pre>
 
-## Exercise
+## Latihan
 
-Try to copy a file over with scp from one machine to another.
+Cuba salin fail dengan scp dari satu mesin ke mesin lain.
 
-## Quiz Question
+## Soalan Kuiz
 
-What command can you use to securely copy files from one host to another?
+Apakah arahan yang boleh anda gunakan untuk menyalin fail dengan selamat dari satu hos ke hos lain?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 scp

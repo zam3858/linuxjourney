@@ -1,19 +1,19 @@
 # CIDR
 
-## Lesson Content
+## Kandungan Pelajaran
 
-CIDR (classless inter-domain routing) is used to represent a subnet mask in a more compact way. You may see subnets notated in CIDR notation, where a subnet such as the 10.42.3.0/255.255.255.0 is written as 10.42.3.0/24 which just means it includes both the subnet prefix and the subnet mask.
+CIDR (penghalaan antara domain tanpa kelas) digunakan untuk mewakili topeng subnet dengan cara yang lebih padat. Anda mungkin melihat subnet yang dicatatkan dalam notasi CIDR, di mana subnet seperti 10.42.3.0/255.255.255.0 ditulis sebagai 10.42.3.0/24 yang hanya bermaksud ia merangkumi kedua-dua awalan subnet dan topeng subnet.
 
-Remember an IP address consists of 4 bytes or 32 bits, CIDR indicates the amount of bits used as the network prefix. So 123.12.24.0/23 means that the first 23 bits are used. Well what does that mean? How many hosts is that?
+Ingat alamat IP terdiri daripada 4 bait atau 32 bit, CIDR menunjukkan jumlah bit yang digunakan sebagai awalan rangkaian. Jadi 123.12.24.0/23 bermakna 23 bit pertama digunakan. Apa maksudnya? Berapa banyak hos itu?
 
-A simple trick is to subtract the total of bits an IP address can have (32) from the CIDR address (23), so that leaves 9 bits, 2^9 = 512, but we have to remove 2 addresses (subnet address and broadcast address) so we have 510 usable hosts.
+Trik mudah ialah menolak jumlah bit yang boleh dimiliki oleh alamat IP (32) daripada alamat CIDR (23), jadi itu meninggalkan 9 bit, 2^9 = 512, tetapi kita perlu mengalih keluar 2 alamat (alamat subnet dan alamat siaran) jadi kita mempunyai 510 hos yang boleh digunakan.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-No questions move along!
+Tiada soalan, teruskan!
 
-## Quiz Answer
+## Jawapan Kuiz

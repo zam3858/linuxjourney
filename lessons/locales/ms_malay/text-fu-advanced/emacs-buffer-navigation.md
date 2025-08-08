@@ -1,41 +1,41 @@
-# Emacs Buffer Navigation
+# Navigasi Penimbal Emacs
 
-## Lesson Content
+## Kandungan Pelajaran
 
-To move around buffers (or files you're visiting) use the following commands:
+Untuk bergerak di sekitar penimbal (atau fail yang anda lawati) gunakan arahan berikut:
 
-<b>Switch buffers</b>
+<b>Tukar penimbal</b>
 
 <pre>
-C-x b - switch buffer
-C-x right arrow - right-cycle through buffer
-C-x left arrow - left-cycle through buffer
+C-x b - tukar penimbal
+C-x anak panah kanan - kitaran kanan melalui penimbal
+C-x anak panah kiri - kitaran kiri melalui penimbal
 </pre>
 
-<b>Close the buffer</b>
+<b>Tutup penimbal</b>
 
 <pre>C-x k</pre>
 
-<b>Split the current buffer</b>
+<b>Pisahkan penimbal semasa</b>
 
 <pre>C-x 2</pre>
 
-This allows you see multiple buffers on one screen. To move between these buffers use: C-x o
+Ini membolehkan anda melihat beberapa penimbal pada satu skrin. Untuk bergerak di antara penimbal ini gunakan: C-x o
 
-<b>Set a single buffer as the current screen</b>
+<b>Tetapkan satu penimbal sebagai skrin semasa</b>
 
 <pre>C-x 1</pre>
 
-If you ever used a terminal multiplexer like screen and tmux, the buffer commands will feel very familiar.
+Jika anda pernah menggunakan pemultipleks terminal seperti skrin dan tmux, arahan penimbal akan terasa sangat biasa.
 
-## Exercise
+## Latihan
 
-Play around with buffers.
+Bermain-main dengan penimbal.
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you kill a buffer?
+Bagaimanakah anda membunuh penimbal?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 C-x k

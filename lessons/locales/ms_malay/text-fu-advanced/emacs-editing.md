@@ -1,36 +1,36 @@
-# Emacs Editing
+# Penyuntingan Emacs
 
-## Lesson Content
+## Kandungan Pelajaran
 
-<b>Text Navigation</b>
+<b>Navigasi Teks</b>
 
 <pre>
-C-up arrow : move up one paragraph
-C-down arrow: move down one paragraph
-C-left arrow: move one word left
-C-right arrow: move one word right
-M-> : move to the end of the buffer
+C-anak panah atas : gerak ke atas satu perenggan
+C-anak panah bawah: gerak ke bawah satu perenggan
+C-anak panah kiri: gerak satu perkataan ke kiri
+C-anak panah kanan: gerak satu perkataan ke kanan
+M-> : gerak ke penghujung penimbal
 </pre>
 
-With text navigation, your regular text buttons work as they should, home, end, page up, page down and the arrow keys, etc.
+Dengan navigasi teks, butang teks biasa anda berfungsi seperti yang sepatutnya, rumah, tamat, halaman atas, halaman bawah dan kekunci anak panah, dsb.
 
-<b>Cutting and Pasting</b>
+<b>Memotong dan Menampal</b>
 
-To cut (kill) or paste (yank) in Emacs you'll need to be able to select text first. To select text, move your cursor to where you want to cut or paste and hit <pre>C-space key</pre> then you can use the navigation keys to select the text you want. Now you can do the cut and paste like so:
+Untuk memotong (bunuh) atau menampal (yank) dalam Emacs anda perlu boleh memilih teks terlebih dahulu. Untuk memilih teks, gerakkan kursor anda ke tempat yang anda ingin potong atau tampal dan tekan <pre>kekunci C-ruang</pre> kemudian anda boleh menggunakan kekunci navigasi untuk memilih teks yang anda mahu. Sekarang anda boleh melakukan potong dan tampal seperti ini:
 
 <pre>
-C-w : cut
+C-w : potong
 C-y : yank
 </pre>
 
-## Exercise
+## Latihan
 
-Play around with text navigation.
+Bermain-main dengan navigasi teks.
 
-## Quiz Question
+## Soalan Kuiz
 
-How do you move to the end of the buffer?
+Bagaimanakah anda bergerak ke penghujung penimbal?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 M->

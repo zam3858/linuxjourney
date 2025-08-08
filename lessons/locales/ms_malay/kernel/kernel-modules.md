@@ -1,53 +1,53 @@
-# Kernel Modules
+# Modul Kernel
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Let's say I have a sweet ride, I invest a lot of time and money into it. I add a spoiler, hitch, bike rack and other random things. These components don't actually change the core functionality of the car and I can remove and add them very easily. The kernel uses the same concept with kernel modules.
+Katakan saya mempunyai kereta yang hebat, saya melabur banyak masa dan wang ke dalamnya. Saya menambah spoiler, penyangkut, rak basikal dan lain-lain perkara rawak. Komponen ini sebenarnya tidak mengubah fungsi teras kereta dan saya boleh menanggalkan dan menambahnya dengan sangat mudah. Kernel menggunakan konsep yang sama dengan modul kernel.
 
-The kernel in itself is a monolithic piece of software, when we want to add support for a new type of keyboard, we don't write this code directly into the kernel code. Just as we wouldn't meld a bike rack to our car (well maybe some people would do that). Kernel modules are pieces of code that can be loaded and unloaded into the kernel on demand. They allow us to extend the functionality of the kernel without actually adding to the core kernel code. We can also add modules and not have to reboot the system (in most cases).
+Kernel itu sendiri adalah perisian monolitik, apabila kita ingin menambah sokongan untuk jenis papan kekunci baharu, kita tidak menulis kod ini terus ke dalam kod kernel. Sama seperti kita tidak akan mencantumkan rak basikal pada kereta kita (mungkin sesetengah orang akan melakukannya). Modul kernel ialah kepingan kod yang boleh dimuatkan dan dinyahmuat ke dalam kernel atas permintaan. Ia membolehkan kita memanjangkan fungsi kernel tanpa benar-benar menambah pada kod kernel teras. Kita juga boleh menambah modul dan tidak perlu but semula sistem (dalam kebanyakan kes).
 
-<b>View a list of currently loaded modules</b>
+<b>Lihat senarai modul yang sedang dimuatkan</b>
 
 <pre>$ lsmod</pre>
 
-<b>Load a module</b>
+<b>Muatkan modul</b>
 
 <pre>$ sudo modprobe bluetooth</pre>
 
-Modprobe loads tries the module from <b>/lib/modules/(kernel version)/kernel/drivers</b>. Kernel modules may also have dependencies, modprobe loads our module dependencies if they are not already loaded.
+Modprobe memuatkan modul dari <b>/lib/modules/(versi kernel)/kernel/drivers</b>. Modul kernel juga mungkin mempunyai kebergantungan, modprobe memuatkan kebergantungan modul kita jika ia belum dimuatkan.
 
-<b>Remove a module</b>
+<b>Alih keluar modul</b>
 
 <pre>$ sudo modprobe -r bluetooth</pre>
 
-<b>Load on bootup</b>
+<b>Muatkan semasa but</b>
 
-You can also load modules during system boot, instead of temporarily loading them with modprobe (which will be unloaded when you reboot). Just modify the <b>/etc/modprobe.d</b> directory and add a configuration file in it like so:
+Anda juga boleh memuatkan modul semasa but sistem, bukannya memuatkannya buat sementara waktu dengan modprobe (yang akan dinyahmuat apabila anda but semula). Hanya ubah suai direktori <b>/etc/modprobe.d</b> dan tambah fail konfigurasi di dalamnya seperti ini:
 
 <pre>pete@icebox:~$ /etc/modprobe.d/peanutbutter.conf
 
 options peanut_butter type=almond
 </pre>
 
-A bit of a outlandish example, but if you had a module named peanut_butter and you wanted to add a kernel parameter for type=almond, you can have it load on startup using this configuration file. Also note that kernel modules have their own kernel parameters so you'll want to read about the module specifically to find out more.
+Contoh yang agak pelik, tetapi jika anda mempunyai modul bernama mentega_kacang dan anda ingin menambah parameter kernel untuk jenis=badam, anda boleh memuatkannya semasa permulaan menggunakan fail konfigurasi ini. Juga ambil perhatian bahawa modul kernel mempunyai parameter kernel mereka sendiri jadi anda perlu membaca tentang modul itu secara khusus untuk mengetahui lebih lanjut.
 
-<b>Do not load on bootup</b>
+<b>Jangan muat semasa but</b>
 
-You can also make sure a module does not load on bootup by adding a configuration file like so:
+Anda juga boleh memastikan modul tidak dimuatkan semasa but dengan menambah fail konfigurasi seperti ini:
 
 <pre>pete@icebox:~$ /etc/modprobe.d/peanutbutter.conf
 
 blacklist peanut_butter
 </pre>
 
-## Exercise
+## Latihan
 
-Unload your bluetooth module with modprobe and see what happens. How will you fix this?
+Nyahmuat modul bluetooth anda dengan modprobe dan lihat apa yang berlaku. Bagaimanakah anda akan memperbaikinya?
 
-## Quiz Question
+## Soalan Kuiz
 
-What command is used to unload a module?
+Apakah arahan yang digunakan untuk menyahmuat modul?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 modprobe -r

@@ -1,55 +1,55 @@
-# sort
+# isih
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The sort command is useful for sorting lines.
+Perintah isih berguna untuk mengisih baris.
 
 <pre>
 file1.txt
-dog
-cow
-cat
-elephant
-bird
+anjing
+lembu
+kucing
+gajah
+burung
 
 $ sort file1.txt
-bird
-cat
-cow
-dog
-elephant
+burung
+kucing
+lembu
+anjing
+gajah
 </pre>
 
-You can also do a reverse sort:
+Anda juga boleh melakukan isihan terbalik:
 
 <pre>$ sort -r file1.txt
-elephant
-dog
-cow
-cat
-bird
+gajah
+anjing
+lembu
+kucing
+burung
 </pre>
 
-And also sort via numerical value:
+Dan juga mengisih melalui nilai berangka:
 
 <pre>$ sort -n file1.txt
-bird
-cat
-cow
-elephant
-dog
+burung
+kucing
+lembu
+gajah
+anjing
 </pre>
 
-## Exercise
+## Latihan
 
-The real power of sort comes with its ability to be combined with other commands, try the following command and see what happens?
+Kuasa sebenar isih datang dengan keupayaannya untuk digabungkan dengan arahan lain, cuba arahan berikut dan lihat apa yang berlaku?
 
 <pre>$ ls /etc | sort -rn</pre>
 
-## Quiz Question
+## Soalan Kuiz
 
-What flag do you use to do a reverse sort?
+Apakah bendera yang anda gunakan untuk melakukan isihan terbalik?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 -r

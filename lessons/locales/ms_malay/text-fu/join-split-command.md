@@ -1,10 +1,10 @@
-# join and split
+# sertai dan pisah
 
-## Lesson Content
+## Kandungan Pelajaran
 
-The join command allows you to join multiple files together by a common field:
+Perintah sertai membolehkan anda menyertai beberapa fail bersama-sama dengan medan biasa:
 
-Let's say I had two files that I wanted to join together:
+Katakan saya mempunyai dua fail yang ingin saya sertai bersama:
 <pre>file1.txt
 1 John
 2 Jane
@@ -21,9 +21,9 @@ $ join file1.txt file2.txt
 3 Mary Sue
 </pre>
 
-See how it joined together my files? They are joined together by the first field by default and the fields have to be identical, if they are not you can sort them, so in this case the files are joined via 1, 2, 3.
+Lihat bagaimana ia menyertai fail saya bersama-sama? Mereka disertai bersama oleh medan pertama secara lalai dan medan mesti sama, jika tidak anda boleh mengisihnya, jadi dalam kes ini fail disertai melalui 1, 2, 3.
 
-How would we join the following files?
+Bagaimanakah kita akan menyertai fail berikut?
 
 <pre>file1.txt
 John 1
@@ -36,7 +36,7 @@ file2.txt
 3 Sue
 </pre>
 
-To join this file you need to specify which fields you are joining, in this case we want field 2 on file1.txt and field 1 on file2.txt, so the command would look like this:
+Untuk menyertai fail ini anda perlu menentukan medan mana yang anda sertai, dalam kes ini kami mahu medan 2 pada file1.txt dan medan 1 pada file2.txt, jadi arahannya akan kelihatan seperti ini:
 
 <pre>
 $ join -1 2 -2 1 file1.txt file2.txt
@@ -45,20 +45,20 @@ $ join -1 2 -2 1 file1.txt file2.txt
 3 Mary Sue
 </pre>
 
--1 refers to file1.txt and -2 refers to file2.txt. Pretty neat. You can also split a file up into different files with the split command:
+-1 merujuk kepada file1.txt dan -2 merujuk kepada file2.txt. Cukup kemas. Anda juga boleh memisahkan fail kepada fail yang berbeza dengan arahan pisah:
 
 <pre>$ split somefile</pre>
 
-This will split it into different files, by default it will split them once they reach a 1000 line limit. The files are named x** by default.
+Ini akan memisahkannya kepada fail yang berbeza, secara lalai ia akan memisahkannya sebaik sahaja ia mencapai had 1000 baris. Fail dinamakan x** secara lalai.
 
-## Exercise
+## Latihan
 
-Join two files with different number of lines in each file, what happens?
+Sertai dua fail dengan bilangan baris yang berbeza dalam setiap fail, apa yang berlaku?
 
-## Quiz Question
+## Soalan Kuiz
 
-What command would you use to join files named cat dog cow?
+Apakah arahan yang akan anda gunakan untuk menyertai fail bernama kucing anjing lembu?
 
-## Quiz Answer
+## Jawapan Kuiz
 
-join cat dog cow
+sertai kucing anjing lembu

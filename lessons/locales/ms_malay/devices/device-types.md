@@ -1,8 +1,8 @@
-# device types
+# jenis peranti
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Before we chat about how devices are managed, let's actually take a look at some devices.
+Sebelum kita berbual tentang cara peranti diuruskan, mari kita lihat beberapa peranti.
 
 <pre>$ ls -l /dev
 brw-rw----   1 root disk      8,   0 Dec 20 20:13 sda
@@ -11,57 +11,57 @@ srw-rw-rw-   1 root root           0 Dec 20 20:13 log
 prw-r--r--   1 root root           0 Dec 20 20:13 fdata
 </pre>
 
-The columns are as follows from left to right:
+Lajur adalah seperti berikut dari kiri ke kanan:
 
 <ul>
-<li>Permissions</li>
-<li>Owner</li>
-<li>Group</li>
-<li>Major Device Number</li>
-<li>Minor Device Number</li>
-<li>Timestamp</li>
-<li>Device Name</li>
+<li>Kebenaran</li>
+<li>Pemilik</li>
+<li>Kumpulan</li>
+<li>Nombor Peranti Utama</li>
+<li>Nombor Peranti Kecil</li>
+<li>Cap Masa</li>
+<li>Nama Peranti</li>
 </ul>
 
-Remember in the ls command you can see the type of file with the first bit on each line. Device files are denoted as the following:
+Ingat dalam arahan ls anda boleh melihat jenis fail dengan bit pertama pada setiap baris. Fail peranti ditandakan seperti berikut:
 
 <ul>
-<li>c - character</li>
-<li>b - block</li>
-<li>p - pipe</li>
-<li>s - socket</li>
+<li>c - aksara</li>
+<li>b - blok</li>
+<li>p - paip</li>
+<li>s - soket</li>
 </ul>
 
-<b>Character Device</b>
+<b>Peranti Aksara</b>
 
-These devices transfer data, but one a character at a time. You'll see a lot of pseudo devices (/dev/null) as character devices, these devices aren't really physically connected to the machine, but they allow the operating system greater functionality.
+Peranti ini memindahkan data, tetapi satu aksara pada satu masa. Anda akan melihat banyak peranti pseudo (/dev/null) sebagai peranti aksara, peranti ini tidak benar-benar disambungkan secara fizikal ke mesin, tetapi ia membolehkan sistem pengendalian berfungsi dengan lebih baik.
 
-<b>Block Device</b>
+<b>Peranti Blok</b>
 
-These devices transfer data, but in large fixed-sized blocks. You'll most commonly see devices that utilize data blocks as block devices, such as harddrives, filesystems, etc.
+Peranti ini memindahkan data, tetapi dalam blok bersaiz tetap yang besar. Anda akan paling biasa melihat peranti yang menggunakan blok data sebagai peranti blok, seperti cakera keras, sistem fail, dsb.
 
-<b>Pipe Device</b>
+<b>Peranti Paip</b>
 
-Named pipes allow two or more processes to communicate with each other, these are similar to character devices, but instead of having output sent to a device, it's sent to another process.
+Paip bernama membolehkan dua atau lebih proses berkomunikasi antara satu sama lain, ini serupa dengan peranti aksara, tetapi bukannya output dihantar ke peranti, ia dihantar ke proses lain.
 
-<b>Socket Device</b>
+<b>Peranti Soket</b>
 
-Socket devices facilitate communication between processes, similar to pipe devices but they can communicate with many processes at once.
+Peranti soket memudahkan komunikasi antara proses, serupa dengan peranti paip tetapi ia boleh berkomunikasi dengan banyak proses sekaligus.
 
-<b>Device Characterization</b>
+<b>Pencirian Peranti</b>
 
-Devices are characterized using two numbers, <b>major device number</b> and <b>minor device number</b>. You can see these numbers in the above ls example, they are separated by a comma. For example, let's say a device had the device numbers: <b>8, 0</b>:
+Peranti dicirikan menggunakan dua nombor, <b>nombor peranti utama</b> dan <b>nombor peranti kecil</b>. Anda boleh melihat nombor ini dalam contoh ls di atas, ia dipisahkan dengan koma. Sebagai contoh, katakan peranti mempunyai nombor peranti: <b>8, 0</b>:
 
-The major device number represents the device driver that is used, in this case 8, which is often the major number for sd block devices. The minor number tells the kernel which unique device it is in this driver class, in this case 0 is used to represent the first device (a).
+Nombor peranti utama mewakili pemacu peranti yang digunakan, dalam kes ini 8, yang selalunya nombor utama untuk peranti blok sd. Nombor kecil memberitahu kernel peranti unik mana dalam kelas pemacu ini, dalam kes ini 0 digunakan untuk mewakili peranti pertama (a).
 
-## Exercise
+## Latihan
 
-Look at your /dev directory and find out what types of devices you can see.
+Lihat direktori /dev anda dan ketahui jenis peranti yang boleh anda lihat.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the symbol for character devices in the ls -l command?
+Apakah simbol untuk peranti aksara dalam arahan ls -l?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 c

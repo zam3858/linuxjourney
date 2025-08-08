@@ -1,27 +1,27 @@
-# Controlling Terminal
+# Mengawal Terminal
 
-## Lesson Content
+## Kandungan Pelajaran
 
-We discussed how there is a TTY field in the ps output. The TTY is the terminal that executed the command.
+Kami membincangkan bagaimana terdapat medan TTY dalam output ps. TTY ialah terminal yang melaksanakan arahan.
 
-There are two types of terminals, regular <b>terminal devices</b> and <b>pseudoterminal devices</b>. A regular terminal device is a native terminal device that you can type into and send output to your system, this sounds like the terminal application you've been launching to get to your shell, but it's not.
+Terdapat dua jenis terminal, <b>peranti terminal</b> biasa dan <b>peranti pseudoterminal</b>. Peranti terminal biasa ialah peranti terminal asli yang boleh anda taip dan hantar output ke sistem anda, ini kedengaran seperti aplikasi terminal yang telah anda lancarkan untuk sampai ke shell anda, tetapi bukan.
 
-We're gonna segue so you can see this action, go ahead and type Ctrl-Alt-F1 to get into TTY1 (the first virtual console), you'll notice how you don't have anything except the terminal, no graphics, etc. This is considered a regular terminal device, you can exit this with Ctrl-Alt-F7.
+Kami akan beralih supaya anda dapat melihat tindakan ini, teruskan dan taip Ctrl-Alt-F1 untuk masuk ke TTY1 (konsol maya pertama), anda akan perasan bagaimana anda tidak mempunyai apa-apa kecuali terminal, tiada grafik, dsb. Ini dianggap sebagai peranti terminal biasa, anda boleh keluar dari ini dengan Ctrl-Alt-F7.
 
-A pseudoterminal is what you've been used to working in, they emulate terminals with the shell terminal window and are denoted by PTS . If you look at ps again, you'll see your shell process under pts/*.
+Pseudoterminal ialah apa yang anda biasa gunakan, ia meniru terminal dengan tetingkap terminal shell dan ditandakan dengan PTS . Jika anda melihat ps sekali lagi, anda akan melihat proses shell anda di bawah pts/*.
 
-Ok, now circling back to the controlling terminal, processes are usually bound to a controlling terminal. For example, if you were running a program on your shell window such as find and you closed the window, your process would also go with it.
+Ok, sekarang kembali ke terminal kawalan, proses biasanya terikat pada terminal kawalan. Sebagai contoh, jika anda menjalankan program pada tetingkap shell anda seperti find dan anda menutup tetingkap, proses anda juga akan turut serta.
 
-There are processes such as daemon processes, which are special processes that are essentially keeping the system running. They often start at system boot and usually get terminated when the system is shutdown. They run in the background and since we don't want these special processes to get terminated they are not bound to a controlling terminal. In the ps output, the TTY is listed as a <b>?</b> meaning it does not have a controlling terminal.
+Terdapat proses seperti proses daemon, yang merupakan proses khas yang pada asasnya memastikan sistem berjalan. Ia selalunya bermula semasa but sistem dan biasanya ditamatkan apabila sistem ditutup. Ia berjalan di latar belakang dan kerana kami tidak mahu proses khas ini ditamatkan, ia tidak terikat pada terminal kawalan. Dalam output ps, TTY disenaraikan sebagai <b>?</b> yang bermaksud ia tidak mempunyai terminal kawalan.
 
-## Exercise
+## Latihan
 
-Look at your ps output and list all the unique TTY values.
+Lihat output ps anda dan senaraikan semua nilai TTY yang unik.
 
-## Quiz Question
+## Soalan Kuiz
 
-What value is given for a process that does not have a controlling terminal?
+Apakah nilai yang diberikan untuk proses yang tidak mempunyai terminal kawalan?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 ?

@@ -1,31 +1,31 @@
-# Process Details
+# Butiran Proses
 
-## Lesson Content
+## Kandungan Pelajaran
 
-Before we get into more practical applications of processes, we have to first understand what they are and how they work. This part can get confusing since we are diving into the nitty gritty, so feel free to come back to this lesson if you don't want to learn about it now.
+Sebelum kita membincangkan aplikasi proses yang lebih praktikal, kita perlu terlebih dahulu memahami apa itu dan bagaimana ia berfungsi. Bahagian ini boleh menjadi mengelirukan kerana kita menyelami selok-beloknya, jadi jangan ragu untuk kembali ke pelajaran ini jika anda tidak mahu belajar mengenainya sekarang.
 
-A process like we said before is a running program on the system, more precisely it's the system allocating memory, CPU, I/O to make the program run. A process is an instance of a running program, go ahead and open 3 terminal windows, in two windows, run the <b>cat</b> command without passing any options (the cat process will stay open as a process because it expects stdin). Now in the third window run: <b>ps aux | grep cat</b>. You'll see that there are two processes for cat, even though they are calling the same program.
+Proses seperti yang kita katakan sebelum ini ialah program yang sedang berjalan pada sistem, lebih tepat lagi ia adalah sistem yang memperuntukkan memori, CPU, I/O untuk menjalankan program. Proses ialah contoh program yang sedang berjalan, teruskan dan buka 3 tetingkap terminal, dalam dua tetingkap, jalankan arahan <b>cat</b> tanpa melepasi sebarang pilihan (proses cat akan tetap terbuka sebagai proses kerana ia menjangkakan stdin). Sekarang dalam tetingkap ketiga jalankan: <b>ps aux | grep cat</b>. Anda akan melihat bahawa terdapat dua proses untuk cat, walaupun ia memanggil program yang sama.
 
-The kernel is in charge of processes, when we run a program the kernel loads up the code of the program in memory, determines and allocates resources and then keeps tabs on each process, it knows:
+Kernel bertanggungjawab ke atas proses, apabila kita menjalankan program, kernel memuatkan kod program dalam memori, menentukan dan memperuntukkan sumber dan kemudian menjejaki setiap proses, ia tahu:
 
 <ul>
-<li>The status of the process</li>
-<li>The resources the process is using and receives</li>
-<li>The process owner</li>
-<li>Signal handling (more on that later)</li>
-<li>And basically everything else</li>
+<li>Status proses</li>
+<li>Sumber yang digunakan dan diterima oleh proses</li>
+<li>Pemilik proses</li>
+<li>Pengendalian isyarat (lebih lanjut mengenai itu kemudian)</li>
+<li>Dan pada asasnya segala-galanya</li>
 </ul>
 
-All processes are trying to get a taste of that sweet resource pie, it's the kernel's job to make sure that processes get the right amount of resources depending on process demands. When a process ends, the resources it used are now freed up for other processes.
+Semua proses cuba merasai pai sumber yang manis itu, tugas kernel adalah untuk memastikan proses mendapat jumlah sumber yang betul bergantung pada permintaan proses. Apabila proses berakhir, sumber yang digunakannya kini dibebaskan untuk proses lain.
 
-## Exercise
+## Latihan
 
-No exercises for this lesson.
+Tiada latihan untuk pelajaran ini.
 
-## Quiz Question
+## Soalan Kuiz
 
-What manages and controls processes?
+Apakah yang mengurus dan mengawal proses?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 kernel

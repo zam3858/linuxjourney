@@ -1,38 +1,38 @@
 # swap
 
-## Lesson Content
+## Kandungan Pelajaran
 
-In our previous example, I showed you how to see your partition table, let's revisit that example, more specifically this line:
+Dalam contoh kami sebelum ini, saya menunjukkan kepada anda cara melihat jadual partition anda, mari kita lawati semula contoh itu, lebih khusus baris ini:
 
 <pre>
 Number  Start   End     Size    Type      File system     Flags
  5      6861MB  7380MB  519MB   logical   linux-swap(v1)
 </pre>
 
-What is this swap partition? Well swap is what we used to allocate virtual memory to our system. If you are low on memory, the system uses this partition to "swap" pieces of memory of idle processes to the disk, so you're not bogged for memory.
+Apakah partition swap ini? Swap ialah apa yang kita gunakan untuk memperuntukkan memori maya kepada sistem kita. Jika anda kekurangan memori, sistem menggunakan partition ini untuk "menukar" kepingan memori proses terbiar ke cakera, jadi anda tidak terbeban untuk memori.
 
-<b>Using a partition for swap space</b>
+<b>Menggunakan partition untuk ruang swap</b>
 
-Let's say we wanted to set our partition of /dev/sdb2 to be used for swap space.
+Katakan kita mahu menetapkan partition /dev/sdb2 kita untuk digunakan untuk ruang swap.
 
 <ol>
-<li>First make sure we don't have anything on the partition</li>
-<li>Run: mkswap /dev/sdb2 to initialize swap areas</li>
-<li>Run: swapon /dev/sdb2 this will enable the swap device</li>
-<li>If you want the swap partition to persist on bootup, you need to add an entry to the /etc/fstab file. sw is the filesystem type that you'll use.</li>
-<li>To remove swap: swapoff /dev/sdb2</li>
+<li>Mula-mula pastikan kita tidak mempunyai apa-apa pada partition</li>
+<li>Jalankan: mkswap /dev/sdb2 untuk memulakan kawasan swap</li>
+<li>Jalankan: swapon /dev/sdb2 ini akan mendayakan peranti swap</li>
+<li>Jika anda mahu partition swap berterusan semasa but, anda perlu menambah entri pada fail /etc/fstab. sw ialah jenis sistem fail yang akan anda gunakan.</li>
+<li>Untuk mengalih keluar swap: swapoff /dev/sdb2</li>
 </ol>
 
-Generally you should allocate about twice as much swap space as you have memory. But modern systems today are usually pretty powerful enough and have enough RAM as it is.
+Secara amnya anda harus memperuntukkan kira-kira dua kali lebih banyak ruang swap daripada memori yang anda ada. Tetapi sistem moden hari ini biasanya cukup berkuasa dan mempunyai RAM yang mencukupi.
 
-## Exercise
+## Latihan
 
-Partition the free space in the USB drive for swap space.
+Bahagikan ruang kosong dalam pemacu USB untuk ruang swap.
 
-## Quiz Question
+## Soalan Kuiz
 
-What is the command to enable swap space on a device?
+Apakah arahan untuk mendayakan ruang swap pada peranti?
 
-## Quiz Answer
+## Jawapan Kuiz
 
 swapon
